@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PropsWithChildren } from 'react';
 
 import './globals.css';
 
@@ -8,11 +9,8 @@ export const metadata: Metadata = {
   description: 'Ky Tran\'s Portfolio',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+/** Root layout for the application. */
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className="antialiased">
