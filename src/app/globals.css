@@ -15,6 +15,11 @@
 @theme inline {
   --color-white: var(--white);
   --color-black: var(--black);
+
+  --font-riot-regular: var(--font-riot-regular);
+  --font-riot-italic: var(--font-riot-italic);
+  --font-riot-bold: var(--font-riot-bold);
+  --font-riot-bold-italic: var(--font-riot-bold-italic);
 }
 
 *,
