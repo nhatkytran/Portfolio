@@ -27,6 +27,17 @@
   --font-spiegel-semibold-italic: var(--font-spiegel-semibold-italic);
   --font-spiegel-bold: var(--font-spiegel-bold);
   --font-spiegel-bold-italic: var(--font-spiegel-bold-italic);
+
+  --font-beaufort-light: var(--font-beaufort-light);
+  --font-beaufort-light-italic: var(--font-beaufort-light-italic);
+  --font-beaufort-regular: var(--font-beaufort-regular);
+  --font-beaufort-regular-italic: var(--font-beaufort-regular-italic);
+  --font-beaufort-medium: var(--font-beaufort-medium);
+  --font-beaufort-medium-italic: var(--font-beaufort-medium-italic);
+  --font-beaufort-bold: var(--font-beaufort-bold);
+  --font-beaufort-bold-italic: var(--font-beaufort-bold-italic);
+  --font-beaufort-heavy: var(--font-beaufort-heavy);
+  --font-beaufort-heavy-italic: var(--font-beaufort-heavy-italic);
 }
 
 *,

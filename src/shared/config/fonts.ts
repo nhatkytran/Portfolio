@@ -81,5 +81,88 @@ const spiegelFonts = [
   spiegelBoldItalic,
 ];
 
+const beaufortLight = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Light.ttf',
+  variable: '--font-beaufort-light',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortLightItalic = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Light-Italic.ttf',
+  variable: '--font-beaufort-light-italic',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortRegular = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Regular.ttf',
+  variable: '--font-beaufort-regular',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortRegularItalic = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Regular-Italic.ttf',
+  variable: '--font-beaufort-regular-italic',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortMedium = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Medium.ttf',
+  variable: '--font-beaufort-medium',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortMediumItalic = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Medium-Italic.ttf',
+  variable: '--font-beaufort-medium-italic',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortBold = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Bold.ttf',
+  variable: '--font-beaufort-bold',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortBoldItalic = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Bold-Italic.ttf',
+  variable: '--font-beaufort-bold-italic',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortHeavy = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Heavy.ttf',
+  variable: '--font-beaufort-heavy',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortHeavyItalic = localFont({
+  src: '../../../public/fonts/Beaufort/Beaufort-Heavy-Italic.ttf',
+  variable: '--font-beaufort-heavy-italic',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const beaufortFonts = [
+  beaufortLight,
+  beaufortLightItalic,
+  beaufortRegular,
+  beaufortRegularItalic,
+  beaufortMedium,
+  beaufortMediumItalic,
+  beaufortBold,
+  beaufortBoldItalic,
+  beaufortHeavy,
+  beaufortHeavyItalic,
+];
+
 /** List of fonts. */
-export const fonts = [...riotFonts, ...spiegelFonts];
+export const fonts = [...riotFonts, ...spiegelFonts, ...beaufortFonts];
