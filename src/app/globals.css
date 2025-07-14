@@ -2,6 +2,14 @@
 
 @layer base {
   .dark {
+    --yellow-sun-glow: #e2cf81;
+    --yellow-golden-sand: #ddb05d;
+    --yellow-harvest-wheat: #c8aa6e;
+    --yellow-amber-honey: #c28f2c;
+    --yellow-bronze-caramel: #a57a3a;
+    --yellow-vintage-mustard: #706547;
+    --yellow-burnt-oak: #67471f;
+
     --white: #000000;
     --black: #ffffff;
 
@@ -43,6 +51,14 @@
   }
 
   :root {
+    --yellow-sun-glow: #e2cf81;
+    --yellow-golden-sand: #ddb05d;
+    --yellow-harvest-wheat: #c8aa6e;
+    --yellow-amber-honey: #c28f2c;
+    --yellow-bronze-caramel: #a57a3a;
+    --yellow-vintage-mustard: #706547;
+    --yellow-burnt-oak: #67471f;
+
     --white: #ffffff;
     --black: #000000;
 
@@ -85,6 +101,14 @@
 }
 
 @theme {
+  --color-yellow-sun-glow: var(--yellow-sun-glow);
+  --color-yellow-golden-sand: var(--yellow-golden-sand);
+  --color-yellow-harvest-wheat: var(--yellow-harvest-wheat);
+  --color-yellow-amber-honey: var(--yellow-amber-honey);
+  --color-yellow-bronze-caramel: var(--yellow-bronze-caramel);
+  --color-yellow-vintage-mustard: var(--yellow-vintage-mustard);
+  --color-yellow-burnt-oak: var(--yellow-burnt-oak);
+
   --color-white: var(--white);
   --color-black: var(--black);
 
