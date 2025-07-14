@@ -20,6 +20,13 @@
   --font-riot-italic: var(--font-riot-italic);
   --font-riot-bold: var(--font-riot-bold);
   --font-riot-bold-italic: var(--font-riot-bold-italic);
+
+  --font-spiegel-regular: var(--font-spiegel-regular);
+  --font-spiegel-regular-italic: var(--font-spiegel-regular-italic);
+  --font-spiegel-semibold: var(--font-spiegel-semibold);
+  --font-spiegel-semibold-italic: var(--font-spiegel-semibold-italic);
+  --font-spiegel-bold: var(--font-spiegel-bold);
+  --font-spiegel-bold-italic: var(--font-spiegel-bold-italic);
 }
 
 *,
