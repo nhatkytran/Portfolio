@@ -1,4 +1,11 @@
+import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+
+const interFonts = Inter({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
+});
 
 const riotRegular = localFont({
   src: '../../../public/fonts/Riot/Riot-Regular.woff2',
@@ -165,4 +172,4 @@ const beaufortFonts = [
 ];
 
 /** List of fonts. */
-export const fonts = [...riotFonts, ...spiegelFonts, ...beaufortFonts];
+export const fonts = [interFonts, ...riotFonts, ...spiegelFonts, ...beaufortFonts];

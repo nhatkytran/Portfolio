@@ -100,7 +100,7 @@
   }
 }
 
-@theme {
+@theme inline {
   --color-yellow-sun-glow: var(--yellow-sun-glow);
   --color-yellow-golden-sand: var(--yellow-golden-sand);
   --color-yellow-harvest-wheat: var(--yellow-harvest-wheat);
@@ -147,6 +147,8 @@
   --color-sky-800: var(--sky-800);
   --color-sky-900: var(--sky-900);
   --color-sky-950: var(--sky-950);
+
+  --font-inter: var(--font-inter);
 
   --font-riot-regular: var(--font-riot-regular);
   --font-riot-italic: var(--font-riot-italic);

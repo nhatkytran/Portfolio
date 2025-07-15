@@ -1,6 +1,10 @@
+import Header from '@/features/home/components/Header';
+
 /** Home page. */
 export default function Home() {
   return (
-    <div className="text-black text-8xl">Hello World</div>
+    <div className="text-black">
+      <Header />
+    </div>
   );
 }
