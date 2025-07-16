@@ -1,7 +1,7 @@
 /** Header. */
 export default function Header() {
   return (
-    <header className="text-neutral-50 bg-neutral-900 h-[78px]">
+    <header className="h-[78px] bg-neutral-900 text-neutral-50">
       <h1>Header</h1>
     </header>
   );
