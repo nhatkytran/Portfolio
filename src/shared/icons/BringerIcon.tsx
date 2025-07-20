@@ -1,4 +1,4 @@
-import { PropsWithClassName } from '../utils/types';
+import { PropsWithClassName } from '@/shared/utils/types';
 
 /**
  * Name logo support icon.
@@ -7,8 +7,8 @@ import { PropsWithClassName } from '../utils/types';
 export default function NameLogoSupport({ className }: PropsWithClassName) {
   return (
     <svg
-      width="20"
-      height="20"
+      width={20}
+      height={20}
       fill="currentColor"
       className={className}
       viewBox="0 0 425 425"
