@@ -1,4 +1,4 @@
 /** Home page. */
 export default function Home() {
-  return <div>Home</div>;
+  return <div className="h-[1000px]">Home</div>;
 }
