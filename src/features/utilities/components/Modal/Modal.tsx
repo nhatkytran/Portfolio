@@ -1,4 +1,5 @@
 import { MouseEventHandler, PropsWithChildren } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
 import { useBodyFreeze } from '@/features/utilities/hooks';
@@ -29,14 +30,20 @@ export default function Modal({ children, isOpen, onClose }: Props) {
    */
   const handlePreventStopPropagation: MouseEventHandler<HTMLDivElement> = event => event.stopPropagation();
 
-  if (!isOpen) return null;
-
   return (
-    <div
-      className={cn('fixed inset-0 z-50 flex items-center justify-center', 'cursor-default bg-black/80')}
-      onClick={onClose}
-    >
-      <div onClick={handlePreventStopPropagation}>{children}</div>
-    </div>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className={cn('fixed inset-0 z-50 flex items-center justify-center', 'cursor-default bg-black/80')}
+          onClick={onClose}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <div onClick={handlePreventStopPropagation}>{children}</div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
