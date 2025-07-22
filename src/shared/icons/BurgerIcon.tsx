@@ -2,7 +2,8 @@ import { PropsWithClassName } from '@/shared/utils/types';
 
 /**
  * Burger icon.
- * @param {PropsWithClassName} props - Props with className.
+ * @param props Props with className.
+ * @param props.className The className for the icon.
  */
 export default function BurgerIcon({ className }: PropsWithClassName) {
   return (
