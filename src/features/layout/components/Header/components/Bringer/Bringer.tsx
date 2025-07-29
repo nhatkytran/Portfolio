@@ -1,10 +1,11 @@
 import { BringerIcon } from '@/shared/icons';
 import { cn } from '@/shared/utils/helpers';
+import { PropsWithClassName } from '@/shared/utils/types';
 
 /** Bringer - Night / Dawn. */
-export default function Bringer() {
+export default function Bringer({ className }: PropsWithClassName) {
   return (
-    <div className="group relative flex cursor-pointer items-center gap-1 p-1.5">
+    <div className={cn('group relative flex cursor-pointer items-center gap-1 p-1.5', className)}>
       <span className={cn('font-riot-bold text-sm tracking-[0.2em] uppercase', 'group-hover:text-sky-400')}>
         To.Dawn
       </span>

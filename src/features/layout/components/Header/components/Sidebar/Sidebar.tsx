@@ -16,7 +16,7 @@ export default function Sidebar() {
   const { isOpen, handleOpen, handleClose } = useOpen();
 
   return (
-    <>
+    <div className="lg:hidden">
       <div className="flex cursor-pointer items-center fill-neutral-800" onClick={handleOpen}>
         <BurgerIcon className="size-10" />
       </div>
@@ -25,8 +25,8 @@ export default function Sidebar() {
         className={cn(
           'h-full w-full max-w-[492px]',
           'fixed top-0 right-0 flex translate-x-full flex-col justify-between',
-          'z-60 bg-white px-6 pb-4 text-black transition-transform duration-250',
-          'xs:px-8',
+          'z-60 bg-white px-4 pb-4 text-black transition-transform duration-250',
+          'xxs:px-6 xs:px-8',
           isOpen && 'translate-x-0',
         )}
       >
@@ -75,6 +75,6 @@ export default function Sidebar() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

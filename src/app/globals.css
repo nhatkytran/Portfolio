@@ -112,6 +112,7 @@
 }
 
 @theme inline {
+  --breakpoint-xxs: 24rem;
   --breakpoint-xs: 30rem;
 
   --color-yellow-sun-glow: var(--yellow-sun-glow);
