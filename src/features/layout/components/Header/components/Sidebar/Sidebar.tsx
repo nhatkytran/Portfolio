@@ -15,68 +15,66 @@ export default function Sidebar() {
   const pathname = usePathname();
   const { isOpen, handleOpen, handleClose } = useOpen();
 
-  console.log('Pathname: ', pathname);
-
   return (
     <>
       <div className="flex cursor-pointer items-center fill-neutral-800" onClick={handleOpen}>
         <BurgerIcon className="size-10" />
       </div>
-      <Modal isOpen={true} onClose={handleClose}>
-        <div
-          className={cn(
-            'h-full w-full max-w-[492px] flex-col justify-between',
-            'absolute top-0 right-0 flex',
-            'bg-white px-6 pb-4 text-black',
-            'xs:px-8',
-          )}
-        >
-          <div>
-            <div className="flex items-center justify-between py-4">
-              <div className="flex items-center gap-4">
-                <div className="cursor-pointer p-1">
-                  <ArrowLeftIcon />
-                </div>
-                <div className="flex items-center gap-2 tracking-wider uppercase">
-                  <p className="font-riot-regular text-xl">/</p>
-                  <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">Ky Tran</p>
-                </div>
-              </div>
-              <div
-                className={cn('flex items-center', 'cursor-pointer rounded-md bg-neutral-100 p-0.5')}
-                onClick={handleOpen}
-              >
-                <CloseIcon className="size-8 stroke-neutral-900" />
+      <Modal isOpen={isOpen} onClose={handleClose} />
+      <div
+        className={cn(
+          'h-full w-full max-w-[492px]',
+          'fixed top-0 right-0 flex translate-x-full flex-col justify-between',
+          'z-60 bg-white px-6 pb-4 text-black transition-transform duration-250',
+          'xs:px-8',
+          isOpen && 'translate-x-0',
+        )}
+      >
+        <div>
+          <div className="flex items-center justify-between py-4">
+            <div className="flex items-center gap-4">
+              <Link href="/" className="cursor-pointer p-1" onClick={handleClose}>
+                <ArrowLeftIcon />
+              </Link>
+              <div className="flex items-center gap-2 tracking-wider uppercase">
+                <p className="font-riot-regular text-xl">/</p>
+                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">Ky Tran</p>
               </div>
             </div>
-            <Divider />
-            <ul className="flex flex-col gap-1.5 py-7">
-              {appNavigationLinks.map(({ href, label }) => (
-                <li key={href}>
-                  <Link href={href} className="group flex items-center justify-between py-3">
-                    <span
-                      className={cn(
-                        'font-inter text-sm font-semibold tracking-widest uppercase',
-                        'group-hover:underline group-hover:underline-offset-4',
-                        pathname === href && 'text-yellow-amber-honey',
-                      )}
-                    >
-                      {label}
-                    </span>
-                    <TriangleDownIcon className="rotate-[-90deg] opacity-60" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div
+              onClick={handleClose}
+              className={cn('flex items-center', 'cursor-pointer rounded-md bg-neutral-100 p-0.5')}
+            >
+              <CloseIcon className="size-8 stroke-neutral-900" />
+            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <Divider />
-            <p className="font-riot-bold-italic text-right text-sm tracking-widest text-red-600">
-              -- Live on the dark side --
-            </p>
-          </div>
+          <Divider />
+          <ul className="flex flex-col gap-1.5 py-7">
+            {appNavigationLinks.map(({ href, label }) => (
+              <li key={href}>
+                <Link href={href} onClick={handleClose} className="group flex items-center justify-between py-3">
+                  <span
+                    className={cn(
+                      'font-inter text-sm font-semibold tracking-widest uppercase',
+                      'group-hover:underline group-hover:underline-offset-4',
+                      pathname === href && 'text-yellow-amber-honey',
+                    )}
+                  >
+                    {label}
+                  </span>
+                  <TriangleDownIcon className="rotate-[-90deg] opacity-60" />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </Modal>
+        <div className="flex flex-col gap-2">
+          <Divider />
+          <p className="font-riot-bold-italic text-right text-sm tracking-widest text-red-600">
+            -- Live on the dark side --
+          </p>
+        </div>
+      </div>
     </>
   );
 }
