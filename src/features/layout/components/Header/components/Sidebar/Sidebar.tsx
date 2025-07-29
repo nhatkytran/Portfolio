@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { cn } from '@/shared/utils/helpers';
-import { useOpen } from '@/shared/hooks';
-import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
+import { BREAK_POINTS, CONTENTS } from '@/shared/constants';
 import { appNavigationLinks } from '@/features/layout/data/appNavigationLinks';
+import { useOpen, useWindowEventListener } from '@/shared/hooks';
+import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
 import Modal from '@/features/utilities/components/Modal';
 import Divider from '@/shared/components/Divider';
 
@@ -14,6 +15,18 @@ import Divider from '@/shared/components/Divider';
 export default function Sidebar() {
   const pathname = usePathname();
   const { isOpen, handleOpen, handleClose } = useOpen();
+
+  /** Auto close sidebar when window size is greater than lg breakpoint. */
+  const handleAutoClose = () => {
+    if (isOpen && window.innerWidth >= BREAK_POINTS.LG) {
+      handleClose();
+    }
+  };
+
+  useWindowEventListener({
+    eventName: 'resize',
+    handler: handleAutoClose,
+  });
 
   return (
     <div className="lg:hidden">
@@ -38,7 +51,7 @@ export default function Sidebar() {
               </Link>
               <div className="flex items-center gap-2 tracking-wider uppercase">
                 <p className="font-riot-regular text-xl">/</p>
-                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">Ky Tran</p>
+                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">{CONTENTS.ENGLISH_NAME}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
