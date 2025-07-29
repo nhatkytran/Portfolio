@@ -1,12 +1,21 @@
 'use client';
 
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { cn } from '@/shared/utils/helpers';
 import { useOpen } from '@/shared/hooks';
-import { ArrowLeft, BurgerIcon } from '@/shared/icons';
+import { ArrowLeftIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
+import { appNavigationLinks } from '@/features/layout/data/appNavigationLinks';
 import Modal from '@/features/utilities/components/Modal';
+import Divider from '@/shared/components/Divider';
 
 /** Sidebar. */
 export default function Sidebar() {
+  const pathname = usePathname();
   const { isOpen, handleOpen, handleClose } = useOpen();
+
+  console.log('Pathname: ', pathname);
 
   return (
     <>
@@ -14,17 +23,58 @@ export default function Sidebar() {
         <BurgerIcon className="size-10" />
       </div>
       <Modal isOpen={true} onClose={handleClose}>
-        <div className="absolute top-0 right-0 h-full w-full max-w-[492px] bg-white px-8">
-          <div className="flex items-center gap-4 py-4">
-            <div className="cursor-pointer p-1">
-              <ArrowLeft />
+        <div
+          className={cn(
+            'h-full w-full max-w-[492px] flex-col justify-between',
+            'absolute top-0 right-0 flex',
+            'bg-white px-6 pb-4 text-black',
+            'xs:px-8',
+          )}
+        >
+          <div>
+            <div className="flex items-center justify-between py-4">
+              <div className="flex items-center gap-4">
+                <div className="cursor-pointer p-1">
+                  <ArrowLeftIcon />
+                </div>
+                <div className="flex items-center gap-2 tracking-wider uppercase">
+                  <p className="font-riot-regular text-xl">/</p>
+                  <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">Ky Tran</p>
+                </div>
+              </div>
+              <div
+                className={cn('flex items-center', 'cursor-pointer rounded-md bg-neutral-100 p-0.5')}
+                onClick={handleOpen}
+              >
+                <CloseIcon className="size-8 stroke-neutral-900" />
+              </div>
             </div>
-            <div className="flex items-center gap-2 tracking-wider text-black uppercase">
-              <p className="font-riot-regular text-xl">/</p>
-              <p className="font-riot-bold text-sm">Ky Tran</p>
-            </div>
+            <Divider />
+            <ul className="flex flex-col gap-1.5 py-7">
+              {appNavigationLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className="group flex items-center justify-between py-3">
+                    <span
+                      className={cn(
+                        'font-inter text-sm font-semibold tracking-widest uppercase',
+                        'group-hover:underline group-hover:underline-offset-4',
+                        pathname === href && 'text-yellow-amber-honey',
+                      )}
+                    >
+                      {label}
+                    </span>
+                    <TriangleDownIcon className="rotate-[-90deg] opacity-60" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div>List</div>
+          <div className="flex flex-col gap-2">
+            <Divider />
+            <p className="font-riot-bold-italic text-right text-sm tracking-widest text-red-600">
+              -- Live on the dark side --
+            </p>
+          </div>
         </div>
       </Modal>
     </>

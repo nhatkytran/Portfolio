@@ -112,6 +112,8 @@
 }
 
 @theme inline {
+  --breakpoint-xs: 30rem;
+
   --color-yellow-sun-glow: var(--yellow-sun-glow);
   --color-yellow-golden-sand: var(--yellow-golden-sand);
   --color-yellow-harvest-wheat: var(--yellow-harvest-wheat);

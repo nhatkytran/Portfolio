@@ -1,11 +1,11 @@
 import { PropsWithClassName } from '@/shared/utils/types';
 
 /**
- * Name logo support icon.
+ * Bringer icon.
  * @param props Props with className.
  * @param props.className The className for the icon.
  */
-export default function NameLogoSupport({ className }: PropsWithClassName) {
+export default function BringerIcon({ className }: PropsWithClassName) {
   return (
     <svg
       width={20}
