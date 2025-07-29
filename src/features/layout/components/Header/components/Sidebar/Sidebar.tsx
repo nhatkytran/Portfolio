@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/shared/utils/helpers';
 import { useOpen } from '@/shared/hooks';
-import { ArrowLeftIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
+import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
 import { appNavigationLinks } from '@/features/layout/data/appNavigationLinks';
 import Modal from '@/features/utilities/components/Modal';
 import Divider from '@/shared/components/Divider';
@@ -41,11 +41,14 @@ export default function Sidebar() {
                 <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">Ky Tran</p>
               </div>
             </div>
-            <div
-              onClick={handleClose}
-              className={cn('flex items-center', 'cursor-pointer rounded-md bg-neutral-100 p-0.5')}
-            >
-              <CloseIcon className="size-8 stroke-neutral-900" />
+            <div className="flex items-center gap-2">
+              <BringerIcon className={cn('size-8 cursor-pointer fill-sky-400', 'hover:fill-sky-500', 'sm:hidden')} />
+              <div
+                onClick={handleClose}
+                className={cn('flex items-center', 'cursor-pointer rounded-md bg-neutral-100 p-0.5')}
+              >
+                <CloseIcon className="size-8 stroke-neutral-900" />
+              </div>
             </div>
           </div>
           <Divider />
