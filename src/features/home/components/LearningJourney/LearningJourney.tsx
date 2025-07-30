@@ -1,12 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import { type ValueOf } from '@/shared/utils/types';
-import { DISPLAY_SCREEN } from '@/shared/constants';
-import { cn, getResponsiveDisplay } from '@/shared/utils/helpers';
-import { useWindowEventListener } from '@/shared/hooks';
+import { cn } from '@/shared/utils/helpers';
+import { useResponsiveDisplay } from '@/shared/hooks';
 import { HeartIcon, JavaScriptIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
+import { DISPLAY_SCREEN } from '@/shared/constants';
 
 const learnings = [
   { name: 'Coding - JavaScript Full Stack', Icon: JavaScriptIcon },
@@ -17,24 +14,7 @@ const learnings = [
 
 /** Learning journey. */
 export default function LearningJourney() {
-  const [display, setDisplay] = useState<ValueOf<typeof DISPLAY_SCREEN> | null>(null);
-
-  /** Handle responsive. */
-  const handleResponsive = () => {
-    const responsiveDisplay = getResponsiveDisplay(window.innerWidth);
-    setDisplay(responsiveDisplay);
-  };
-
-  /** Handles responsive on resize event. */
-  useWindowEventListener({
-    eventName: 'resize',
-    handler: handleResponsive,
-  });
-
-  /** Handles responsive at first render. */
-  useEffect(() => {
-    handleResponsive();
-  }, []);
+  const { display } = useResponsiveDisplay();
 
   if (display == null) {
     return null;
