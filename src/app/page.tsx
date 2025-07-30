@@ -21,18 +21,20 @@ export default function Home() {
           </div>
           <ul className="grid grid-cols-4 gap-6">
             {learnings.map(({ name, Icon }) => (
-              <li key={name} className="flex min-h-[92px] overflow-hidden rounded-sm bg-neutral-100">
-                <div className={cn('flex items-center justify-center', 'learning-item-clip-path w-14 bg-red-600')}>
-                  <Icon />
+              <li key={name} className="learning-item-bg-hover rounded-md p-0.5 transition duration-100">
+                <div className="flex h-full min-h-[100px] overflow-hidden rounded-md border-2 border-white bg-neutral-100 hover:rounded-sm">
+                  <div className={cn('flex items-center justify-center', 'learning-item-clip-path w-14 bg-red-600')}>
+                    <Icon />
+                  </div>
+                  <p
+                    className={cn(
+                      'flex flex-1 items-center justify-center',
+                      'font-inter px-4 py-2 text-lg font-bold tracking-wider',
+                    )}
+                  >
+                    {name}
+                  </p>
                 </div>
-                <p
-                  className={cn(
-                    'flex flex-1 items-center justify-center',
-                    'font-inter px-4 py-2 text-lg font-bold tracking-wider',
-                  )}
-                >
-                  {name}
-                </p>
               </li>
             ))}
           </ul>
