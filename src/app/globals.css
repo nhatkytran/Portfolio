@@ -186,4 +186,12 @@
   --font-beaufort-bold-italic: var(--font-beaufort-bold-italic);
   --font-beaufort-heavy: var(--font-beaufort-heavy);
   --font-beaufort-heavy-italic: var(--font-beaufort-heavy-italic);
+
+  --spacing-8xl: 84.5rem;
+}
+
+@layer utilities {
+  .learning-item-clip-path {
+    clip-path: polygon(0px 0px, 100% 0px, 82% 100%, 0% 100%);
+  }
 }

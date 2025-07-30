@@ -21,6 +21,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={cn(getFontsVariables(fonts), 'font-spiegel-regular antialiased')}>
         <Header />
         {children}
+        <div className="h-[320px] bg-neutral-900">Footer</div>
       </body>
     </html>
   );

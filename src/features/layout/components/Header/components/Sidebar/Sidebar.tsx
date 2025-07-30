@@ -29,12 +29,12 @@ export default function Sidebar() {
   });
 
   return (
-    <div className="lg:hidden">
-      <div className="flex cursor-pointer items-center fill-neutral-800" onClick={handleOpen}>
+    <>
+      <div className="flex cursor-pointer items-center fill-neutral-800 lg:hidden" onClick={handleOpen}>
         <BurgerIcon className="size-10" />
       </div>
       <Modal isOpen={isOpen} onClose={handleClose} />
-      <div
+      <aside
         className={cn(
           'h-full w-full max-w-[492px]',
           'fixed top-0 right-0 flex translate-x-full flex-col justify-between',
@@ -90,7 +90,7 @@ export default function Sidebar() {
             -- Live on the dark side --
           </p>
         </div>
-      </div>
-    </div>
+      </aside>
+    </>
   );
 }
