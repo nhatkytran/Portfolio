@@ -35,7 +35,14 @@ const riotBoldItalic = localFont({
   fallback: ['Arial', 'sans-serif'],
 });
 
-const riotFonts = [riotRegular, riotItalic, riotBold, riotBoldItalic];
+const riotSansBold = localFont({
+  src: '../../../public/fonts/Riot/Riot-Sans-Bold.woff2',
+  variable: '--font-riot-sans-bold',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const riotFonts = [riotRegular, riotItalic, riotBold, riotBoldItalic, riotSansBold];
 
 const spiegelRegular = localFont({
   src: '../../../public/fonts/Spiegel/Spiegel-Regular.ttf',

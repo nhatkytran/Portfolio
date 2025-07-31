@@ -38,7 +38,7 @@ export default function Sidebar() {
         className={cn(
           'h-full w-full max-w-[492px]',
           'fixed top-0 right-0 flex translate-x-full flex-col justify-between',
-          'z-60 bg-white px-4 pb-4 text-black transition-transform duration-250',
+          'z-60 overflow-y-auto bg-white px-4 pb-4 text-black transition-transform duration-250',
           'xxs:px-6 xs:px-8',
           isOpen && 'translate-x-0',
         )}

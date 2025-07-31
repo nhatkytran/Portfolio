@@ -14,7 +14,7 @@ export default function Logo() {
       <div className={cn('flex items-center gap-0.5', 'relative top-0.25')}>
         <BringerIcon className="size-2.5 fill-red-600" />
         {/* TODO (Ky Tran): Dark light mode text Nightbringer / Dawnbringer. */}
-        <span className="font-riot-bold text-[10px] tracking-wider text-red-600 uppercase">Nightbringer</span>
+        <span className="font-riot-sans-bold text-[10px] tracking-wider text-red-600 uppercase">Nightbringer</span>
       </div>
     </div>
   );

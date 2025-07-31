@@ -25,6 +25,7 @@
     --neutral-900: #111111;
     --neutral-950: #040404;
 
+    --red-base: #ff0000;
     --red-50: #ffe4e4;
     --red-100: #ffd4d4;
     --red-200: #febcbd;
@@ -114,6 +115,7 @@
 @theme inline {
   --breakpoint-xxs: 24rem;
   --breakpoint-xs: 30rem;
+  --breakpoint-lgx: 70rem;
 
   --color-yellow-sun-glow: var(--yellow-sun-glow);
   --color-yellow-golden-sand: var(--yellow-golden-sand);
@@ -138,6 +140,7 @@
   --color-neutral-900: var(--neutral-900);
   --color-neutral-950: var(--neutral-950);
 
+  --color-red-base: var(--red-base);
   --color-red-50: var(--red-50);
   --color-red-100: var(--red-100);
   --color-red-200: var(--red-200);
@@ -168,6 +171,7 @@
   --font-riot-italic: var(--font-riot-italic);
   --font-riot-bold: var(--font-riot-bold);
   --font-riot-bold-italic: var(--font-riot-bold-italic);
+  --font-riot-sans-bold: var(--font-riot-sans-bold);
 
   --font-spiegel-regular: var(--font-spiegel-regular);
   --font-spiegel-regular-italic: var(--font-spiegel-regular-italic);
