@@ -136,17 +136,16 @@ export default function LearningJourney() {
   }
 
   return (
-    <section className="py-14">
-      <div className="flex flex-col gap-9 px-9">
+    <section className={cn('py-10', 'sm:py-14')}>
+      <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
         <div
           className={cn(
             'relative flex size-full flex-col justify-center gap-2.5',
-            'overflow-hidden rounded-sm bg-neutral-50 p-9',
+            'overflow-hidden rounded-sm bg-neutral-50 p-6',
+            'sm:p-9',
           )}
         >
-          <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase', 'lgx:text-2xl')}>
-            Learning Journey
-          </h2>
+          <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase')}>Learning Journey</h2>
           <p className="font-inter text-[15px]">Keep pushing forward as a soldier, growing and improving my skills.</p>
           <p className="font-riot-bold text-red-base text-xs tracking-wider">
             &quot;Let the light fade - I was never meant to follow it, only to surpass it.&quot;
@@ -165,7 +164,7 @@ export default function LearningJourney() {
             <LearningBookIcon className="relative left-1" />
           </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-sm bg-neutral-50 px-10 py-6">
+        <div className="flex flex-col gap-6 rounded-sm bg-neutral-50 px-6 py-6 sm:px-10">
           <div className="flex items-center justify-between">
             <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
             <ArrowUpRightIcon className="md:hidden" />
@@ -173,15 +172,22 @@ export default function LearningJourney() {
           <ul className="flex flex-col gap-4">
             {learnings.map(({ name, Icon }) => (
               <li key={name} className="group rounded-sm p-0.5">
-                <div className="flex items-center justify-between rounded-sm bg-white px-6 py-4 group-hover:rounded-xs">
+                <div
+                  className={cn(
+                    'flex flex-col items-start justify-between gap-2',
+                    'rounded-sm bg-white px-6 py-4',
+                    'group-hover:rounded-xs',
+                    'sm:flex-row sm:items-center',
+                  )}
+                >
                   <div className="flex items-center gap-2.5">
-                    <div className="flex size-7.5 items-center justify-center rounded-sm bg-neutral-50">
+                    <div className={cn('flex size-7.5 items-center justify-center', 'rounded-sm bg-neutral-50')}>
                       <Icon {...learningIconsData[name]} />
                     </div>
                     <p className="font-inter text-sm font-semibold tracking-wider text-neutral-900">{name}</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-inter text-sm text-neutral-500 uppercase">On Learning</span>
+                  <div className="flex flex-row-reverse items-center gap-2">
+                    <span className="font-inter text-sm tracking-wider text-neutral-400 uppercase">On Learning</span>
                     <span className="block size-4 rounded-full bg-lime-400" />
                   </div>
                 </div>
