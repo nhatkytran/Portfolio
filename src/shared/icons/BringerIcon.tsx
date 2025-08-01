@@ -1,10 +1,6 @@
 import { PropsWithClassName } from '@/shared/utils/types';
 
-/**
- * Bringer icon.
- * @param props Props with className.
- * @param props.className The className for the icon.
- */
+/** Bringer icon. */
 export default function BringerIcon({ className }: PropsWithClassName) {
   return (
     <svg

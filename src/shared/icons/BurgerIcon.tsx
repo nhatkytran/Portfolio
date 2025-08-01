@@ -1,10 +1,6 @@
 import { PropsWithClassName } from '@/shared/utils/types';
 
-/**
- * Burger icon.
- * @param props Props with className.
- * @param props.className The className for the icon.
- */
+/** Burger icon. */
 export default function BurgerIcon({ className }: PropsWithClassName) {
   return (
     <svg width={48} height={48} viewBox="0 0 48 48" className={className}>

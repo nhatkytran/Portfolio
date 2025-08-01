@@ -1,10 +1,6 @@
 import { PropsWithClassName } from '@/shared/utils/types';
 
-/**
- * Arrow left icon.
- * @param props - Props with className.
- * @param props.className - The className for the icon.
- */
+/** Arrow left icon. */
 export default function ArrowLeftIcon({ className }: PropsWithClassName) {
   return (
     <svg width={24} height={24} fill="none" role="presentation" xmlns="http://www.w3.org/2000/svg">

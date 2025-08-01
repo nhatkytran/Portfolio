@@ -1,3 +1,4 @@
+// prettier-ignore
 /** Props with className. */
 export type PropsWithClassName<P = unknown> = P & {
 
