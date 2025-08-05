@@ -3,6 +3,7 @@
 import Link from 'next/link';
 
 import LearningJourneyLargeDesktop from './components/LearningJourneyLargeDesktop';
+import LearningJourneyDesktop from './components/LearningJourneyDesktop';
 
 import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay } from '@/shared/hooks';
@@ -53,59 +54,7 @@ export default function LearningJourney() {
   }
 
   if (display === DISPLAY_SCREEN.DESKTOP) {
-    return (
-      <section className="flex items-center justify-center py-20">
-        <div className="flex w-full gap-5 px-9">
-          <div className="rounded-sm p-1">
-            <div className="relative flex size-full flex-col justify-center gap-2.5 rounded-sm bg-neutral-50 p-9">
-              <Link href="/learning-journey" className="absolute top-4 right-4 rounded-sm p-1 hover:bg-neutral-200">
-                <ArrowExploreIcon fill="#f03647" />
-              </Link>
-              <h2 className="font-riot-sans-bold lgx:text-2xl text-xl font-normal tracking-wider uppercase">
-                Learning Journey
-              </h2>
-              <p className="font-inter text-[15px]">
-                Keep pushing forward as a soldier, growing and improving my skills.
-              </p>
-              <p className="font-riot-bold text-red-base text-xs tracking-wider">
-                &quot;Let the light fade - I was never meant to follow it, only to surpass it.&quot;
-              </p>
-              {/* <p className="font-riot-bold text-xs text-blue-600">
-                &quot;Let the darkness come - I was not shaped to fear it, only to outshine it.&quot;
-              </p> */}
-            </div>
-          </div>
-          <ul className="grid min-w-[590px] grid-cols-2 gap-4">
-            {learnings.map(({ name, Icon }) => (
-              <li
-                key={name}
-                className={cn('learning-item-bg-hover', 'min-w-[284px] rounded-md p-0.5 transition duration-100')}
-              >
-                <div
-                  className={cn(
-                    'flex h-full min-h-[100px]',
-                    'overflow-hidden rounded-md border-2 border-white bg-neutral-50',
-                    'hover:rounded-sm',
-                  )}
-                >
-                  <div className={cn('flex items-center justify-center', 'learning-item-clip-path w-14 bg-red-600')}>
-                    <Icon />
-                  </div>
-                  <p
-                    className={cn(
-                      'flex flex-1 items-center justify-center',
-                      'font-inter lgx:text-lg px-4 py-2 text-base font-bold tracking-wider',
-                    )}
-                  >
-                    {name}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-    );
+    return <LearningJourneyDesktop />;
   }
 
   return (

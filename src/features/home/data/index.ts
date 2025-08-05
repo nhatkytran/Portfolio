@@ -24,3 +24,7 @@ export const LEARNINGS: readonly Learning[] = [
 /** Learning journey night bringer quote. */
 export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE =
   'Let the light fade - I was never meant to follow it, only to surpass it.';
+
+/** Learning journey dawn bringer quote. */
+export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE =
+  'Let the darkness come - I was not shaped to fear it, only to outshine it.';
