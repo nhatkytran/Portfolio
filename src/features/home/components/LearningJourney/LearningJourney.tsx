@@ -1,8 +1,10 @@
 'use client';
 
+import Link from 'next/link';
+
 import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay } from '@/shared/hooks';
-import { ArrowUpRightIcon, HeartIcon, JavaScriptIcon, LanguageIcon, LearningBookIcon, MusicIcon } from '@/shared/icons';
+import { ArrowExploreIcon, HeartIcon, JavaScriptIcon, LanguageIcon, LearningBookIcon, MusicIcon } from '@/shared/icons';
 import { LearningIconProps } from '@/shared/utils/types';
 import { DISPLAY_SCREEN } from '@/shared/constants';
 
@@ -48,9 +50,15 @@ export default function LearningJourney() {
     return (
       <section className="flex items-center justify-center pt-20 pb-24">
         <div className="max-w-8xl flex w-full flex-col gap-10 px-9">
-          <div className="flex flex-col gap-4">
+          <div className="relative flex flex-col gap-4">
             <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
             <p className="font-inter text-base">Keep pushing forward as a soldier, growing and improving my skills.</p>
+            <Link href="/learning-journey" className="absolute top-4 right-0 flex items-center gap-1 rounded-sm p-1">
+              <ArrowExploreIcon fill="#e80029" />
+              <p className="font-inter hidden text-sm font-semibold text-red-600 uppercase underline sm:block">
+                Full site
+              </p>
+            </Link>
           </div>
           <ul className="grid grid-cols-4 gap-5">
             {learnings.map(({ name, Icon }) => (
@@ -77,6 +85,11 @@ export default function LearningJourney() {
               </li>
             ))}
           </ul>
+          <div className="flex flex-col gap-6">
+            <p className="font-riot-bold text-red-base text-sm tracking-wider">
+              &quot;Let the light fade - I was never meant to follow it, only to surpass it.&quot;
+            </p>
+          </div>
         </div>
       </section>
     );
@@ -87,7 +100,10 @@ export default function LearningJourney() {
       <section className="flex items-center justify-center py-20">
         <div className="flex w-full gap-5 px-9">
           <div className="rounded-sm p-1">
-            <div className="flex size-full flex-col justify-center gap-2.5 rounded-sm bg-neutral-50 p-9">
+            <div className="relative flex size-full flex-col justify-center gap-2.5 rounded-sm bg-neutral-50 p-9">
+              <Link href="/learning-journey" className="absolute top-4 right-4 rounded-sm p-1 hover:bg-neutral-200">
+                <ArrowExploreIcon fill="#f03647" />
+              </Link>
               <h2 className="font-riot-sans-bold lgx:text-2xl text-xl font-normal tracking-wider uppercase">
                 Learning Journey
               </h2>
@@ -167,7 +183,14 @@ export default function LearningJourney() {
         <div className="flex flex-col gap-6 rounded-sm bg-neutral-50 px-6 py-6 sm:px-10">
           <div className="flex items-center justify-between">
             <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
-            <ArrowUpRightIcon className="md:hidden" />
+            {/* TODO (Ky Tran): Implement learning journey page. */}
+            <Link
+              href="/learning-journey"
+              className={cn('flex items-center gap-1.5 rounded-sm bg-neutral-200 p-1', 'sm:bg-transparent sm:p-0')}
+            >
+              <p className="font-inter hidden text-sm font-bold text-red-600 uppercase sm:block">Full site</p>
+              <ArrowExploreIcon fill="#e80029" />
+            </Link>
           </div>
           <ul className="flex flex-col gap-4">
             {learnings.map(({ name, Icon }) => (

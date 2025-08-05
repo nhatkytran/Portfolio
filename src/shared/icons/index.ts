@@ -1,5 +1,5 @@
+import ArrowExploreIcon from './ArrowExploreIcon';
 import ArrowLeftIcon from './ArrowLeftIcon';
-import ArrowUpRightIcon from './ArrowUpRightIcon';
 import BringerIcon from './BringerIcon';
 import BurgerIcon from './BurgerIcon';
 import CloseIcon from './CloseIcon';
@@ -11,8 +11,8 @@ import MusicIcon from './MusicIcon';
 import TriangleDownIcon from './TriangleDownIcon';
 
 export {
+  ArrowExploreIcon,
   ArrowLeftIcon,
-  ArrowUpRightIcon,
   BringerIcon,
   BurgerIcon,
   CloseIcon,
