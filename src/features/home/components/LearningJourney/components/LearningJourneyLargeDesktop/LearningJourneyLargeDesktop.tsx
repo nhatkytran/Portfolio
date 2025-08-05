@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
-import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNINGS } from '@/features/home/data';
+import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNINGS } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey large desktop. */
@@ -11,7 +11,7 @@ export default function LearningJourneyLargeDesktop() {
       <div className="max-w-8xl flex w-full flex-col gap-10 px-9">
         <div className="relative flex flex-col gap-4">
           <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
-          <p className="font-inter text-base">Keep pushing forward as a soldier, growing and improving my skills.</p>
+          <p className="font-inter text-base">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
           <Link
             href="/learning-journey"
             className={cn('flex items-center gap-1', 'absolute top-4 right-0 rounded-sm p-1')}

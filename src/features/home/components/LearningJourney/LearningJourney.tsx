@@ -1,45 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-
 import LearningJourneyLargeDesktop from './components/LearningJourneyLargeDesktop';
 import LearningJourneyDesktop from './components/LearningJourneyDesktop';
+import LearningJourneyMobile from './components/LearningJourneyMobile';
 
-import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay } from '@/shared/hooks';
-import { ArrowExploreIcon, HeartIcon, JavaScriptIcon, LanguageIcon, LearningBookIcon, MusicIcon } from '@/shared/icons';
-import { LearningIconProps } from '@/shared/utils/types';
 import { DISPLAY_SCREEN } from '@/shared/constants';
-
-const learnings = [
-  { name: 'Coding - Full Stack Developer', Icon: JavaScriptIcon },
-  { name: 'Language - English and Chinese', Icon: LanguageIcon },
-  { name: 'Music - Piano and Guitar', Icon: MusicIcon },
-  { name: 'Health - Fitness and Nutrition', Icon: HeartIcon },
-];
-
-const learningIconsData: Record<string, LearningIconProps> = {
-  ['Coding - Full Stack Developer']: {
-    width: 18,
-    height: 18,
-    fill: '#111111',
-  },
-  ['Language - English and Chinese']: {
-    width: 16,
-    height: 16,
-    fill: '#111111',
-  },
-  ['Music - Piano and Guitar']: {
-    width: 17,
-    height: 17,
-    fill: '#111111',
-  },
-  ['Health - Fitness and Nutrition']: {
-    width: 13,
-    height: 14,
-    fill: '#111111',
-  },
-};
 
 /** Learning journey. */
 export default function LearningJourney() {
@@ -57,74 +23,5 @@ export default function LearningJourney() {
     return <LearningJourneyDesktop />;
   }
 
-  return (
-    <section className={cn('py-10', 'sm:py-14')}>
-      <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
-        <div
-          className={cn(
-            'relative flex size-full flex-col justify-center gap-2.5',
-            'overflow-hidden rounded-sm bg-neutral-50 p-6',
-            'sm:p-9',
-          )}
-        >
-          <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase')}>Learning Journey</h2>
-          <p className="font-inter text-[15px]">Keep pushing forward as a soldier, growing and improving my skills.</p>
-          <p className="font-riot-bold text-red-base text-xs tracking-wider">
-            &quot;Let the light fade - I was never meant to follow it, only to surpass it.&quot;
-          </p>
-          {/* <p className="font-riot-bold text-xs text-blue-600">
-                &quot;Let the darkness come - I was not shaped to fear it, only to outshine it.&quot;
-              </p> */}
-          <div
-            className={cn(
-              'learning-journey-clip-path',
-              'h-full w-32',
-              'absolute top-0 right-0 hidden bg-red-600',
-              'md:flex md:items-center md:justify-center',
-            )}
-          >
-            <LearningBookIcon className="relative left-1" />
-          </div>
-        </div>
-        <div className="flex flex-col gap-6 rounded-sm bg-neutral-50 px-6 py-6 sm:px-10">
-          <div className="flex items-center justify-between">
-            <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
-            {/* TODO (Ky Tran): Implement learning journey page. */}
-            <Link
-              href="/learning-journey"
-              className={cn('flex items-center gap-1.5 rounded-sm bg-neutral-200 p-1', 'sm:bg-transparent sm:p-0')}
-            >
-              <p className="font-inter hidden text-sm font-bold text-red-600 uppercase sm:block">Full site</p>
-              <ArrowExploreIcon fill="#e80029" />
-            </Link>
-          </div>
-          <ul className="flex flex-col gap-4">
-            {learnings.map(({ name, Icon }) => (
-              <li key={name} className="group rounded-sm p-0.5">
-                <div
-                  className={cn(
-                    'flex flex-col items-start justify-between gap-2',
-                    'rounded-sm bg-white px-6 py-4',
-                    'group-hover:rounded-xs',
-                    'sm:flex-row sm:items-center',
-                  )}
-                >
-                  <div className="flex items-center gap-2.5">
-                    <div className={cn('flex size-7.5 items-center justify-center', 'rounded-sm bg-neutral-50')}>
-                      <Icon {...learningIconsData[name]} />
-                    </div>
-                    <p className="font-inter text-sm font-semibold tracking-wider text-neutral-900">{name}</p>
-                  </div>
-                  <div className="flex flex-row-reverse items-center gap-2">
-                    <span className="font-inter text-sm tracking-wider text-neutral-400 uppercase">On Learning</span>
-                    <span className="block size-4 rounded-full bg-lime-400" />
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
+  return <LearningJourneyMobile />;
 }

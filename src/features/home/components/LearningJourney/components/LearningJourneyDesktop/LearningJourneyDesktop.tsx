@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
-import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNINGS } from '@/features/home/data';
+import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNINGS } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey desktop. */
@@ -22,9 +22,7 @@ export default function LearningJourneyDesktop() {
             <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase', 'lgx:text-2xl')}>
               Learning Journey
             </h2>
-            <p className="font-inter text-[15px]">
-              Keep pushing forward as a soldier, growing and improving my skills.
-            </p>
+            <p className="font-inter text-[15px]">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
             <p className="font-riot-bold text-red-base text-xs tracking-wider">
               {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
             </p>
