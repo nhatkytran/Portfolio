@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/shared/utils/helpers';
 import { BREAK_POINTS, CONTENTS } from '@/shared/constants';
-import { appNavigationLinks } from '@/features/layout/data/appNavigationLinks';
+import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
 import { useOpen, useWindowEventListener } from '@/shared/hooks';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
 import Modal from '@/features/utilities/components/Modal';
@@ -66,7 +66,7 @@ export default function Sidebar() {
           </div>
           <Divider />
           <ul className="flex flex-col gap-1.5 py-7">
-            {appNavigationLinks.map(({ href, label }) => (
+            {APP_NAVIGATION_LINKS.map(({ href, label }) => (
               <li key={href}>
                 <Link href={href} onClick={handleClose} className="group flex items-center justify-between py-3">
                   <span

@@ -9,7 +9,7 @@ type AppNavigationLink = {
 };
 
 /** App navigation links. */
-export const appNavigationLinks: readonly AppNavigationLink[] = [
+export const APP_NAVIGATION_LINKS: readonly AppNavigationLink[] = [
   { href: '/', label: 'Home' },
   { href: '/skills', label: 'Skills' },
   { href: '/experience', label: 'Experience' },

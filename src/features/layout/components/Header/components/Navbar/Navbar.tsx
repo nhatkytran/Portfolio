@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { cn } from '@/shared/utils/helpers';
-import { appNavigationLinks } from '@/features/layout/data/appNavigationLinks';
+import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
 
 /** Navbar. */
 export default function Navbar() {
@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className={cn('hidden px-6', 'lg:block')}>
       <ul className="flex items-center gap-1">
-        {appNavigationLinks.map(({ href, label }) => (
+        {APP_NAVIGATION_LINKS.map(({ href, label }) => (
           <li key={href} className="group relative">
             <Link href={href} className="block py-3">
               <span
