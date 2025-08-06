@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 
 import { LearningIconProps } from '@/shared/utils/types';
-import { HeartIcon, JavaScriptIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
+import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
 
 // prettier-ignore
 type Learning = {
@@ -15,7 +15,7 @@ type Learning = {
 
 /** Learnings. */
 export const LEARNINGS: readonly Learning[] = [
-  { name: 'Coding - Full Stack Developer', Icon: JavaScriptIcon },
+  { name: 'Coding - Full Stack Developer', Icon: JavaScriptLearningIcon },
   { name: 'Language - English and Chinese', Icon: LanguageIcon },
   { name: 'Music - Piano and Guitar', Icon: MusicIcon },
   { name: 'Health - Fitness and Nutrition', Icon: HeartIcon },

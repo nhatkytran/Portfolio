@@ -1,3 +1,13 @@
+import {
+  CssIcon,
+  HtmlIcon,
+  JavaScriptIcon,
+  NextIcon,
+  ReactIcon,
+  TailwindCssIcon,
+  TypeScriptIcon,
+} from '@/shared/icons';
+
 // prettier-ignore
 type AppNavigationLink = {
 
@@ -14,6 +24,17 @@ export const APP_NAVIGATION_LINKS: readonly AppNavigationLink[] = [
   { href: '/skills', label: 'Skills' },
   { href: '/experience', label: 'Experience' },
   { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/learning', label: 'Learning' },
   { href: '/blogs', label: 'Blogs' },
+];
+
+/** Technology icons. */
+export const TECHNOLOGY_ICONS = [
+  JavaScriptIcon,
+  TypeScriptIcon,
+  ReactIcon,
+  NextIcon,
+  TailwindCssIcon,
+  HtmlIcon,
+  CssIcon,
 ];

@@ -5,6 +5,7 @@ import { fonts } from '@/shared/config';
 import { cn, getFontsVariables } from '@/shared/utils/helpers';
 import { CONTENTS } from '@/shared/constants';
 import Header from '@/features/layout/components/Header';
+import Footer from '@/features/layout/components/Footer';
 
 import './globals.css';
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={cn(getFontsVariables(fonts), 'font-spiegel-regular antialiased')}>
         <Header />
         {children}
-        <div className="h-[320px] bg-neutral-900">Footer</div>
+        <Footer />
       </body>
     </html>
   );
