@@ -39,18 +39,45 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className={cn('flex w-full max-w-6xl justify-center gap-9', 'px-4 py-16', 'xs:px-6', 'sm:px-9')}>
+      <div className={cn('lgx:gap-9 flex w-full max-w-6xl justify-center gap-8', 'px-4 py-16', 'xs:px-6', 'sm:px-9')}>
         {ESSENTIAL_INFORMATION.map(({ label, content, Icon }, index) => (
-          <div key={index} className="flex w-80 gap-4 rounded-sm bg-neutral-800 p-5">
+          <div
+            key={index}
+            className={cn('group relative flex w-80 gap-4', 'overflow-hidden rounded-sm bg-neutral-800 p-5')}
+          >
             <div className="flex items-center justify-center">
               <div className="rounded-full bg-neutral-900 p-4">
                 <Icon />
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-0.5">
+            <div className="z-1 flex flex-col justify-center gap-0.5">
               <p className="font-inter font-semibold tracking-wide text-white">{label}</p>
               <p className="font-inter tracking-wider text-white">{content}</p>
             </div>
+            <div
+              className={cn(
+                'absolute top-0 left-20 z-[0] h-1.5 w-full',
+                '-rotate-75 bg-red-600 transition-all',
+                'lgx:left-25',
+                'group-hover:lgx:left-5 group-hover:left-10',
+              )}
+            />
+            <div
+              className={cn(
+                'absolute top-0 left-25 z-[0] h-1.5 w-full',
+                '-rotate-75 bg-red-600 transition-all',
+                'lgx:left-30',
+                'group-hover:left-20',
+              )}
+            />
+            <div
+              className={cn(
+                'absolute top-0 left-35 z-[0] h-1.5 w-full',
+                '-rotate-75 bg-blue-400 transition-all',
+                'lgx:left-40',
+                'group-hover:lgx:left-43 group-hover:left-40',
+              )}
+            />
           </div>
         ))}
       </div>
