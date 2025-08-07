@@ -6,7 +6,7 @@ export default function NextIcon({ className }: PropsWithClassName) {
     <svg
       width={32}
       height={32}
-      fill="#ffffff"
+      fill="#f5f5f5"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
