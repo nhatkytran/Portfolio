@@ -39,11 +39,20 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className={cn('lgx:gap-9 flex w-full max-w-6xl justify-center gap-8', 'px-4 py-16', 'xs:px-6', 'sm:px-9')}>
+      <div
+        className={cn(
+          'flex w-full max-w-6xl flex-col justify-center gap-8',
+          'px-4 py-16',
+          'xs:px-6',
+          'sm:px-9',
+          'lg:flex-row',
+          'lgx:gap-9',
+        )}
+      >
         {ESSENTIAL_INFORMATION.map(({ label, content, Icon }, index) => (
           <div
             key={index}
-            className={cn('group relative flex w-80 gap-4', 'overflow-hidden rounded-sm bg-neutral-800 p-5')}
+            className={cn('group relative flex gap-4 lg:w-80', 'overflow-hidden rounded-sm bg-neutral-800 p-5')}
           >
             <div className="flex items-center justify-center">
               <div className="rounded-full bg-neutral-900 p-4">
