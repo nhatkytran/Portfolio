@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
 import {
-  LEARNING_ICON_STYLES,
-  LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,
-  LEARNING_JOURNEY_SOLDIER_QUOTE,
   LEARNINGS,
+  LEARNING_ICON_STYLES,
+  LEARNING_JOURNEY_SOLDIER_QUOTE,
+  LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 
@@ -22,7 +22,7 @@ export default function LearningJourneyMobile() {
             'sm:p-9',
           )}
         >
-          <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase')}>Learning Journey</h2>
+          <h2 className="font-riot-sans-bold text-xl font-normal tracking-wider uppercase">Learning Journey</h2>
           <p className="font-inter text-[15px]">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
           <p className="font-riot-bold text-red-base text-xs tracking-wider">{LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}</p>
           <div
@@ -36,7 +36,7 @@ export default function LearningJourneyMobile() {
             <LearningBookIcon className="relative left-1" />
           </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-sm bg-neutral-50 px-6 py-6 sm:px-10">
+        <div className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 py-6', 'sm:px-10')}>
           <div className="flex items-center justify-between">
             <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
             {/* TODO (Ky Tran): Implement learning journey page. */}
@@ -44,7 +44,9 @@ export default function LearningJourneyMobile() {
               href="/learning-journey"
               className={cn('flex items-center gap-1.5 rounded-sm bg-neutral-200 p-1', 'sm:bg-transparent sm:p-0')}
             >
-              <p className="font-inter hidden text-sm font-bold text-red-600 uppercase sm:block">Full site</p>
+              <p className={cn('hidden', 'font-inter text-sm font-bold text-red-600 uppercase', 'sm:block')}>
+                Full site
+              </p>
               <ArrowExploreIcon fill="#e80029" />
             </Link>
           </div>
@@ -54,13 +56,19 @@ export default function LearningJourneyMobile() {
                 <div
                   className={cn(
                     'flex flex-col items-start justify-between gap-2',
-                    'rounded-sm bg-white px-6 py-4',
+                    'rounded-sm bg-white px-5 py-4',
                     'group-hover:rounded-xs',
+                    'xxs:px-6',
                     'sm:flex-row sm:items-center',
                   )}
                 >
-                  <div className="flex items-center gap-2.5">
-                    <div className={cn('flex size-7.5 items-center justify-center', 'rounded-sm bg-neutral-50')}>
+                  <div className={cn('flex items-center gap-2', 'xxs:gap-2.5')}>
+                    <div
+                      className={cn(
+                        'flex size-7.5 flex-shrink-0 items-center justify-center',
+                        'rounded-sm bg-neutral-50',
+                      )}
+                    >
                       <Icon {...LEARNING_ICON_STYLES[index]} />
                     </div>
                     <p className="font-inter text-sm font-semibold tracking-wider text-neutral-900">{name}</p>
