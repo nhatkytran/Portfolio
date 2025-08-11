@@ -50,8 +50,8 @@ export default function Footer() {
       <div className="flex w-full items-center justify-center bg-neutral-800">
         <div
           className={cn(
-            'flex w-full max-w-4xl items-center justify-between',
-            'px-4 py-5',
+            'flex items-center justify-between',
+            'w-full max-w-4xl px-4 py-5',
             'xs:px-6 xs:py-6',
             'sm:px-9',
             'lg:py-7',
@@ -71,7 +71,7 @@ export default function Footer() {
           'lg:pt-16 lg:pb-8',
         )}
       >
-        <div className={cn('flex w-full max-w-6xl flex-col justify-center gap-6', 'sm:gap-8', 'lg:flex-row')}>
+        <div className={cn('flex flex-col justify-center', 'w-full max-w-6xl gap-6', 'sm:gap-8', 'lg:flex-row')}>
           {ESSENTIAL_INFORMATION.map(({ label, content, Icon }, index) => (
             <div
               key={index}
@@ -87,9 +87,15 @@ export default function Footer() {
                   <Icon />
                 </div>
               </div>
-              <div className="z-1 flex flex-col justify-center gap-0.5">
-                <p className="font-inter text-[15px] font-semibold tracking-wide text-white lg:text-base">{label}</p>
-                <p className="font-inter text-[15px] tracking-wider text-white lg:text-base">{content}</p>
+              <div
+                className={cn(
+                  'flex flex-col justify-center gap-0.5',
+                  'font-inter z-1 text-[15px] text-white',
+                  'lg:text-base',
+                )}
+              >
+                <p className="font-semibold tracking-wide">{label}</p>
+                <p className="tracking-wider">{content}</p>
               </div>
               <div
                 className={cn(
@@ -129,16 +135,16 @@ export default function Footer() {
           ))}
         </div>
         <div className="w-full max-w-2xl">
-          <div className="xs:px-9 relative flex flex-col items-center justify-center gap-1.5 px-2 py-20">
-            <div className="absolute top-0 left-0 z-0 flex size-full items-center justify-center opacity-10">
+          <div className={cn('flex flex-col items-center justify-center gap-1.5', 'relative px-2 py-20', 'xs:px-9')}>
+            <div className={cn('flex items-center justify-center', 'absolute top-0 left-0 z-0 size-full opacity-10')}>
               <RiotGamesIcon
                 className={cn('h-[100px] w-[300px] rotate-287', 'xs:h-[150px] xs:w-[452px] xs:rotate-0')}
               />
             </div>
-            <p className="font-riot-bold relative z-1 text-neutral-300">
+            <p className={cn('relative z-1', 'font-riot-bold text-neutral-300')}>
               Inspired by <span className="text-red-600">Riot Games</span>
             </p>
-            <p className="font-inter relative z-1 text-center text-sm font-semibold text-neutral-400">
+            <p className={cn('relative z-1', 'font-inter text-center text-sm font-semibold text-neutral-400')}>
               This portfolio design was inspired by Riot&apos;s UI/UX. All rights to original assets belong to Riot
               Games. Personal, non-commercial project.
             </p>
@@ -150,7 +156,7 @@ export default function Footer() {
               <Link
                 key={index}
                 href={url}
-                className="group flex items-center justify-center rounded-sm bg-neutral-800 p-2"
+                className={cn('group flex items-center justify-center', 'rounded-sm bg-neutral-800 p-2')}
               >
                 <Icon className={cn('size-6 fill-neutral-300', 'group-hover:fill-white', 'sm:size-7')} />
               </Link>
