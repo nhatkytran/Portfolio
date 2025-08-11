@@ -1,9 +1,9 @@
-import { IconAppearanceProps } from '@/shared/utils/types';
+import { PropsWithClassName } from '@/shared/utils/types';
 
 /** Riot Games icon. */
-export default function RiotGamesIcon({ width = 100, height = 33, fill = '#ffffff' }: IconAppearanceProps) {
+export default function RiotGamesIcon({ className }: PropsWithClassName) {
   return (
-    <svg width={width} height={height} fill={fill} viewBox="0 0 75.89 24">
+    <svg width={100} height={33} fill="#ffffff" className={className} viewBox="0 0 75.89 24">
       <g>
         {/* eslint-disable-next-line max-len */}
         <path d="M69.31 20.67l4.22.71.26 2.63h-6.26l.11-1 4.48-.18v-.48l-4.3-.74.26-2.64h5.21l.1 1.05-4 .15zm-36.23 1.27l.06-1H36l.17 3.06h-6.52l.51-5.08h5.71l.07 1.05-4.43.1-.14 2.79 3.22.09v-1zm27.63.04v.87l4.1.1v1H59l.17-5.08h5.53v1.05l-4.1.09v.89h3.11v1z"></path>
