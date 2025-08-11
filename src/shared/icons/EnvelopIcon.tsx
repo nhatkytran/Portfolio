@@ -1,7 +1,7 @@
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 
 /** Envelop icon. */
-export default function EnvelopIcon({ width = 20, height = 20, fill = '#efefef' }: LearningIconProps) {
+export default function EnvelopIcon({ width = 20, height = 20, fill = '#efefef' }: IconAppearanceProps) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill={fill} viewBox="0 0 20 20">
       {/* eslint-disable-next-line max-len */}

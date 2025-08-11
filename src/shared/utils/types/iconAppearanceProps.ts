@@ -1,6 +1,6 @@
 // prettier-ignore
-/** Learning icon props. */
-export type LearningIconProps = {
+/** Icon appearance props. */
+export type IconAppearanceProps = {
 
   /** Width. */
   readonly width?: number;

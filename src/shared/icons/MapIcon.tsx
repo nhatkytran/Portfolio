@@ -1,7 +1,7 @@
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 
 /** Map icon. */
-export default function MapIcon({ width = 24, height = 24, fill = '#efefef' }: LearningIconProps) {
+export default function MapIcon({ width = 24, height = 24, fill = '#efefef' }: IconAppearanceProps) {
   return (
     <svg width={width} height={height} fill={fill} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       {/* eslint-disable-next-line max-len */}

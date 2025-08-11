@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 import { cn } from '@/shared/utils/helpers';
 import { TECHNOLOGY_ICONS } from '@/features/layout/data';
-import { EnvelopIcon, MapIcon, PhoneIcon } from '@/shared/icons';
+import { EnvelopIcon, GithubIcon, LeetCodeIcon, LinkedInIcon, MapIcon, PhoneIcon, RiotGamesIcon } from '@/shared/icons';
 
 const ESSENTIAL_INFORMATION = [
   {
@@ -24,6 +26,21 @@ const ESSENTIAL_INFORMATION_ICON_STYLES = [
   { width: 44, height: 44 },
   { width: 54, height: 54 },
   { width: 54, height: 54 },
+];
+
+const SOCIAL_MEDIA_ACCOUNTS = [
+  {
+    url: '',
+    Icon: LinkedInIcon,
+  },
+  {
+    url: '',
+    Icon: GithubIcon,
+  },
+  {
+    url: '',
+    Icon: LeetCodeIcon,
+  },
 ];
 
 /** Footer. */
@@ -110,6 +127,28 @@ export default function Footer() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="w-full max-w-2xl">
+        <div className="relative flex flex-col items-center justify-center gap-1.5 px-9 py-20">
+          <div className="absolute top-0 left-0 z-0 flex size-full items-center justify-center opacity-10">
+            <RiotGamesIcon width={452} height={150} />
+          </div>
+          <p className="font-riot-bold relative z-1 text-neutral-300">Inspired by Riot Games</p>
+          <p className="font-inter relative z-1 text-center text-sm font-semibold text-neutral-400">
+            This portfolio design was inspired by Riot&apos;s UI/UX. All rights to original assets belong to Riot Games.
+            Personal, non-commercial project.
+          </p>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4">
+            {SOCIAL_MEDIA_ACCOUNTS.map(({ url, Icon }, index) => (
+              <Link key={index} href={url} className="flex items-center justify-center rounded-sm bg-neutral-800 p-2">
+                <Icon className="size-7 fill-neutral-300" />
+              </Link>
+            ))}
+          </div>
+          <p className="text-center font-semibold text-neutral-600">© 2025 by Ky Tran (nhatky.tran.2002@gmail.com)</p>
+        </div>
       </div>
     </footer>
   );

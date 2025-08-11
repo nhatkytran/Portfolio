@@ -1,7 +1,7 @@
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 
 /** Music icon. */
-export default function MusicIcon({ width = 22, height = 22, fill = '#f1f5f0' }: LearningIconProps) {
+export default function MusicIcon({ width = 22, height = 22, fill = '#f1f5f0' }: IconAppearanceProps) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 512.000000 512.000000">
       <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill={fill} stroke="none">

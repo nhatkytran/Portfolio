@@ -1,7 +1,7 @@
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 
 /** Language icon. */
-export default function LanguageIcon({ width = 21, height = 21, fill = '#f1f5f0' }: LearningIconProps) {
+export default function LanguageIcon({ width = 21, height = 21, fill = '#f1f5f0' }: IconAppearanceProps) {
   return (
     <svg width={width} height={height} fill={fill} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       {/* eslint-disable-next-line max-len */}

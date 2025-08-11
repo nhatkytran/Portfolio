@@ -1,7 +1,7 @@
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 
 /** Heart icon. */
-export default function HeartIcon({ width = 18, height = 19, fill = '#f1f5f0' }: LearningIconProps) {
+export default function HeartIcon({ width = 18, height = 19, fill = '#f1f5f0' }: IconAppearanceProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

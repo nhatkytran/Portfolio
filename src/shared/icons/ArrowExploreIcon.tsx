@@ -1,7 +1,10 @@
-import { PropsWithClassName, LearningIconProps } from '@/shared/utils/types';
+import { PropsWithClassName, IconAppearanceProps } from '@/shared/utils/types';
 
 /** Arrow explore icon. */
-export default function ArrowExploreIcon({ className, fill = 'currentColor' }: PropsWithClassName & LearningIconProps) {
+export default function ArrowExploreIcon({
+  className,
+  fill = 'currentColor',
+}: PropsWithClassName & IconAppearanceProps) {
   return (
     <svg
       width={16}

@@ -1,4 +1,4 @@
-import { LearningIconProps, PropsWithClassName } from '@/shared/utils/types';
+import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
 
 /** Learning book icon. */
 export default function LearningBookIcon({
@@ -6,7 +6,7 @@ export default function LearningBookIcon({
   width = 64,
   height = 54,
   fill = '#f1f5f0',
-}: PropsWithClassName & LearningIconProps) {
+}: PropsWithClassName & IconAppearanceProps) {
   return (
     <svg
       width={width}

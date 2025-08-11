@@ -1,7 +1,7 @@
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 
 /** JavaScript icon. */
-export default function JavaScriptIcon({ width = 23, height = 23, fill = '#f1f5f0' }: LearningIconProps) {
+export default function JavaScriptIcon({ width = 23, height = 23, fill = '#f1f5f0' }: IconAppearanceProps) {
   return (
     <svg
       width={width}

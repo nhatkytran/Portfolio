@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react';
 
-import { LearningIconProps } from '@/shared/utils/types';
+import { IconAppearanceProps } from '@/shared/utils/types';
 import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
 
 // prettier-ignore
@@ -10,7 +10,7 @@ type Learning = {
   readonly name: string;
 
   /** Icon. */
-  readonly Icon: (props: LearningIconProps) => ReactNode;
+  readonly Icon: (props: IconAppearanceProps) => ReactNode;
 };
 
 /** Learnings. */
@@ -22,7 +22,7 @@ export const LEARNINGS: readonly Learning[] = [
 ];
 
 /** Learning icon styles. */
-export const LEARNING_ICON_STYLES: readonly LearningIconProps[] = [
+export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
   {
     width: 18,
     height: 18,
