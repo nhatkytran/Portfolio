@@ -15,7 +15,7 @@ export default function Footer() {
           'w-full px-4 pt-10 pb-5',
           'xs:px-6 xs:gap-2',
           'sm:gap-4 sm:px-9 sm:pt-14 sm:pb-7',
-          'lg:pt-16 lg:pb-8',
+          'lg:gap-6 lg:pt-16 lg:pb-8',
         )}
       >
         <EssentialInformation />

@@ -1,30 +1,6 @@
 import { cn } from '@/shared/utils/helpers';
-import { EnvelopIcon, MapIcon, PhoneIcon } from '@/shared/icons';
+import { ESSENTIAL_INFORMATION, ESSENTIAL_INFORMATION_ICON_STYLES } from '@/features/layout/data';
 import StraightStick from '@/shared/components/StraightStick';
-
-const ESSENTIAL_INFORMATION = [
-  {
-    label: 'Gmail',
-    content: 'nhockktean2@gmail.com',
-    Icon: EnvelopIcon,
-  },
-  {
-    label: 'Location',
-    content: 'Sai Gon, Vietnam',
-    Icon: MapIcon,
-  },
-  {
-    label: 'Phone',
-    content: '(+84) 813 659 939',
-    Icon: PhoneIcon,
-  },
-];
-
-const ESSENTIAL_INFORMATION_ICON_STYLES = [
-  { width: 44, height: 44 },
-  { width: 54, height: 54 },
-  { width: 54, height: 54 },
-];
 
 /** Essential information. */
 export default function EssentialInformation() {
