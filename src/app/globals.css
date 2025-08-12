@@ -1,55 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer base {
-  .dark {
-    --yellow-sun-glow: #e2cf81;
-    --yellow-golden-sand: #ddb05d;
-    --yellow-harvest-wheat: #c8aa6e;
-    --yellow-amber-honey: #c28f2c;
-    --yellow-bronze-caramel: #a57a3a;
-    --yellow-vintage-mustard: #706547;
-    --yellow-burnt-oak: #67471f;
-
-    --white: #000000;
-    --black: #ffffff;
-
-    --neutral-50: #040404;
-    --neutral-100: #111111;
-    --neutral-200: #202020;
-    --neutral-300: #3a3a3a;
-    --neutral-400: #4c4c4c;
-    --neutral-500: #6d6d6d;
-    --neutral-600: #9d9d9d;
-    --neutral-700: #cecece;
-    --neutral-800: #dfdfdf;
-    --neutral-900: #efefef;
-    --neutral-950: #f4f4f4;
-
-    --red-50: #4f060d;
-    --red-100: #89171f;
-    --red-200: #a3071e;
-    --red-300: #c3081f;
-    --red-400: #e80029;
-    --red-500: #f03647;
-    --red-600: #f86374;
-    --red-700: #fb9798;
-    --red-800: #febcbd;
-    --red-900: #ffd4d4;
-    --red-950: #ffe4e4;
-
-    --sky-50: #02383f;
-    --sky-100: #064362;
-    --sky-200: #01528c;
-    --sky-300: #00529d;
-    --sky-400: #007dd2;
-    --sky-500: #08b0f0;
-    --sky-600: #32c8ff;
-    --sky-700: #77dcff;
-    --sky-800: #b4efff;
-    --sky-900: #daf9ff;
-    --sky-950: #eafeff;
-  }
-
   :root {
     --yellow-sun-glow: #e2cf81;
     --yellow-golden-sand: #ddb05d;
@@ -62,7 +13,7 @@
     --white: #ffffff;
     --black: #000000;
 
-    --neutral-50: #f4f4f4;
+    --neutral-50: #f5f5f5;
     --neutral-100: #efefef;
     --neutral-200: #dfdfdf;
     --neutral-300: #cecece;
@@ -74,6 +25,7 @@
     --neutral-900: #111111;
     --neutral-950: #040404;
 
+    --red-base: #ff0000;
     --red-50: #ffe4e4;
     --red-100: #ffd4d4;
     --red-200: #febcbd;
@@ -97,10 +49,74 @@
     --sky-800: #01528c;
     --sky-900: #064362;
     --sky-950: #02383f;
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      /* Creating animations for dark mode. */
+      transition:
+        background-color 0.3s,
+        color 0.3s,
+        border 0.3s,
+        fill 0.3s;
+    }
+
+    *:disabled {
+      cursor: not-allowed;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* TODO (Ky Tran): Set up font family for button and input. */
+    button {
+      cursor: pointer;
+    }
+
+    button,
+    input,
+    select {
+      outline: none;
+      border: none;
+      background-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
   }
 }
 
-@theme {
+@theme inline {
+  --breakpoint-xxs: 24rem; /* 384px */
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-lgx: 70rem; /* 1120px */
+
   --color-yellow-sun-glow: var(--yellow-sun-glow);
   --color-yellow-golden-sand: var(--yellow-golden-sand);
   --color-yellow-harvest-wheat: var(--yellow-harvest-wheat);
@@ -124,6 +140,7 @@
   --color-neutral-900: var(--neutral-900);
   --color-neutral-950: var(--neutral-950);
 
+  --color-red-base: var(--red-base);
   --color-red-50: var(--red-50);
   --color-red-100: var(--red-100);
   --color-red-200: var(--red-200);
@@ -148,10 +165,13 @@
   --color-sky-900: var(--sky-900);
   --color-sky-950: var(--sky-950);
 
+  --font-inter: var(--font-inter);
+
   --font-riot-regular: var(--font-riot-regular);
   --font-riot-italic: var(--font-riot-italic);
   --font-riot-bold: var(--font-riot-bold);
   --font-riot-bold-italic: var(--font-riot-bold-italic);
+  --font-riot-sans-bold: var(--font-riot-sans-bold);
 
   --font-spiegel-regular: var(--font-spiegel-regular);
   --font-spiegel-regular-italic: var(--font-spiegel-regular-italic);
@@ -170,52 +190,24 @@
   --font-beaufort-bold-italic: var(--font-beaufort-bold-italic);
   --font-beaufort-heavy: var(--font-beaufort-heavy);
   --font-beaufort-heavy-italic: var(--font-beaufort-heavy-italic);
+
+  --spacing-8xl: 84.5rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  /* Creating animations for dark mode. */
-  transition: background-color 0.3s, border 0.3s;
-}
+@layer utilities {
+  .learning-item-clip-path {
+    clip-path: polygon(0px 0px, 100% 0px, 82% 100%, 0% 100%);
+  }
 
-*:disabled {
-  cursor: not-allowed;
-}
+  .learning-journey-clip-path {
+    clip-path: polygon(18% 0px, 100% 0px, 100% 100%, 0% 100%);
+  }
 
-body {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+  .learning-item-bg {
+    background: linear-gradient(90deg, rgb(232, 0, 41) 5%, rgb(235, 235, 235) 95%);
+  }
 
-/* TODO (Ky Tran): Set up font family for button and input. */
-button {
-  cursor: pointer;
-}
-
-button, input, select {
-  outline: none;
-  border: none;
-  background-color: transparent;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+  .learning-item-bg-hover:hover {
+    background: linear-gradient(90deg, rgb(232, 0, 41) 5%, rgb(235, 235, 235) 95%);
+  }
 }

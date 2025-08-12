@@ -1,6 +1,11 @@
+import LearningJourney from '@/features/home/components/LearningJourney';
+
 /** Home page. */
 export default function Home() {
   return (
-    <div className="text-black text-8xl">Hello World</div>
+    <>
+      <section className="h-[460px] bg-black"></section>
+      <LearningJourney />
+    </>
   );
 }
