@@ -24,7 +24,7 @@ const TECHNOLOGIES_OVERVIEW = [
 export default function TechnologiesOverview() {
   return (
     <section className={cn('flex items-center justify-center', 'relative bg-black pt-20 pb-24')}>
-      <div className={cn('absolute top-0 right-0 size-28', 'technologies-overview-full-site-clip-path bg-red-600')}>
+      <div className={cn('technologies-overview-full-site-clip-path bg-red-600', 'absolute top-0 right-0 size-28')}>
         <Link href="/skills" className="absolute top-3.5 right-3.5 cursor-pointer p-2">
           <ArrowExploreIcon fill="white" className="size-5" />
         </Link>
@@ -32,23 +32,35 @@ export default function TechnologiesOverview() {
       <div className={cn('max-w-8xl w-full', 'flex flex-col items-center gap-16 px-4', 'xs:px-6', 'sm:px-9')}>
         <div className={cn('w-full', 'flex flex-col items-center gap-4')}>
           <h2 className="font-inter text-4xl font-semibold text-white">Technologies</h2>
-          <p className="font-inter w-full max-w-125 text-center text-base text-white">
+          <p className={cn('font-inter w-full max-w-100 text-center text-base text-white', 'md:max-w-full')}>
             My gear evolves with every battle, and here are some of the technologies at my side.
           </p>
         </div>
-        <div className={cn('mp:max-w-3xl w-full max-w-134', 'mp:grid-cols-3 grid grid-cols-2 gap-x-6 gap-y-12')}>
+        <div
+          className={cn(
+            'w-full max-w-115',
+            'grid grid-cols-2 gap-x-6 gap-y-12',
+            'md:max-w-176 md:grid-cols-3',
+            'mp:max-w-3xl',
+          )}
+        >
           {TECHNOLOGIES_OVERVIEW.map((technology, index) => (
             <div key={index} className="relative">
               <div
                 style={{ backgroundImage: `url('/images/tech-overview-${index}.webp')` }}
-                className={cn('technologies-overview-clip-path relative', 'bg-cover bg-center bg-no-repeat pt-[125%]')}
+                className={cn(
+                  'technologies-overview-clip-path',
+                  'relative pt-[125%]',
+                  'bg-cover bg-center bg-no-repeat',
+                )}
               >
                 <div className={cn('technologies-overview-bg size-full', 'absolute top-0 left-0')} />
                 <div
                   className={cn(
                     'font-riot-sans-bold',
-                    'absolute bottom-4 left-6',
-                    'text-[20px] tracking-wider text-white italic',
+                    'absolute bottom-4 left-5',
+                    'text-lg tracking-wider text-white italic',
+                    'mp:left-6 mp:text-xl',
                   )}
                 >
                   {technology.name}
