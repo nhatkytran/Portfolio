@@ -39,12 +39,13 @@ export default function TechnologiesOverview() {
         <div
           className={cn(
             'w-full max-w-115',
-            'grid grid-cols-2 gap-x-6 gap-y-12',
+            'grid grid-cols-2 gap-x-2 gap-y-12',
+            'xs:gap-x-6',
             'md:max-w-176 md:grid-cols-3',
             'mp:max-w-3xl',
           )}
         >
-          {TECHNOLOGIES_OVERVIEW.map((technology, index) => (
+          {TECHNOLOGIES_OVERVIEW.map(({ name, Icon }, index) => (
             <div key={index} className="relative">
               <div
                 style={{ backgroundImage: `url('/images/tech-overview-${index}.webp')` }}
@@ -54,19 +55,27 @@ export default function TechnologiesOverview() {
                   'bg-cover bg-center bg-no-repeat',
                 )}
               >
-                <div className={cn('technologies-overview-bg size-full', 'absolute top-0 left-0')} />
+                <div className={cn('technologies-overview-bg size-[101%]', 'absolute top-0 left-0')} />
                 <div
                   className={cn(
                     'font-riot-sans-bold',
-                    'absolute bottom-4 left-5',
-                    'text-lg tracking-wider text-white italic',
+                    'absolute bottom-4 left-5 hidden',
+                    'text-base tracking-wider text-white italic',
+                    'xs:block',
+                    'md:text-lg',
                     'mp:left-6 mp:text-xl',
                   )}
                 >
-                  {technology.name}
+                  {name}
                 </div>
               </div>
-              <technology.Icon className={cn('size-[54%] opacity-90', 'absolute -right-2 bottom-11')} />
+              <Icon
+                className={cn(
+                  'size-[54%] opacity-90',
+                  'absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2',
+                  'xs:-right-2 xs:bottom-11 xs:translate-x-0 xs:translate-y-0',
+                )}
+              />
             </div>
           ))}
         </div>
