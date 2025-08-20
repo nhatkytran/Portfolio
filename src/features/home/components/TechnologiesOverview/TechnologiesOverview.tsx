@@ -23,16 +23,39 @@ const TECHNOLOGIES_OVERVIEW = [
 /** Technologies overview. */
 export default function TechnologiesOverview() {
   return (
-    <section className={cn('flex items-center justify-center', 'relative bg-black pt-20 pb-24')}>
-      <div className={cn('technologies-overview-full-site-clip-path bg-red-600', 'absolute top-0 right-0 size-28')}>
-        <Link href="/skills" className="absolute top-3.5 right-3.5 cursor-pointer p-2">
+    <section
+      className={cn('flex items-center justify-center', 'relative bg-black py-10', 'sm:py-14', 'lg:py-20', 'xl:pb-24')}
+    >
+      <div
+        className={cn(
+          'technologies-overview-full-site-clip-path bg-red-600',
+          'absolute top-0 right-0 size-20',
+          'xs:size-28',
+        )}
+      >
+        <Link href="/skills" className={cn('absolute top-1.5 right-1.5 cursor-pointer p-2', 'xs:top-3.5 xs:right-3.5')}>
           <ArrowExploreIcon fill="white" className="size-5" />
         </Link>
       </div>
-      <div className={cn('max-w-8xl w-full', 'flex flex-col items-center gap-16 px-4', 'xs:px-6', 'sm:px-9')}>
+      <div
+        className={cn(
+          'max-w-8xl w-full',
+          'flex flex-col items-center gap-12 px-4',
+          'xs:px-6 xs:gap-14',
+          'sm:px-9',
+          'md:gap-16',
+        )}
+      >
         <div className={cn('w-full', 'flex flex-col items-center gap-4')}>
-          <h2 className="font-inter text-4xl font-semibold text-white">Technologies</h2>
-          <p className={cn('font-inter w-full max-w-100 text-center text-base text-white', 'md:max-w-full')}>
+          <h2 className={cn('font-inter text-[32px] font-semibold text-white', 'sm:text-4xl')}>Technologies</h2>
+          <p
+            className={cn(
+              'w-full max-w-100',
+              'font-inter text-center text-[15px] text-white',
+              'xs:text-base',
+              'md:max-w-full',
+            )}
+          >
             My gear evolves with every battle, and here are some of the technologies at my side.
           </p>
         </div>
