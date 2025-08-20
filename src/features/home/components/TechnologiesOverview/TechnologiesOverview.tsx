@@ -1,5 +1,15 @@
+import Link from 'next/link';
+
 import { cn } from '@/shared/utils/helpers';
-import { AngularIcon, HtmlIcon, JavaScriptIcon, NodeIcon, ReactIcon, TypeScriptIcon } from '@/shared/icons';
+import {
+  AngularIcon,
+  ArrowExploreIcon,
+  HtmlIcon,
+  JavaScriptIcon,
+  NodeIcon,
+  ReactIcon,
+  TypeScriptIcon,
+} from '@/shared/icons';
 
 const TECHNOLOGIES_OVERVIEW = [
   { name: 'HTML / CSS', Icon: HtmlIcon },
@@ -13,11 +23,18 @@ const TECHNOLOGIES_OVERVIEW = [
 /** Technologies overview. */
 export default function TechnologiesOverview() {
   return (
-    <section className={cn('flex items-center justify-center', 'bg-black pt-20 pb-24')}>
-      <div className={cn('max-w-8xl w-full', 'flex flex-col items-center gap-10 px-9')}>
+    <section className={cn('flex items-center justify-center', 'relative bg-black pt-20 pb-24')}>
+      <div className={cn('absolute top-0 right-0 size-28', 'technologies-overview-full-site-clip-path bg-red-600')}>
+        <Link href="/skills" className="absolute top-3.5 right-3.5 cursor-pointer p-2">
+          <ArrowExploreIcon fill="white" className="size-5" />
+        </Link>
+      </div>
+      <div className={cn('max-w-8xl w-full', 'flex flex-col items-center gap-16 px-9')}>
         <div className={cn('w-full text-center', 'flex flex-col gap-4')}>
           <h2 className="font-inter text-4xl font-semibold text-white">Technologies</h2>
-          <p className="font-inter text-base text-white">Technologies I use to build web applications.</p>
+          <p className="font-inter text-base text-white">
+            My gear evolves with every battle, and here are some of the technologies at my side.
+          </p>
         </div>
         <div className={cn('w-full max-w-3xl', 'grid grid-cols-3 grid-rows-2 gap-x-4 gap-y-12')}>
           {TECHNOLOGIES_OVERVIEW.map((technology, index) => (
