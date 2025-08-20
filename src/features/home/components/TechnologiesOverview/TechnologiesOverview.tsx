@@ -29,14 +29,14 @@ export default function TechnologiesOverview() {
           <ArrowExploreIcon fill="white" className="size-5" />
         </Link>
       </div>
-      <div className={cn('max-w-8xl w-full', 'flex flex-col items-center gap-16 px-9')}>
-        <div className={cn('w-full text-center', 'flex flex-col gap-4')}>
+      <div className={cn('max-w-8xl w-full', 'flex flex-col items-center gap-16 px-4', 'xs:px-6', 'sm:px-9')}>
+        <div className={cn('w-full', 'flex flex-col items-center gap-4')}>
           <h2 className="font-inter text-4xl font-semibold text-white">Technologies</h2>
-          <p className="font-inter text-base text-white">
+          <p className="font-inter w-full max-w-125 text-center text-base text-white">
             My gear evolves with every battle, and here are some of the technologies at my side.
           </p>
         </div>
-        <div className={cn('w-full max-w-3xl', 'grid grid-cols-3 grid-rows-2 gap-x-4 gap-y-12')}>
+        <div className={cn('mp:max-w-3xl w-full max-w-134', 'mp:grid-cols-3 grid grid-cols-2 gap-x-6 gap-y-12')}>
           {TECHNOLOGIES_OVERVIEW.map((technology, index) => (
             <div key={index} className="relative">
               <div

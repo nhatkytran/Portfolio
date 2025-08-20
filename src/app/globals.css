@@ -115,6 +115,7 @@
 @theme inline {
   --breakpoint-xxs: 24rem; /* 384px */
   --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-mp: 56.25em; /* 900px */
   --breakpoint-lgx: 70rem; /* 1120px */
 
   --color-yellow-sun-glow: var(--yellow-sun-glow);
