@@ -62,7 +62,9 @@ export default function PersonalStatement() {
     <section
       className={cn('flex flex-col items-center justify-center gap-10 pt-14', 'xs:gap-12', 'md:gap-14', 'lg:pt-20')}
     >
-      <div className={cn('flex flex-col gap-6 px-4', 'font-mark-pro-bold w-full max-w-4xl', 'xs:px-6', 'sm:px-9')}>
+      <div
+        className={cn('flex flex-col gap-6 px-4', 'font-inter w-full max-w-4xl font-semibold', 'xs:px-6', 'sm:px-9')}
+      >
         <p className="text-center text-xs tracking-wider text-neutral-700">
           Like armor, a soldier&apos;s statement adapts,
           <br />
@@ -112,13 +114,23 @@ export default function PersonalStatement() {
             )}
           >
             On learning
+            {/* 修學 / 修学 */}
+            {/* Tu học */}
           </span>
-          <p className="text-sm tracking-wider text-neutral-600">Ky Tran</p>
-          <p className={cn('xs:text-lg text-base tracking-wider text-red-600', 'md:text-xl')}>
+          <p className="text-sm tracking-wider text-neutral-600">
+            Ky Tran
+            {/* 陳日祺 / 陈日祺 */}
+            {/* Trần Nhật Kỳ */}
+          </p>
+          <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>
             I pledge to be first under heaven
+            {/* 自許人間第一流 / 自许人间第一流 */}
+            {/* Tự hứa nhân gian đệ nhất lưu */}
           </p>
           <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>
             I vow to be as the Sun&apos;s light, piercing through the ages
+            {/* 願如太陽之光，亙古長照，穿越時光 / 愿如太阳之光，亘古长照，穿越时光 */}
+            {/* Nguyện như ánh Mặt Trời, chiếu xuyên qua Thời Gian */}
           </p>
         </div>
       </div>
