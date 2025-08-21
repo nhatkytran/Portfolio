@@ -59,9 +59,11 @@ export default function PersonalStatement() {
   }
 
   return (
-    <section className="flex flex-col items-center justify-center gap-16 pt-20">
-      <div className={cn('flex w-full max-w-4xl flex-col gap-6 px-4', 'xs:px-6', 'sm:px-9')}>
-        <p className="font-mark-pro-bold text-center text-xs tracking-wider text-neutral-700">
+    <section
+      className={cn('flex flex-col items-center justify-center gap-10 pt-14', 'xs:gap-12', 'md:gap-14', 'lg:pt-20')}
+    >
+      <div className={cn('flex flex-col gap-6 px-4', 'font-mark-pro-bold w-full max-w-4xl', 'xs:px-6', 'sm:px-9')}>
+        <p className="text-center text-xs tracking-wider text-neutral-700">
           Like armor, a soldier&apos;s statement adapts,
           <br />
           {`but it is always worn into battle${
@@ -75,7 +77,7 @@ export default function PersonalStatement() {
                 key={lang}
                 onClick={handleLanguage(lang)}
                 className={cn(
-                  'font-mark-pro-bold flex-1 py-3.5 text-xs tracking-widest uppercase',
+                  'flex-1 py-3.5 text-xs tracking-widest uppercase',
                   'xs:text-sm',
                   language === lang ? 'text-neutral-800' : 'text-neutral-500',
                 )}
@@ -93,19 +95,29 @@ export default function PersonalStatement() {
             )}
           />
         </div>
-        <div className="relative flex flex-col gap-4 rounded-sm bg-neutral-50 px-14 py-9">
+        <div
+          className={cn(
+            'relative flex flex-col gap-3.5',
+            'rounded-sm bg-neutral-100 px-7 py-8',
+            'xs:px-10 xs:py-9',
+            'md:gap-4 md:px-14',
+          )}
+        >
           <span
             className={cn(
-              'font-mark-pro-bold w-fit rounded-3xl border-2 border-neutral-500 px-7 py-1.5 text-sm text-neutral-600',
+              'w-fit px-6 py-1.5',
+              'text-sm text-neutral-600',
+              'rounded-3xl border-2 border-neutral-500',
+              'md:px-7 md:text-sm',
             )}
           >
             On learning
           </span>
-          <p className="font-mark-pro-bold text-sm tracking-wider text-neutral-600">Ky Tran</p>
-          <p className="font-mark-pro-bold text-[20px] tracking-wider text-neutral-700">
+          <p className="text-sm tracking-wider text-neutral-600">Ky Tran</p>
+          <p className={cn('xs:text-lg text-base tracking-wider text-neutral-700', 'md:text-xl')}>
             I pledge to be first under heaven
           </p>
-          <p className="font-mark-pro-bold z-1 text-base tracking-wider text-neutral-600">
+          <p className={cn('text-sm tracking-wider text-neutral-600', 'md:text-base')}>
             I vow to be as the Sun&apos;s light, piercing through the ages
           </p>
         </div>
