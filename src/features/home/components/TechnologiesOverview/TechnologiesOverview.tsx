@@ -55,7 +55,7 @@ export default function TechnologiesOverview() {
               href="/skills"
               className={cn(
                 'hidden bg-red-600',
-                'cursor-pointer rounded-sm p-2 opacity-90',
+                'cursor-pointer rounded-sm p-1.5 opacity-90',
                 'transition duration-200 hover:opacity-100',
                 '2xl:block',
               )}
