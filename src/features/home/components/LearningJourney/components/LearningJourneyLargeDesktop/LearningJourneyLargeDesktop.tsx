@@ -8,7 +8,7 @@ import { ArrowExploreIcon } from '@/shared/icons';
 export default function LearningJourneyLargeDesktop() {
   return (
     <section className="flex items-center justify-center pt-20 pb-24">
-      <div className="max-w-8xl flex w-full flex-col gap-10 px-9">
+      <div className="max-w-8xl flex w-full flex-col gap-16 px-9">
         <div className="relative flex flex-col gap-4">
           <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
           <p className="font-inter text-base">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>

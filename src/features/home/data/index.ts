@@ -1,7 +1,18 @@
 import { type ReactNode } from 'react';
 
-import { IconAppearanceProps } from '@/shared/utils/types';
-import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
+import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
+import {
+  HeartIcon,
+  JavaScriptLearningIcon,
+  LanguageIcon,
+  MusicIcon,
+  HtmlIcon,
+  JavaScriptIcon,
+  NodeIcon,
+  ReactIcon,
+  TypeScriptIcon,
+  AngularIcon,
+} from '@/shared/icons';
 
 // prettier-ignore
 type Learning = {
@@ -55,3 +66,23 @@ export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE =
 /** Learning journey dawn bringer quote. */
 export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE =
   'Let the darkness come - I was not shaped to fear it, only to outshine it.';
+
+// prettier-ignore
+type TechnologyOverview = {
+
+  /** Name. */
+  readonly name: string;
+
+  /** Icon. */
+  readonly Icon: (props: PropsWithClassName) => ReactNode;
+}
+
+/** Technologies overview. */
+export const TECHNOLOGIES_OVERVIEW: readonly TechnologyOverview[] = [
+  { name: 'HTML / CSS', Icon: HtmlIcon },
+  { name: 'JavaScript', Icon: JavaScriptIcon },
+  { name: 'TypeScript', Icon: TypeScriptIcon },
+  { name: 'React / Next', Icon: ReactIcon },
+  { name: 'Angular', Icon: AngularIcon },
+  { name: 'Node / Express', Icon: NodeIcon },
+];

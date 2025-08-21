@@ -1,4 +1,5 @@
 import LearningJourney from '@/features/home/components/LearningJourney';
+import TechnologiesOverview from '@/features/home/components/TechnologiesOverview';
 
 /** Home page. */
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <section className="h-[460px] bg-black"></section>
       <LearningJourney />
+      <TechnologiesOverview />
     </>
   );
 }
