@@ -60,7 +60,7 @@ export default function PersonalStatement() {
   return (
     <section className="flex items-center justify-center pt-20 pb-24">
       <div className={cn('flex w-full max-w-4xl flex-col gap-6 px-4', 'xs:px-6', 'sm:px-9')}>
-        <p className="font-mark-pro-bold text-center text-xs tracking-wider text-neutral-500">
+        <p className="font-mark-pro-bold text-center text-xs tracking-wider text-neutral-700">
           Like armor, a soldier&apos;s statement adapts,
           <br />
           {`but it is always worn into battle${
@@ -76,7 +76,7 @@ export default function PersonalStatement() {
                 className={cn(
                   'font-mark-pro-bold flex-1 py-3.5 text-xs tracking-widest uppercase',
                   'xs:text-sm',
-                  language === lang ? 'text-neutral-800' : 'text-neutral-400',
+                  language === lang ? 'text-neutral-800' : 'text-neutral-500',
                 )}
               >
                 {lang}
@@ -91,6 +91,22 @@ export default function PersonalStatement() {
               languageLineStyles,
             )}
           />
+        </div>
+        <div className="relative flex flex-col gap-4 rounded-sm bg-neutral-50 px-14 py-9">
+          <span
+            className={cn(
+              'font-mark-pro-bold w-fit rounded-3xl border-2 border-neutral-500 px-7 py-1.5 text-sm text-neutral-600',
+            )}
+          >
+            On learning
+          </span>
+          <p className="font-mark-pro-bold text-sm tracking-wider text-neutral-600">Ky Tran</p>
+          <p className="font-mark-pro-bold text-[20px] tracking-wider text-neutral-700">
+            I pledge to be first under heaven
+          </p>
+          <p className="font-mark-pro-bold z-1 text-base tracking-wider text-neutral-600">
+            I vow to be as the Sun&apos;s light, piercing through the ages
+          </p>
         </div>
       </div>
     </section>
