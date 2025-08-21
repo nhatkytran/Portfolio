@@ -113,7 +113,7 @@ export const SOCIAL_MEDIA_ACCOUNTS: readonly SocialMediaAccount[] = [
   },
   {
     url: 'https://github.com/kytran-saritasa/',
-    specialColor: 'orange',
+    specialColor: 'bg-[linear-gradient(135deg,_theme(colors.neutral.800)_85%,_theme(colors.orange.700)_50%)]',
     Icon: GithubIcon,
   },
   {

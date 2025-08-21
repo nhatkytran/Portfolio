@@ -1,24 +1,8 @@
 import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
-import {
-  AngularIcon,
-  ArrowExploreIcon,
-  HtmlIcon,
-  JavaScriptIcon,
-  NodeIcon,
-  ReactIcon,
-  TypeScriptIcon,
-} from '@/shared/icons';
-
-const TECHNOLOGIES_OVERVIEW = [
-  { name: 'HTML / CSS', Icon: HtmlIcon },
-  { name: 'JavaScript', Icon: JavaScriptIcon },
-  { name: 'TypeScript', Icon: TypeScriptIcon },
-  { name: 'React / Next', Icon: ReactIcon },
-  { name: 'Angular', Icon: AngularIcon },
-  { name: 'Node / Express', Icon: NodeIcon },
-];
+import { ArrowExploreIcon } from '@/shared/icons';
+import { TECHNOLOGIES_OVERVIEW } from '@/features/home/data';
 
 /** Technologies overview. */
 export default function TechnologiesOverview() {
@@ -84,13 +68,14 @@ export default function TechnologiesOverview() {
           )}
         >
           {TECHNOLOGIES_OVERVIEW.map(({ name, Icon }, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="group relative">
               <div
                 style={{ backgroundImage: `url('/images/tech-overview-${index}.webp')` }}
                 className={cn(
                   'technologies-overview-clip-path',
-                  'relative pt-[125%]',
-                  'bg-cover bg-center bg-no-repeat',
+                  'relative bg-cover bg-center bg-no-repeat pt-[125%]',
+                  'origin-bottom-left transition-all duration-250 ease-in-out',
+                  'group-hover:scale-107',
                 )}
               >
                 <div className={cn('technologies-overview-bg size-[101%]', 'absolute top-0 left-0')} />
@@ -109,9 +94,11 @@ export default function TechnologiesOverview() {
               </div>
               <Icon
                 className={cn(
-                  'size-[54%] opacity-90',
+                  'size-[54%] opacity-100',
+                  'origin-bottom-left transition-all duration-250 ease-in-out',
                   'absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2',
-                  'xs:-right-2 xs:bottom-11 xs:translate-x-0 xs:translate-y-0',
+                  'xs:-right-2 xs:bottom-11 xs:translate-x-0 xs:translate-y-0 xs:opacity-90',
+                  'group-hover:scale-112 group-hover:opacity-100',
                 )}
               />
             </div>

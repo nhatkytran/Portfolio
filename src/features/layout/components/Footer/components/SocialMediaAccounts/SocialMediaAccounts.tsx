@@ -14,12 +14,7 @@ export default function SocialMediaAccounts() {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn(
-              'group flex items-center justify-center',
-              'rounded-sm bg-neutral-800 p-2',
-              specialColor &&
-                `bg-[linear-gradient(135deg,_theme(colors.neutral.800)_85%,_theme(colors.${specialColor}.700)_50%)]`,
-            )}
+            className={cn('group flex items-center justify-center', 'rounded-sm bg-neutral-800 p-2', specialColor)}
           >
             <Icon className={cn('size-6 fill-neutral-300', 'group-hover:fill-white', 'sm:size-7')} />
           </Link>
