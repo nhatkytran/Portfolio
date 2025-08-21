@@ -15,6 +15,27 @@ type Language = 'English' | 'Chinese' | 'Vietnamese';
 
 const LANGUAGES: readonly Language[] = [ENGLISH_LANGUAGE, CHINESE_LANGUAGE, VIETNAMESE_LANGUAGE];
 
+const quotes = {
+  [ENGLISH_LANGUAGE]: {
+    badge: 'On learning',
+    author: 'Ky Tran',
+    quote: 'I pledge to be first under heaven',
+    motto: "I vow to be as the Sun's light, piercing through the ages",
+  },
+  [CHINESE_LANGUAGE]: {
+    badge: '修學 / 修学',
+    author: '陳日祺 / 陈日祺',
+    quote: '自許人間第一流 / 自许人间第一流',
+    motto: '願如太陽之光，亙古長照，穿越時光 / 愿如太阳之光，亘古长照，穿越时光',
+  },
+  [VIETNAMESE_LANGUAGE]: {
+    badge: 'Tu học',
+    author: 'Trần Nhật Kỳ',
+    quote: 'Tự hứa nhân gian đệ nhất lưu',
+    motto: 'Nguyện như ánh Mặt Trời, chiếu xuyên qua Thời Gian',
+  },
+};
+
 /**
  * Gets the language line styles.
  * @param language The language to get styles for.
@@ -113,24 +134,14 @@ export default function PersonalStatement() {
               'md:px-7',
             )}
           >
-            On learning
-            {/* 修學 / 修学 */}
-            {/* Tu học */}
+            {quotes[language].badge}
           </span>
-          <p className="text-sm tracking-wider text-neutral-600">
-            Ky Tran
-            {/* 陳日祺 / 陈日祺 */}
-            {/* Trần Nhật Kỳ */}
-          </p>
+          <p className="text-sm tracking-wider text-neutral-600">{quotes[language].author}</p>
           <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>
-            I pledge to be first under heaven
-            {/* 自許人間第一流 / 自许人间第一流 */}
-            {/* Tự hứa nhân gian đệ nhất lưu */}
+            {quotes[language].quote}
           </p>
           <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>
-            I vow to be as the Sun&apos;s light, piercing through the ages
-            {/* 願如太陽之光，亙古長照，穿越時光 / 愿如太阳之光，亘古长照，穿越时光 */}
-            {/* Nguyện như ánh Mặt Trời, chiếu xuyên qua Thời Gian */}
+            {quotes[language].motto}
           </p>
         </div>
       </div>
