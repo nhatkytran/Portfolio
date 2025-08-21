@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay, useWindowEventListener } from '@/shared/hooks';
 import { DISPLAY_SCREEN } from '@/shared/constants';
+import Waves from '@/features/home/components/PersonalStatement/Waves';
 
 const ENGLISH_LANGUAGE = 'English';
 const CHINESE_LANGUAGE = 'Chinese';
@@ -58,7 +59,7 @@ export default function PersonalStatement() {
   }
 
   return (
-    <section className="flex items-center justify-center pt-20 pb-24">
+    <section className="flex flex-col items-center justify-center gap-16 pt-20">
       <div className={cn('flex w-full max-w-4xl flex-col gap-6 px-4', 'xs:px-6', 'sm:px-9')}>
         <p className="font-mark-pro-bold text-center text-xs tracking-wider text-neutral-700">
           Like armor, a soldier&apos;s statement adapts,
@@ -109,6 +110,7 @@ export default function PersonalStatement() {
           </p>
         </div>
       </div>
+      <Waves />
     </section>
   );
 }
