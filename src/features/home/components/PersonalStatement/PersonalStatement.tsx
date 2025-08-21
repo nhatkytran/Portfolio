@@ -79,7 +79,7 @@ export default function PersonalStatement() {
                 className={cn(
                   'flex-1 py-3.5 text-xs tracking-widest uppercase',
                   'xs:text-sm',
-                  language === lang ? 'text-neutral-800' : 'text-neutral-500',
+                  language === lang ? 'text-red-600' : 'text-neutral-500',
                 )}
               >
                 {lang}
@@ -90,7 +90,7 @@ export default function PersonalStatement() {
             style={{ width: `${languageLineWidth}px` }}
             className={cn(
               'personal-statement-line-transition',
-              'absolute bottom-0 left-0 block h-[2px] bg-neutral-500',
+              'absolute bottom-0 left-0 block h-[2px] bg-red-600',
               languageLineStyles,
             )}
           />
@@ -105,19 +105,19 @@ export default function PersonalStatement() {
         >
           <span
             className={cn(
-              'w-fit px-6 py-1.5',
-              'text-sm text-neutral-600',
+              'w-fit px-6 py-2',
+              'text-xs text-neutral-600 uppercase',
               'rounded-3xl border-2 border-neutral-500',
-              'md:px-7 md:text-sm',
+              'md:px-7',
             )}
           >
             On learning
           </span>
           <p className="text-sm tracking-wider text-neutral-600">Ky Tran</p>
-          <p className={cn('xs:text-lg text-base tracking-wider text-neutral-700', 'md:text-xl')}>
+          <p className={cn('xs:text-lg text-base tracking-wider text-red-600', 'md:text-xl')}>
             I pledge to be first under heaven
           </p>
-          <p className={cn('text-sm tracking-wider text-neutral-600', 'md:text-base')}>
+          <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>
             I vow to be as the Sun&apos;s light, piercing through the ages
           </p>
         </div>
