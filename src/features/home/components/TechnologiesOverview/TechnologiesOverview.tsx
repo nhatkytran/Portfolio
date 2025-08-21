@@ -28,9 +28,11 @@ export default function TechnologiesOverview() {
     >
       <div
         className={cn(
-          'technologies-overview-full-site-clip-path bg-red-600',
-          'absolute top-0 right-0 size-20',
+          'technologies-overview-full-site-clip-path',
+          'size-20 bg-red-600',
+          'absolute top-0 right-0',
           'xs:size-28',
+          '2xl:hidden',
         )}
       >
         <Link href="/skills" className={cn('absolute top-1.5 right-1.5 cursor-pointer p-2', 'xs:top-3.5 xs:right-3.5')}>
@@ -47,7 +49,20 @@ export default function TechnologiesOverview() {
         )}
       >
         <div className={cn('w-full', 'flex flex-col items-center gap-4')}>
-          <h2 className={cn('font-inter text-[32px] font-semibold text-white', 'sm:text-4xl')}>Technologies</h2>
+          <div className="flex items-center gap-4">
+            <h2 className={cn('font-inter text-[32px] font-semibold text-white', 'sm:text-4xl')}>Technologies</h2>
+            <Link
+              href="/skills"
+              className={cn(
+                'hidden bg-red-600',
+                'cursor-pointer rounded-sm p-2 opacity-90',
+                'transition duration-200 hover:opacity-100',
+                '2xl:block',
+              )}
+            >
+              <ArrowExploreIcon fill="white" className="size-5" />
+            </Link>
+          </div>
           <p
             className={cn(
               'w-full max-w-100',
