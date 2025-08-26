@@ -86,3 +86,58 @@ export const TECHNOLOGIES_OVERVIEW: readonly TechnologyOverview[] = [
   { name: 'Angular', Icon: AngularIcon },
   { name: 'Node / Express', Icon: NodeIcon },
 ];
+
+/** Language. */
+export type Language = 'English' | 'Chinese' | 'Vietnamese';
+
+/** English language. */
+export const ENGLISH_LANGUAGE = 'English';
+
+/** Chinese language. */
+export const CHINESE_LANGUAGE = 'Chinese';
+
+/** Vietnamese language. */
+export const VIETNAMESE_LANGUAGE = 'Vietnamese';
+
+/** Languages. */
+export const LANGUAGES: readonly Language[] = [ENGLISH_LANGUAGE, CHINESE_LANGUAGE, VIETNAMESE_LANGUAGE];
+
+// prettier-ignore
+type PersonalStatement = {
+
+  /** Badge. */
+  readonly badge: string;
+
+  /** Author. */
+  readonly author: string;
+
+  /** Quote. */
+  readonly quote: string;
+
+  /** Motto. */
+  readonly motto: string;
+};
+
+type Statements = Readonly<Record<Language, PersonalStatement>>;
+
+/** Personal statements. */
+export const STATEMENTS: Statements = {
+  [ENGLISH_LANGUAGE]: {
+    badge: 'On learning',
+    author: 'Ky Tran',
+    quote: 'I pledge to be first under heaven',
+    motto: "I vow to be as the Sun's light, piercing through the ages",
+  },
+  [CHINESE_LANGUAGE]: {
+    badge: '修學 / 修学',
+    author: '陳日祺 / 陈日祺',
+    quote: '自許人間第一流 / 自许人间第一流',
+    motto: '願如太陽之光，亙古長照，穿越時光 / 愿如太阳之光，亘古长照，穿越时光',
+  },
+  [VIETNAMESE_LANGUAGE]: {
+    badge: 'Tu học',
+    author: 'Trần Nhật Kỳ',
+    quote: 'Tự hứa nhân gian đệ nhất lưu',
+    motto: 'Nguyện như ánh Mặt Trời, chiếu xuyên qua Thời Gian',
+  },
+};

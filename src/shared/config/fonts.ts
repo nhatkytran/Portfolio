@@ -178,5 +178,14 @@ const beaufortFonts = [
   beaufortHeavyItalic,
 ];
 
+const markProBold = localFont({
+  src: '../../../public/fonts/Mark/MarkPro-Bold.woff2',
+  variable: '--font-mark-pro-bold',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
+
+const markFonts = [markProBold];
+
 /** List of fonts. */
-export const fonts = [interFonts, ...riotFonts, ...spiegelFonts, ...beaufortFonts];
+export const fonts = [interFonts, ...riotFonts, ...spiegelFonts, ...beaufortFonts, ...markFonts];
