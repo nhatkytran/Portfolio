@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay, useWindowEventListener } from '@/shared/hooks';
@@ -128,24 +129,25 @@ export default function PersonalStatement() {
             )}
           />
         </div>
-        <div
-          className={cn(
-            'relative flex flex-col gap-3.5',
-            'rounded-sm bg-neutral-100 px-7 py-8',
-            'xs:px-10 xs:py-9',
-            'md:gap-4 md:px-14',
-          )}
-        >
-          {isTranslating && (
-            <>
-              <span className="h-[36px] w-full max-w-[140px] rounded-3xl bg-neutral-200"></span>
-              <span className="h-[20px] w-full max-w-[124px] rounded-3xl bg-neutral-200"></span>
-              <span className="h-[28px] w-full max-w-[350px] rounded-3xl bg-neutral-200"></span>
-              <span className="h-[24px] w-full max-w-[480px] rounded-3xl bg-neutral-200"></span>
-            </>
-          )}
-          {!isTranslating && (
-            <>
+        <div className={cn('rounded-sm bg-neutral-100 px-7 py-8', 'xs:px-10 xs:py-9', 'md:gap-4 md:px-14')}>
+          {isTranslating ? (
+            <div className="flex flex-col gap-3.5">
+              {[
+                'h-[36px] max-w-[140px]',
+                'h-[20px] max-w-[124px]',
+                'h-[28px] max-w-[350px]',
+                'h-[24px] max-w-[480px]',
+              ].map((style, index) => (
+                <span key={index} className={cn('w-full rounded-3xl bg-neutral-200', style)} />
+              ))}
+            </div>
+          ) : (
+            <motion.div
+              className="flex flex-col gap-3.5"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
               <span
                 className={cn(
                   'w-fit px-6 py-2',
@@ -163,7 +165,7 @@ export default function PersonalStatement() {
               <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>
                 {quotes[language].motto}
               </p>
-            </>
+            </motion.div>
           )}
         </div>
       </div>
