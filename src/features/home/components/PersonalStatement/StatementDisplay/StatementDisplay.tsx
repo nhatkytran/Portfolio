@@ -16,7 +16,6 @@ type Props = {
 /** Statement display. */
 export default function StatementDisplay({ language }: Props) {
   const [isTranslating, setIsTranslating] = useState<boolean>(false);
-  const statement = STATEMENTS[language];
 
   useEffect(() => {
     setIsTranslating(true);
@@ -35,28 +34,29 @@ export default function StatementDisplay({ language }: Props) {
           )}
         </div>
       ) : (
-        <motion.div
-          className="flex flex-col gap-3.5"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.2 }}
-        >
-          <span
-            className={cn(
-              'w-fit px-6 py-2',
-              'text-xs text-neutral-600 uppercase',
-              'rounded-3xl border-2 border-neutral-500',
-              'md:px-7',
-            )}
+        Object.entries(STATEMENTS).map(([languageKey, { badge, author, quote, motto }]) => (
+          <motion.div
+            key={languageKey}
+            className={cn('flex flex-col gap-3.5', languageKey !== language && 'hidden')}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
           >
-            {statement.badge}
-          </span>
-          <p className="text-sm tracking-wider text-neutral-600">{statement.author}</p>
-          <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>
-            {statement.quote}
-          </p>
-          <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>{statement.motto}</p>
-        </motion.div>
+            <span
+              className={cn(
+                'w-fit px-6 py-2',
+                'text-xs text-neutral-600 uppercase',
+                'rounded-3xl border-2 border-neutral-500',
+                'md:px-7',
+              )}
+            >
+              {badge}
+            </span>
+            <p className="text-sm tracking-wider text-neutral-600">{author}</p>
+            <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>{quote}</p>
+            <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>{motto}</p>
+          </motion.div>
+        ))
       )}
     </div>
   );
