@@ -1,11 +1,13 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay, useWindowEventListener } from '@/shared/hooks';
 import { DISPLAY_SCREEN } from '@/shared/constants';
 import Waves from '@/features/home/components/PersonalStatement/Waves';
+
+const TRANSLATION_ANIMATION_DURATION = 500;
 
 const ENGLISH_LANGUAGE = 'English';
 const CHINESE_LANGUAGE = 'Chinese';
@@ -54,7 +56,8 @@ const getLanguageLineStyles = (language: Language): string => {
 export default function PersonalStatement() {
   const { display } = useResponsiveDisplay();
   const languageContainerRef = useRef<HTMLDivElement>(null);
-  const [languageLineWidth, setLanguageLineWidth] = useState<number>(0);
+  const [isTranslating, setIsTranslating] = useState<boolean>(false);
+  const [languageLineWidth, setLanguageLineWidth] = useState(0);
   const [language, setLanguage] = useState<Language>(ENGLISH_LANGUAGE);
   const languageLineStyles = getLanguageLineStyles(language);
 
@@ -63,6 +66,7 @@ export default function PersonalStatement() {
    * @param language The language to change to.
    */
   const handleLanguage = (language: Language) => () => {
+    setIsTranslating(true);
     setLanguage(language);
   };
 
@@ -74,6 +78,12 @@ export default function PersonalStatement() {
   };
 
   useWindowEventListener({ eventName: 'resize', isInitialCall: true, handler: handleLanguageLineWidth });
+
+  useEffect(() => {
+    if (isTranslating) {
+      setTimeout(() => setIsTranslating(false), TRANSLATION_ANIMATION_DURATION);
+    }
+  }, [isTranslating]);
 
   if (display == null) {
     return null;
@@ -126,23 +136,35 @@ export default function PersonalStatement() {
             'md:gap-4 md:px-14',
           )}
         >
-          <span
-            className={cn(
-              'w-fit px-6 py-2',
-              'text-xs text-neutral-600 uppercase',
-              'rounded-3xl border-2 border-neutral-500',
-              'md:px-7',
-            )}
-          >
-            {quotes[language].badge}
-          </span>
-          <p className="text-sm tracking-wider text-neutral-600">{quotes[language].author}</p>
-          <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>
-            {quotes[language].quote}
-          </p>
-          <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>
-            {quotes[language].motto}
-          </p>
+          {isTranslating && (
+            <>
+              <span className="h-[36px] w-full max-w-[140px] rounded-3xl bg-neutral-200"></span>
+              <span className="h-[20px] w-full max-w-[124px] rounded-3xl bg-neutral-200"></span>
+              <span className="h-[28px] w-full max-w-[350px] rounded-3xl bg-neutral-200"></span>
+              <span className="h-[24px] w-full max-w-[480px] rounded-3xl bg-neutral-200"></span>
+            </>
+          )}
+          {!isTranslating && (
+            <>
+              <span
+                className={cn(
+                  'w-fit px-6 py-2',
+                  'text-xs text-neutral-600 uppercase',
+                  'rounded-3xl border-2 border-neutral-500',
+                  'md:px-7',
+                )}
+              >
+                {quotes[language].badge}
+              </span>
+              <p className="text-sm tracking-wider text-neutral-600">{quotes[language].author}</p>
+              <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>
+                {quotes[language].quote}
+              </p>
+              <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>
+                {quotes[language].motto}
+              </p>
+            </>
+          )}
         </div>
       </div>
       <Waves />
