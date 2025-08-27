@@ -12,6 +12,8 @@ export default function FadeInMotion<T extends ElementType = 'div'>({
   as,
   children,
   className,
+  onClick,
+  exit,
   transition,
 }: FadeInMotionProps<T>) {
   const MotionComponent = motion(as || 'div');
@@ -21,6 +23,8 @@ export default function FadeInMotion<T extends ElementType = 'div'>({
       className={className}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      onClick={onClick}
+      exit={exit}
       transition={{ duration: 0.2, ...transition }}
     >
       {children}
