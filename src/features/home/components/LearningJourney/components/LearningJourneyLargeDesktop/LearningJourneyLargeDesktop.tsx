@@ -6,6 +6,7 @@ import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
+import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
 
 /** Learning journey large desktop. */
 export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
@@ -25,8 +26,8 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         <div className="relative">
           {initialLoading ? (
             <div className="flex flex-col gap-4">
-              <span className="h-[40px] w-[440px] rounded-sm bg-neutral-100" />
-              <span className="h-[24px] w-[512px] rounded-sm bg-neutral-100" />
+              <SkeletonLoading className="h-[40px] w-[440px]" />
+              <SkeletonLoading className="h-[24px] w-[512px]" />
             </div>
           ) : (
             <motion.div
@@ -45,7 +46,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
             className={cn('absolute top-4 right-0 rounded-sm p-1', initialLoading && 'cursor-default')}
           >
             {initialLoading ? (
-              <span className="block h-[28px] w-[96px] rounded-sm bg-neutral-100" />
+              <SkeletonLoading className="block h-[28px] w-[96px]" />
             ) : (
               <motion.div
                 className="flex items-center gap-1"
@@ -62,7 +63,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         <ul className="grid grid-cols-4 gap-5">
           {LEARNINGS.map(({ name, Icon }, index) =>
             initialLoading ? (
-              <span key={name} className="h-[104px] w-full max-w-[305px] rounded-sm bg-neutral-100" />
+              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[305px]" />
             ) : (
               <motion.li
                 key={name}
@@ -96,7 +97,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         </ul>
         <div className="flex flex-col gap-6">
           {initialLoading ? (
-            <span className="h-[20px] w-[496px] rounded-sm bg-neutral-100" />
+            <SkeletonLoading className="h-[20px] w-[496px]" />
           ) : (
             <motion.p
               className="font-riot-bold text-red-base text-sm tracking-wider"

@@ -8,7 +8,7 @@ import { BREAK_POINTS, CONTENTS } from '@/shared/constants';
 import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
 import { useOpen, useWindowEventListener } from '@/shared/hooks';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
-import Modal from '@/features/utilities/components/Modal';
+import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
 
 /** Sidebar. */

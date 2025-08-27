@@ -6,6 +6,7 @@ import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
+import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
 
 /** Learning journey desktop. */
 export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
@@ -15,7 +16,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
     <section className={cn('flex items-center justify-center py-20', !shouldDisplay && 'hidden')}>
       <div className="flex w-full gap-5 px-9">
         {initialLoading ? (
-          <span className="w-full max-w-[474px] rounded-sm bg-neutral-100" />
+          <SkeletonLoading className="w-full max-w-[474px]" />
         ) : (
           <motion.div
             className="max-w-[474px] rounded-sm p-1"
@@ -49,7 +50,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
         <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-4">
           {LEARNINGS.map(({ name, Icon }, index) =>
             initialLoading ? (
-              <span key={name} className="h-[104px] w-full max-w-[341px] rounded-sm bg-neutral-100" />
+              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[341px]" />
             ) : (
               <motion.li
                 key={name}

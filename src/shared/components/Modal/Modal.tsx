@@ -2,7 +2,7 @@ import { MouseEventHandler, PropsWithChildren } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
-import { useBodyFreeze } from '@/features/utilities/hooks';
+import { useBodyFreeze } from '@/shared/hooks';
 
 // prettier-ignore
 type Props = PropsWithChildren & {

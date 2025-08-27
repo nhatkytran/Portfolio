@@ -11,6 +11,7 @@ import {
   LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
+import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
 
 /** Learning journey mobile. */
 export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDisplayProps) {
@@ -20,7 +21,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
     <section className={cn('py-10', 'sm:py-14', !shouldDisplay && 'hidden')}>
       <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
         {initialLoading ? (
-          <span className="h-[158px] w-full rounded-sm bg-neutral-100" />
+          <SkeletonLoading className="h-[158px] w-full" />
         ) : (
           <motion.div
             className={cn(
@@ -50,7 +51,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
           </motion.div>
         )}
         {initialLoading ? (
-          <span className="h-[412px] w-full rounded-sm bg-neutral-100" />
+          <SkeletonLoading className="h-[412px] w-full" />
         ) : (
           <motion.div
             className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 py-6', 'sm:px-10')}
