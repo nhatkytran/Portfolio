@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
+import { useInitialLoading } from '@/shared/hooks';
 import {
   LEARNINGS,
   LEARNING_ICON_STYLES,
@@ -14,13 +14,7 @@ import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 
 /** Learning journey mobile. */
 export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDisplayProps) {
-  const [initialLoading, setInitialLoading] = useState(false);
-
-  useEffect(() => {
-    setInitialLoading(true);
-    const timeoutId = setTimeout(() => setInitialLoading(false), 1000);
-    return () => clearTimeout(timeoutId);
-  }, []);
+  const { initialLoading } = useInitialLoading({ dependencies: [shouldDisplay] });
 
   return (
     <section className={cn('py-10', 'sm:py-14', !shouldDisplay && 'hidden')}>

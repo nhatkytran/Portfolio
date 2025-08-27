@@ -1,21 +1,15 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
+import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey desktop. */
 export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
-  const [initialLoading, setInitialLoading] = useState(false);
-
-  useEffect(() => {
-    setInitialLoading(true);
-    const timeoutId = setTimeout(() => setInitialLoading(false), 1000);
-    return () => clearTimeout(timeoutId);
-  }, []);
+  const { initialLoading } = useInitialLoading({ dependencies: [shouldDisplay] });
 
   return (
     <section className={cn('flex items-center justify-center py-20', !shouldDisplay && 'hidden')}>

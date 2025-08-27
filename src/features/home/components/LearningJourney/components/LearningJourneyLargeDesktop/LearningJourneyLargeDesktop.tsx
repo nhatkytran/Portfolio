@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
+import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey large desktop. */
 export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
-  const [initialLoading, setInitialLoading] = useState(false);
+  const { initialLoading } = useInitialLoading({ dependencies: [shouldDisplay] });
 
   /**
    * Prevents the link from navigating.
@@ -18,12 +18,6 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
   const handleLinkPrevention = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
   };
-
-  useEffect(() => {
-    setInitialLoading(true);
-    const timeoutId = setTimeout(() => setInitialLoading(false), 1000);
-    return () => clearTimeout(timeoutId);
-  }, []);
 
   return (
     <section className={cn('flex items-center justify-center pt-20 pb-24', !shouldDisplay && 'hidden')}>
