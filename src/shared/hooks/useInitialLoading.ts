@@ -5,13 +5,16 @@ const INITIAL_LOADING_DURATION = 1000;
 // prettier-ignore
 type Props = {
 
+  /** Initial loading state. */
+  readonly initialLoadingState?: boolean;
+
   /** Dependencies to trigger initial loading. */
   readonly dependencies?: readonly unknown[];
 };
 
 /** Hook for managing the initial loading. */
-export function useInitialLoading({ dependencies = [] }: Props = {}) {
-  const [initialLoading, setInitialLoading] = useState(false);
+export function useInitialLoading({ initialLoadingState = false, dependencies = [] }: Props = {}) {
+  const [initialLoading, setInitialLoading] = useState(initialLoadingState);
 
   useEffect(() => {
     setInitialLoading(true);
