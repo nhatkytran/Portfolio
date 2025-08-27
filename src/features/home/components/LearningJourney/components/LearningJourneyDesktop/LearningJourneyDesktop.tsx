@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
-import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNINGS } from '@/features/home/data';
+import { LEARNINGS, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey desktop. */
