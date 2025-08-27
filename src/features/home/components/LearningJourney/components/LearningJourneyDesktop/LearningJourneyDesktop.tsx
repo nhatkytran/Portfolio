@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
+import FadeInMotion from '@/shared/components/FadeInMotion';
 import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
 
 /** Learning journey desktop. */
@@ -18,12 +18,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
         {initialLoading ? (
           <SkeletonLoading className="w-full max-w-[474px]" />
         ) : (
-          <motion.div
-            className="max-w-[474px] rounded-sm p-1"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
+          <FadeInMotion className="max-w-[474px] rounded-sm p-1">
             <div
               className={cn(
                 'relative size-full',
@@ -45,19 +40,18 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
                 {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
               </p>
             </div>
-          </motion.div>
+          </FadeInMotion>
         )}
         <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-4">
           {LEARNINGS.map(({ name, Icon }, index) =>
             initialLoading ? (
               <SkeletonLoading key={name} className="h-[104px] w-full max-w-[341px]" />
             ) : (
-              <motion.li
+              <FadeInMotion
                 key={name}
+                as="li"
+                transition={{ delay: index * 0.05 }}
                 className={cn('learning-item-bg-hover', 'min-w-[284px] rounded-md p-0.5 transition duration-100')}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.2, delay: index * 0.05 }}
               >
                 <div
                   className={cn(
@@ -78,7 +72,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
                     {name}
                   </p>
                 </div>
-              </motion.li>
+              </FadeInMotion>
             ),
           )}
         </ul>

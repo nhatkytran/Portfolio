@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
-import { cn } from '@/shared/utils/helpers';
 import { type Language, LANGUAGES, CHINESE_LANGUAGE, ENGLISH_LANGUAGE } from '@/features/home/data';
+import { cn } from '@/shared/utils/helpers';
 import { useWindowEventListener } from '@/shared/hooks';
 
 // prettier-ignore

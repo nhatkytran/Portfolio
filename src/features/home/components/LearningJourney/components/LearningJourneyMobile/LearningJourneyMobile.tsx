@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
@@ -11,6 +10,7 @@ import {
   LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
+import FadeInMotion from '@/shared/components/FadeInMotion';
 import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
 
 /** Learning journey mobile. */
@@ -23,15 +23,12 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
         {initialLoading ? (
           <SkeletonLoading className="h-[158px] w-full" />
         ) : (
-          <motion.div
+          <FadeInMotion
             className={cn(
               'relative flex size-full flex-col justify-center gap-2.5',
               'overflow-hidden rounded-sm bg-neutral-50 p-6',
               'sm:p-9',
             )}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
           >
             <h2 className="font-riot-sans-bold text-xl font-normal tracking-wider uppercase">Learning Journey</h2>
             <p className="font-inter text-[15px]">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
@@ -48,17 +45,12 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
             >
               <LearningBookIcon className="relative left-1" />
             </div>
-          </motion.div>
+          </FadeInMotion>
         )}
         {initialLoading ? (
           <SkeletonLoading className="h-[412px] w-full" />
         ) : (
-          <motion.div
-            className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 py-6', 'sm:px-10')}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
+          <FadeInMotion className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 py-6', 'sm:px-10')}>
             <div className="flex items-center justify-between">
               <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
               {/* TODO (Ky Tran): Implement learning journey page. */}
@@ -103,7 +95,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </FadeInMotion>
         )}
       </div>
     </section>

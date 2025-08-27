@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 
-import { cn } from '@/shared/utils/helpers';
 import { type Language, STATEMENTS } from '@/features/home/data';
+import { cn } from '@/shared/utils/helpers';
+import FadeInMotion from '@/shared/components/FadeInMotion';
 
 const TRANSLATION_ANIMATION_DURATION = 500;
 
@@ -38,13 +38,7 @@ export default function StatementDisplay({ language }: Props) {
         </div>
       ) : (
         Object.entries(STATEMENTS).map(([languageKey, { badge, author, quote, motto }]) => (
-          <motion.div
-            key={languageKey}
-            className={cn('flex flex-col gap-3.5', languageKey !== language && 'hidden')}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
+          <FadeInMotion key={languageKey} className={cn('flex flex-col gap-3.5', languageKey !== language && 'hidden')}>
             <span
               className={cn(
                 'w-fit px-6 py-2',
@@ -58,7 +52,7 @@ export default function StatementDisplay({ language }: Props) {
             <p className="text-sm tracking-wider text-neutral-600">{author}</p>
             <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>{quote}</p>
             <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>{motto}</p>
-          </motion.div>
+          </FadeInMotion>
         ))
       )}
     </div>

@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
+import FadeInMotion from '@/shared/components/FadeInMotion';
 import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
 
 /** Learning journey large desktop. */
@@ -30,15 +30,10 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
               <SkeletonLoading className="h-[24px] w-[512px]" />
             </div>
           ) : (
-            <motion.div
-              className="flex flex-col gap-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
+            <FadeInMotion className="flex flex-col gap-4">
               <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
               <p className="font-inter text-base">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
-            </motion.div>
+            </FadeInMotion>
           )}
           <Link
             href="/learning-journey"
@@ -48,15 +43,10 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
             {initialLoading ? (
               <SkeletonLoading className="block h-[28px] w-[96px]" />
             ) : (
-              <motion.div
-                className="flex items-center gap-1"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.2 }}
-              >
+              <FadeInMotion className="flex items-center gap-1">
                 <ArrowExploreIcon fill="#e80029" />
                 <p className="font-inter text-sm font-semibold text-red-600 uppercase underline">Full site</p>
-              </motion.div>
+              </FadeInMotion>
             )}
           </Link>
         </div>
@@ -65,12 +55,11 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
             initialLoading ? (
               <SkeletonLoading key={name} className="h-[104px] w-full max-w-[305px]" />
             ) : (
-              <motion.li
+              <FadeInMotion
                 key={name}
+                as="li"
                 className={cn('learning-item-bg-hover', 'rounded-md p-0.5 transition duration-100')}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.2, delay: index * 0.05 }}
+                transition={{ delay: index * 0.05 }}
               >
                 <div
                   className={cn(
@@ -91,7 +80,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
                     {name}
                   </p>
                 </div>
-              </motion.li>
+              </FadeInMotion>
             ),
           )}
         </ul>
@@ -99,14 +88,9 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
           {initialLoading ? (
             <SkeletonLoading className="h-[20px] w-[496px]" />
           ) : (
-            <motion.p
-              className="font-riot-bold text-red-base text-sm tracking-wider"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
+            <FadeInMotion as="p" className="font-riot-bold text-red-base text-sm tracking-wider">
               {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
-            </motion.p>
+            </FadeInMotion>
           )}
         </div>
       </div>

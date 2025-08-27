@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 
-import { cn } from '@/shared/utils/helpers';
 import { type Language, ENGLISH_LANGUAGE } from '@/features/home/data';
+import { cn } from '@/shared/utils/helpers';
 import Introduction from '@/features/home/components/PersonalStatement/Introduction';
 import LanguageSelection from '@/features/home/components/PersonalStatement/LanguageSelection';
 import StatementDisplay from '@/features/home/components/PersonalStatement/StatementDisplay/StatementDisplay';
