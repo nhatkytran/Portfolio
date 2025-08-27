@@ -4,6 +4,7 @@ import LearningJourneyLargeDesktop from './components/LearningJourneyLargeDeskto
 import LearningJourneyDesktop from './components/LearningJourneyDesktop';
 import LearningJourneyMobile from './components/LearningJourneyMobile';
 
+import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay } from '@/shared/hooks';
 import { DISPLAY_SCREEN } from '@/shared/constants';
 
@@ -11,17 +12,12 @@ import { DISPLAY_SCREEN } from '@/shared/constants';
 export default function LearningJourney() {
   const { display } = useResponsiveDisplay();
 
-  if (display == null) {
-    return null;
-  }
-
-  if (display === DISPLAY_SCREEN.LARGE_DESKTOP) {
-    return <LearningJourneyLargeDesktop />;
-  }
-
-  if (display === DISPLAY_SCREEN.DESKTOP) {
-    return <LearningJourneyDesktop />;
-  }
-
-  return <LearningJourneyMobile />;
+  return (
+    <>
+      <div className={cn('h-[508px]', display != null && 'hidden')} />
+      <LearningJourneyLargeDesktop shouldDisplay={display === DISPLAY_SCREEN.LARGE_DESKTOP} />
+      <LearningJourneyDesktop shouldDisplay={display === DISPLAY_SCREEN.DESKTOP} />
+      <LearningJourneyMobile shouldDisplay={display === DISPLAY_SCREEN.TABLET || display === DISPLAY_SCREEN.MOBILE} />
+    </>
+  );
 }

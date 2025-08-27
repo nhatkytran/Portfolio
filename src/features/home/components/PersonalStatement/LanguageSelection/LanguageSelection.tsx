@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
-import { cn } from '@/shared/utils/helpers';
 import { type Language, LANGUAGES, CHINESE_LANGUAGE, ENGLISH_LANGUAGE } from '@/features/home/data';
+import { cn } from '@/shared/utils/helpers';
 import { useWindowEventListener } from '@/shared/hooks';
 
 // prettier-ignore
@@ -19,12 +19,12 @@ export default function LanguageSelection({ language, onLanguageChange }: Props)
   const languageContainerRef = useRef<HTMLDivElement>(null);
   const [languageLineWidth, setLanguageLineWidth] = useState(0);
 
-  const languageLineStyles = ((language: Language) => {
+  const languageLineStyles = (() => {
     if (language === ENGLISH_LANGUAGE) {
       return 'left-0';
     }
     return language === CHINESE_LANGUAGE ? 'left-[33%]' : 'left-[66%]';
-  })(language);
+  })();
 
   /**
    * Handles language change.
