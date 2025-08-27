@@ -2,19 +2,13 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
 import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
-// prettier-ignore
-type Props = {
-
-  /** Whether to display the learning journey. */
-  readonly shouldDisplay?: boolean;
-};
-
 /** Learning journey large desktop. */
-export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Props) {
+export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
   const [initialLoading, setInitialLoading] = useState(false);
 
   /**

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
 import {
   LEARNINGS,
@@ -11,15 +12,8 @@ import {
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 
-// prettier-ignore
-type Props = {
-
-  /** Whether to display the learning journey. */
-  readonly shouldDisplay?: boolean;
-};
-
 /** Learning journey mobile. */
-export default function LearningJourneyMobile({ shouldDisplay = true }: Props) {
+export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDisplayProps) {
   const [initialLoading, setInitialLoading] = useState(false);
 
   useEffect(() => {
