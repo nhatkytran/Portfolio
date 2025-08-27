@@ -6,8 +6,15 @@ import { cn } from '@/shared/utils/helpers';
 import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
+// prettier-ignore
+type Props = {
+
+  /** Whether to display the learning journey. */
+  readonly shouldDisplay?: boolean;
+};
+
 /** Learning journey large desktop. */
-export default function LearningJourneyLargeDesktop() {
+export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Props) {
   const [initialLoading, setInitialLoading] = useState(false);
 
   /**
@@ -25,7 +32,7 @@ export default function LearningJourneyLargeDesktop() {
   }, []);
 
   return (
-    <section className="flex items-center justify-center pt-20 pb-24">
+    <section className={cn('flex items-center justify-center pt-20 pb-24', !shouldDisplay && 'hidden')}>
       <div className="max-w-8xl flex w-full flex-col gap-16 px-9">
         <div className="relative">
           {initialLoading ? (

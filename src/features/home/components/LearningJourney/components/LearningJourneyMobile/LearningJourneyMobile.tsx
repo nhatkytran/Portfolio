@@ -11,8 +11,15 @@ import {
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 
+// prettier-ignore
+type Props = {
+
+  /** Whether to display the learning journey. */
+  readonly shouldDisplay?: boolean;
+};
+
 /** Learning journey mobile. */
-export default function LearningJourneyMobile() {
+export default function LearningJourneyMobile({ shouldDisplay = true }: Props) {
   const [initialLoading, setInitialLoading] = useState(false);
 
   useEffect(() => {
@@ -22,7 +29,7 @@ export default function LearningJourneyMobile() {
   }, []);
 
   return (
-    <section className={cn('py-10', 'sm:py-14')}>
+    <section className={cn('py-10', 'sm:py-14', !shouldDisplay && 'hidden')}>
       <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
         {initialLoading ? (
           <span className="h-[158px] w-full rounded-sm bg-neutral-100" />

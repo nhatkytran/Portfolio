@@ -6,8 +6,15 @@ import { cn } from '@/shared/utils/helpers';
 import { LEARNINGS, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
+// prettier-ignore
+type Props = {
+
+  /** Whether to display the learning journey. */
+  readonly shouldDisplay?: boolean;
+};
+
 /** Learning journey desktop. */
-export default function LearningJourneyDesktop() {
+export default function LearningJourneyDesktop({ shouldDisplay = true }: Props) {
   const [initialLoading, setInitialLoading] = useState(false);
 
   useEffect(() => {
@@ -17,7 +24,7 @@ export default function LearningJourneyDesktop() {
   }, []);
 
   return (
-    <section className="flex items-center justify-center py-20">
+    <section className={cn('flex items-center justify-center py-20', !shouldDisplay && 'hidden')}>
       <div className="flex w-full gap-5 px-9">
         {initialLoading ? (
           <span className="w-full max-w-[474px] rounded-sm bg-neutral-100" />
