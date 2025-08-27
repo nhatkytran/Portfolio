@@ -1,28 +1,19 @@
-import { useEffect, useState } from 'react';
-
 import { type Language, STATEMENTS } from '@/features/home/data';
 import { cn } from '@/shared/utils/helpers';
 import FadeInMotion from '@/shared/components/FadeInMotion';
-
-const TRANSLATION_ANIMATION_DURATION = 500;
 
 // prettier-ignore
 type Props = {
 
   /** Language. */
   readonly language: Language;
+
+  /** Whether it is translating. */
+  readonly isTranslating: boolean;
 };
 
 /** Statement display. */
-export default function StatementDisplay({ language }: Props) {
-  const [isTranslating, setIsTranslating] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsTranslating(true);
-    const timeoutId = setTimeout(() => setIsTranslating(false), TRANSLATION_ANIMATION_DURATION);
-    return () => clearTimeout(timeoutId);
-  }, [language]);
-
+export default function StatementDisplay({ language, isTranslating }: Props) {
   return (
     <div className={cn('rounded-sm bg-neutral-100 px-7 py-8', 'xs:px-10 xs:py-9', 'md:gap-4 md:px-14')}>
       {isTranslating ? (
