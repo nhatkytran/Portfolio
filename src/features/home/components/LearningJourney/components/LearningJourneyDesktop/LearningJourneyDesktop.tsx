@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
 import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNINGS } from '@/features/home/data';
@@ -6,55 +8,83 @@ import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey desktop. */
 export default function LearningJourneyDesktop() {
+  const [initialLoading, setInitialLoading] = useState(false);
+
+  useEffect(() => {
+    setInitialLoading(true);
+    const timeoutId = setTimeout(() => setInitialLoading(false), 1000);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <section className="flex items-center justify-center py-20">
       <div className="flex w-full gap-5 px-9">
-        <div className="rounded-sm p-1">
-          <div
-            className={cn('relative size-full', 'flex flex-col justify-center gap-2.5', 'rounded-sm bg-neutral-50 p-9')}
+        {initialLoading ? (
+          <span className="w-full max-w-[474px] rounded-sm bg-neutral-100" />
+        ) : (
+          <motion.div
+            className="max-w-[474px] rounded-sm p-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
           >
-            <Link
-              href="/learning-journey"
-              className={cn('absolute top-4 right-4 rounded-sm p-1', 'hover:bg-neutral-200')}
+            <div
+              className={cn(
+                'relative size-full',
+                'flex flex-col justify-center gap-2.5',
+                'rounded-sm bg-neutral-50 p-9',
+              )}
             >
-              <ArrowExploreIcon fill="#f03647" />
-            </Link>
-            <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase', 'lgx:text-2xl')}>
-              Learning Journey
-            </h2>
-            <p className="font-inter text-[15px]">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
-            <p className="font-riot-bold text-red-base text-xs tracking-wider">
-              {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
-            </p>
-          </div>
-        </div>
-        <ul className="grid min-w-[590px] grid-cols-2 gap-4">
-          {LEARNINGS.map(({ name, Icon }) => (
-            <li
-              key={name}
-              className={cn('learning-item-bg-hover', 'min-w-[284px] rounded-md p-0.5 transition duration-100')}
-            >
-              <div
-                className={cn(
-                  'flex h-full min-h-[100px]',
-                  'overflow-hidden rounded-md border-2 border-white bg-neutral-50',
-                  'hover:rounded-sm',
-                )}
+              <Link
+                href="/learning-journey"
+                className={cn('absolute top-4 right-4 rounded-sm p-1', 'hover:bg-neutral-200')}
               >
-                <div className={cn('learning-item-clip-path', 'flex items-center justify-center', 'w-14 bg-red-600')}>
-                  <Icon />
-                </div>
-                <p
+                <ArrowExploreIcon fill="#f03647" />
+              </Link>
+              <h2 className={cn('font-riot-sans-bold text-xl font-normal tracking-wider uppercase', 'lgx:text-2xl')}>
+                Learning Journey
+              </h2>
+              <p className="font-inter text-[15px]">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
+              <p className="font-riot-bold text-red-base text-xs tracking-wider">
+                {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
+              </p>
+            </div>
+          </motion.div>
+        )}
+        <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-4">
+          {LEARNINGS.map(({ name, Icon }, index) =>
+            initialLoading ? (
+              <span key={name} className="h-[104px] w-full max-w-[341px] rounded-sm bg-neutral-100" />
+            ) : (
+              <motion.li
+                key={name}
+                className={cn('learning-item-bg-hover', 'min-w-[284px] rounded-md p-0.5 transition duration-100')}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: index * 0.05 }}
+              >
+                <div
                   className={cn(
-                    'flex flex-1 items-center justify-center',
-                    'font-inter lgx:text-lg px-4 py-2 text-base font-bold tracking-wider',
+                    'flex h-full min-h-[100px]',
+                    'overflow-hidden rounded-md border-2 border-white bg-neutral-50',
+                    'hover:rounded-sm',
                   )}
                 >
-                  {name}
-                </p>
-              </div>
-            </li>
-          ))}
+                  <div className={cn('learning-item-clip-path', 'flex items-center justify-center', 'w-14 bg-red-600')}>
+                    <Icon />
+                  </div>
+                  <p
+                    className={cn(
+                      'flex flex-1 items-center justify-center',
+                      'font-inter lgx:text-lg px-4 py-2 text-base font-bold tracking-wider',
+                    )}
+                  >
+                    {name}
+                  </p>
+                </div>
+              </motion.li>
+            ),
+          )}
         </ul>
       </div>
     </section>
