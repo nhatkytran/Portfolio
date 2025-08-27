@@ -29,7 +29,10 @@ export default function StatementDisplay({ language }: Props) {
         <div className="flex flex-col gap-3.5">
           {['h-[36px] max-w-[140px]', 'h-[20px] max-w-[124px]', 'h-[28px] max-w-[350px]', 'h-[24px] max-w-[480px]'].map(
             (style, index) => (
-              <span key={index} className={cn('w-full rounded-3xl bg-neutral-200', style)} />
+              <span
+                key={index}
+                className={cn('w-full rounded-sm bg-neutral-200', index === 0 && 'rounded-3xl', style)}
+              />
             ),
           )}
         </div>

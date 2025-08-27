@@ -1,54 +1,117 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
-import { LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNINGS } from '@/features/home/data';
+import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons';
 
 /** Learning journey large desktop. */
 export default function LearningJourneyLargeDesktop() {
+  const [initialLoading, setInitialLoading] = useState(false);
+
+  /**
+   * Prevents the link from navigating.
+   * @param event The click event.
+   */
+  const handleLinkPrevention = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+  };
+
+  useEffect(() => {
+    setInitialLoading(true);
+    const timeoutId = setTimeout(() => setInitialLoading(false), 1000);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <section className="flex items-center justify-center pt-20 pb-24">
       <div className="max-w-8xl flex w-full flex-col gap-16 px-9">
-        <div className="relative flex flex-col gap-4">
-          <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
-          <p className="font-inter text-base">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
+        <div className="relative">
+          {initialLoading ? (
+            <div className="flex flex-col gap-4">
+              <span className="h-[40px] w-[440px] rounded-sm bg-neutral-100" />
+              <span className="h-[24px] w-[512px] rounded-sm bg-neutral-100" />
+            </div>
+          ) : (
+            <motion.div
+              className="flex flex-col gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
+              <p className="font-inter text-base">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
+            </motion.div>
+          )}
           <Link
             href="/learning-journey"
-            className={cn('flex items-center gap-1', 'absolute top-4 right-0 rounded-sm p-1')}
+            onClick={handleLinkPrevention}
+            className={cn('absolute top-4 right-0 rounded-sm p-1', initialLoading && 'cursor-default')}
           >
-            <ArrowExploreIcon fill="#e80029" />
-            <p className={cn('font-inter hidden text-sm font-semibold text-red-600 uppercase underline', 'sm:block')}>
-              Full site
-            </p>
+            {initialLoading ? (
+              <span className="block h-[28px] w-[96px] rounded-sm bg-neutral-100" />
+            ) : (
+              <motion.div
+                className="flex items-center gap-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowExploreIcon fill="#e80029" />
+                <p className="font-inter text-sm font-semibold text-red-600 uppercase underline">Full site</p>
+              </motion.div>
+            )}
           </Link>
         </div>
         <ul className="grid grid-cols-4 gap-5">
-          {LEARNINGS.map(({ name, Icon }) => (
-            <li key={name} className={cn('learning-item-bg-hover', 'rounded-md p-0.5 transition duration-100')}>
-              <div
-                className={cn(
-                  'flex h-full min-h-[100px]',
-                  'overflow-hidden rounded-md border-2 border-white bg-neutral-50',
-                  'hover:rounded-sm',
-                )}
+          {LEARNINGS.map(({ name, Icon }, index) =>
+            initialLoading ? (
+              <span key={name} className="h-[104px] w-full max-w-[305px] rounded-sm bg-neutral-100" />
+            ) : (
+              <motion.li
+                key={name}
+                className={cn('learning-item-bg-hover', 'rounded-md p-0.5 transition duration-100')}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: index * 0.05 }}
               >
-                <div className={cn('learning-item-clip-path', 'flex items-center justify-center', 'w-14 bg-red-600')}>
-                  <Icon />
-                </div>
-                <p
+                <div
                   className={cn(
-                    'flex flex-1 items-center justify-center',
-                    'font-inter px-4 py-2 text-lg font-bold tracking-wider',
+                    'flex h-full min-h-[100px]',
+                    'overflow-hidden rounded-md border-2 border-white bg-neutral-50',
+                    'hover:rounded-sm',
                   )}
                 >
-                  {name}
-                </p>
-              </div>
-            </li>
-          ))}
+                  <div className={cn('learning-item-clip-path', 'flex items-center justify-center', 'w-14 bg-red-600')}>
+                    <Icon />
+                  </div>
+                  <p
+                    className={cn(
+                      'flex flex-1 items-center justify-center',
+                      'font-inter px-4 py-2 text-lg font-bold tracking-wider',
+                    )}
+                  >
+                    {name}
+                  </p>
+                </div>
+              </motion.li>
+            ),
+          )}
         </ul>
         <div className="flex flex-col gap-6">
-          <p className="font-riot-bold text-red-base text-sm tracking-wider">{LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}</p>
+          {initialLoading ? (
+            <span className="h-[20px] w-[496px] rounded-sm bg-neutral-100" />
+          ) : (
+            <motion.p
+              className="font-riot-bold text-red-base text-sm tracking-wider"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
+            </motion.p>
+          )}
         </div>
       </div>
     </section>
