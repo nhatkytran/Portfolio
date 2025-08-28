@@ -1,3 +1,4 @@
+import Hero from '@/features/home/components/Hero';
 import LearningJourney from '@/features/home/components/LearningJourney';
 import TechnologiesOverview from '@/features/home/components/TechnologiesOverview';
 import PersonalStatement from '@/features/home/components/PersonalStatement';
@@ -6,7 +7,7 @@ import PersonalStatement from '@/features/home/components/PersonalStatement';
 export default function Home() {
   return (
     <>
-      <section className="h-[460px] bg-black"></section>
+      <Hero />
       <LearningJourney />
       <TechnologiesOverview />
       <PersonalStatement />

@@ -32,7 +32,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
           ) : (
             <FadeInMotion className="flex flex-col gap-4">
               <h2 className="font-inter text-4xl font-semibold">On The Learning Journey</h2>
-              <p className="font-inter text-base">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
+              <p className="font-inter text-base font-semibold text-neutral-600">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
             </FadeInMotion>
           )}
           <Link
