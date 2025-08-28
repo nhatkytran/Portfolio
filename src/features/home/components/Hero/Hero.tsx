@@ -3,24 +3,34 @@ import { cn } from '@/shared/utils/helpers';
 /** Hero. */
 export default function Hero() {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden bg-black pt-20 pb-24">
+    <section
+      className={cn(
+        'relative flex items-center justify-center overflow-hidden bg-black py-10',
+        'sm:py-14',
+        'lg:py-20',
+        'xl:pb-24',
+      )}
+    >
       <div className="max-w-8xl flex w-full items-center justify-between px-9">
-        <div className="flex flex-3 flex-col gap-8 pr-8">
+        <div className={cn('flex flex-3 flex-col gap-6 pr-8', 'mp:gap-8')}>
           <span
             className={cn(
               'w-fit px-6 py-2',
-              'font-mark-pro-bold text-sm text-neutral-200 uppercase',
+              'font-mark-pro-bold text-xs text-neutral-200 uppercase',
               'rounded-3xl border-2 border-neutral-400',
+              'mp:text-base',
             )}
           >
             Web Developer
           </span>
-          <p className="font-riot-sans-bold text-[18px] text-white uppercase">Ky Tran - (陳 / 陈) 日 祺</p>
-          <h2 className="text-mark-pro-bold text-4xl font-bold tracking-wider text-neutral-50">
+          <p className={cn('font-riot-sans-bold text-base text-white uppercase', 'mp:text-lg')}>
+            Ky Tran - (陳 / 陈) 日 祺
+          </p>
+          <h2 className={cn('text-mark-pro-bold text-3xl font-bold tracking-wider text-neutral-50', 'mp:text-4xl')}>
             On The <span className="font-riot-bold-italic relative top-0.25 text-red-600">Frontlines</span>
             &nbsp;of&nbsp;Code
           </h2>
-          <p className="font-inter text-base font-semibold tracking-wide text-neutral-200">
+          <p className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}>
             Serving as a Frontend Web Developer since July 2024, armed with{' '}
             <span className="text-amber-300">Vanilla JavaScript</span>, <span>Next</span>,{' '}
             <span className="text-blue-400">React</span>, <span className="text-red-400">Angular</span>, and
@@ -29,8 +39,9 @@ export default function Hero() {
           <div className="py-3">
             <button
               className={cn(
-                'font-mark-pro-bold w-fit rounded-sm bg-red-600 px-6 py-4 text-sm text-white uppercase',
+                'font-mark-pro-bold w-fit rounded-sm bg-red-600 px-6 py-4 text-xs text-white uppercase',
                 'hover:bg-red-700',
+                'mp:text-base',
               )}
             >
               Deploy Me on Your Next Mission
