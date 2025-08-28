@@ -3,7 +3,9 @@
 import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import FadeInMotion from '@/shared/components/FadeInMotion';
-import SkeletonLoading from '@/features/home/components/Hero/components/SkeletonLoading';
+import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
+
+const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutral-800' });
 
 /** Hero content. */
 export default function HeroContent() {

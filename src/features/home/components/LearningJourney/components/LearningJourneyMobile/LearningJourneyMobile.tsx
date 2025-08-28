@@ -11,7 +11,9 @@ import {
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 import FadeInMotion from '@/shared/components/FadeInMotion';
-import SkeletonLoading from '@/features/home/components/LearningJourney/components/SkeletonLoading';
+import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
+
+const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutral-100' });
 
 /** Learning journey mobile. */
 export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDisplayProps) {
