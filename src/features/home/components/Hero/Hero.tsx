@@ -24,7 +24,8 @@ export default function Hero() {
               'w-fit px-6 py-2',
               'font-mark-pro-bold text-xs text-neutral-200 uppercase',
               'rounded-3xl border-2 border-neutral-400',
-              'mp:text-base',
+              'mp:text-[15px]',
+              'lg:text-base',
             )}
           >
             Web Developer
