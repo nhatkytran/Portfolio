@@ -3,6 +3,7 @@
 import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import FadeInMotion from '@/shared/components/FadeInMotion';
+import SkeletonLoading from '@/features/home/components/Hero/components/SkeletonLoading';
 
 /** Hero. */
 export default function Hero() {
@@ -24,30 +25,22 @@ export default function Hero() {
         >
           {initialLoading ? (
             <div className={cn('flex flex-3 flex-col gap-6', 'w-full', 'sm:pr-8', 'mp:gap-8')}>
-              <span
+              <SkeletonLoading
                 className={cn(
-                  'h-[36px] max-w-[160px] rounded-3xl bg-neutral-800',
+                  'h-[36px] max-w-[160px] rounded-3xl',
                   'mp:h-[40px] mp:max-w-[186px]',
                   'lg:h-[44px] lg:max-w-[195px]',
                 )}
               />
-              <span
-                className={cn('h-[24px] max-w-[182px] rounded-sm bg-neutral-800', 'mp:h-[28px] mp:max-w-[205px]')}
-              />
-              <span
-                className={cn(
-                  'h-[36px] max-w-[364px] rounded-sm bg-neutral-800',
-                  'xs:max-w-[416px]',
-                  'lg:h-[40px] lg:max-w-[468px]',
-                )}
+              <SkeletonLoading className={cn('h-[24px] max-w-[182px]', 'mp:h-[28px] mp:max-w-[205px]')} />
+              <SkeletonLoading
+                className={cn('h-[36px] max-w-[364px]', 'xs:max-w-[416px]', 'lg:h-[40px] lg:max-w-[468px]')}
               />
               <div className="flex flex-col gap-2">
-                <span className={cn('h-[20px] max-w-[460px] rounded-sm bg-neutral-800', 'mp:max-w-[720px]')} />
-                <span className={cn('h-[20px] max-w-[180px] rounded-sm bg-neutral-800', 'mp:max-w-[260px]')} />
+                <SkeletonLoading className={cn('h-[20px] max-w-[460px]', 'mp:max-w-[720px]')} />
+                <SkeletonLoading className={cn('h-[20px] max-w-[180px]', 'mp:max-w-[260px]')} />
               </div>
-              <span
-                className={cn('h-[48px] max-w-[272px] rounded-sm bg-neutral-800', 'mp:h-[56px] mp:max-w-[346px]')}
-              />
+              <SkeletonLoading className={cn('h-[48px] max-w-[272px]', 'mp:h-[56px] mp:max-w-[346px]')} />
             </div>
           ) : (
             <div className={cn('flex flex-3 flex-col gap-6', 'sm:pr-8', 'mp:gap-8')}>
