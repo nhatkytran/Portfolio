@@ -16,7 +16,7 @@ export default function FadeInMotion<T extends ElementType = 'div'>({
   exit,
   transition,
 }: FadeInMotionProps<T>) {
-  const MotionComponent = motion(as || 'div');
+  const MotionComponent = motion.create(as || 'div');
 
   return (
     <MotionComponent

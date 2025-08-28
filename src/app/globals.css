@@ -198,6 +198,20 @@
 }
 
 @layer utilities {
+  .hero-image-clip-path {
+    clip-path: polygon(15% 100%, 0px 30%, 25% 0px, 100% 0px, 100% 100%);
+  }
+
+  @media screen and (min-width: 640px) {
+    .hero-image-clip-path {
+      clip-path: polygon(15% 100%, 0px 30%, 25% 0px, 100% 0px, 100% 100%);
+    }
+  }
+
+  .hero-image-overlay-bg {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 80%);
+  }
+
   .learning-item-clip-path {
     clip-path: polygon(0px 0px, 100% 0px, 82% 100%, 0% 100%);
   }

@@ -1,6 +1,9 @@
 import { type Language, STATEMENTS } from '@/features/home/data';
 import { cn } from '@/shared/utils/helpers';
 import FadeInMotion from '@/shared/components/FadeInMotion';
+import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
+
+const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutral-200' });
 
 // prettier-ignore
 type Props = {
@@ -20,10 +23,7 @@ export default function StatementDisplay({ language, isTranslating }: Props) {
         <div className="flex flex-col gap-3.5">
           {['h-[36px] max-w-[140px]', 'h-[20px] max-w-[124px]', 'h-[28px] max-w-[350px]', 'h-[24px] max-w-[480px]'].map(
             (style, index) => (
-              <span
-                key={index}
-                className={cn('w-full rounded-sm bg-neutral-200', index === 0 && 'rounded-3xl', style)}
-              />
+              <SkeletonLoading key={index} className={cn(index === 0 && 'rounded-3xl', style)} />
             ),
           )}
         </div>

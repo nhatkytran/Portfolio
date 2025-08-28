@@ -1,6 +1,7 @@
+import StraightStick from './components/StraightStick';
+
 import { cn } from '@/shared/utils/helpers';
 import { ESSENTIAL_INFORMATION, ESSENTIAL_INFORMATION_ICON_STYLES } from '@/features/layout/data';
-import StraightStick from '@/shared/components/StraightStick';
 
 /** Essential information. */
 export default function EssentialInformation() {
