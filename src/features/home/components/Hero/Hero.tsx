@@ -11,8 +11,14 @@ export default function Hero() {
         'xl:pb-24',
       )}
     >
-      <div className="max-w-8xl flex w-full items-center justify-between px-9">
-        <div className={cn('flex flex-3 flex-col gap-6 pr-8', 'mp:gap-8')}>
+      <div
+        className={cn(
+          'max-w-8xl flex w-full flex-col items-center justify-between px-4',
+          'xs:px-6',
+          'sm:flex-row sm:px-9',
+        )}
+      >
+        <div className={cn('flex flex-3 flex-col gap-6', 'sm:pr-8', 'mp:gap-8')}>
           <span
             className={cn(
               'w-fit px-6 py-2',
@@ -26,14 +32,20 @@ export default function Hero() {
           <p className={cn('font-riot-sans-bold text-base text-white uppercase', 'mp:text-lg')}>
             Ky Tran - (陳 / 陈) 日 祺
           </p>
-          <h2 className={cn('text-mark-pro-bold text-3xl font-bold tracking-wider text-neutral-50', 'mp:text-4xl')}>
+          <h2
+            className={cn(
+              'text-mark-pro-bold text-[28px] font-bold tracking-wider text-neutral-50',
+              'xs:text-3xl',
+              'mp:text-4xl',
+            )}
+          >
             On The <span className="font-riot-bold-italic relative top-0.25 text-red-600">Frontlines</span>
             &nbsp;of&nbsp;Code
           </h2>
           <p className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}>
             Serving as a Frontend Web Developer since July 2024, armed with{' '}
             <span className="text-amber-300">Vanilla JavaScript</span>, <span>Next</span>,{' '}
-            <span className="text-blue-400">React</span>, <span className="text-red-400">Angular</span>, and
+            <span className="text-blue-400">React</span>, <span className="text-red-500">Angular</span>, and
             self-training&nbsp;in&nbsp;<span className="text-green-400">Vue</span>.
           </p>
           <div className="py-3">
@@ -48,15 +60,16 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div className="flex-2" />
+        <div className={cn('h-[432px]', 'sm:h-0 sm:flex-2')} />
       </div>
       <div>
         <div
           style={{ backgroundImage: "url('/images/ky-tran.jpg')" }}
           className={cn(
             'hero-image-clip-path',
-            'absolute top-0 right-0 bottom-0 w-[42%] flex-2 self-stretch',
+            'absolute right-0 bottom-0 h-[432px] w-full flex-2 self-stretch',
             'bg-cover bg-center bg-no-repeat',
+            'sm:top-0 sm:h-full sm:w-[42%]',
           )}
         >
           <div className={cn('hero-image-overlay-bg size-[101%]', 'absolute top-0 left-0')} />
