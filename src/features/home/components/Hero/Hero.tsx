@@ -12,17 +12,18 @@ export default function Hero() {
     <section className="relative bg-cover bg-center bg-no-repeat">
       <div
         style={{ backgroundImage: "url('/images/hero-bg.png')" }}
-        className={cn('flex items-center justify-center bg-black py-10', 'sm:py-14', 'lg:py-20', 'xl:pb-24')}
+        className={cn('flex items-center justify-center', 'bg-black py-10', 'sm:py-14', 'lg:py-20', 'xl:pb-24')}
       >
         <div
           className={cn(
-            'max-w-8xl flex w-full flex-col items-center justify-between px-4',
+            'max-w-8xl w-full px-4',
+            'flex flex-col items-center justify-between',
             'xs:px-6',
             'sm:flex-row sm:px-9',
           )}
         >
           {initialLoading ? (
-            <div className={cn('flex w-full flex-3 flex-col gap-6', 'sm:pr-8', 'mp:gap-8')}>
+            <div className={cn('flex flex-3 flex-col gap-6', 'w-full', 'sm:pr-8', 'mp:gap-8')}>
               <span
                 className={cn(
                   'h-[36px] max-w-[160px] rounded-3xl bg-neutral-800',
@@ -78,7 +79,7 @@ export default function Hero() {
                   'lg:text-4xl',
                 )}
               >
-                On The <span className="font-riot-bold-italic relative top-0.25 text-red-600">Frontlines</span>
+                On The <span className={cn('relative top-0.25', 'font-riot-bold-italic text-red-600')}>Frontlines</span>
                 &nbsp;of&nbsp;Code
               </FadeInMotion>
               <FadeInMotion
@@ -94,7 +95,8 @@ export default function Hero() {
               <FadeInMotion transition={{ delay: 0.2 }} className="py-3">
                 <button
                   className={cn(
-                    'font-mark-pro-bold w-fit rounded-sm bg-red-600 px-6 py-4 text-xs text-white uppercase',
+                    'w-fit rounded-sm bg-red-600 px-6 py-4',
+                    'font-mark-pro-bold text-xs text-white uppercase',
                     'hover:bg-red-700',
                     'mp:text-base',
                   )}
@@ -110,8 +112,8 @@ export default function Hero() {
           <div
             style={{ backgroundImage: "url('/images/ky-tran.jpg')" }}
             className={cn(
-              'hero-image-clip-path',
-              'absolute right-0 bottom-0 h-[432px] w-full flex-2 self-stretch',
+              'hero-image-clip-path h-[432px] w-full',
+              'absolute right-0 bottom-0 flex-2 self-stretch',
               'bg-cover bg-center bg-no-repeat',
               'sm:top-0 sm:h-full sm:w-[42%]',
             )}
