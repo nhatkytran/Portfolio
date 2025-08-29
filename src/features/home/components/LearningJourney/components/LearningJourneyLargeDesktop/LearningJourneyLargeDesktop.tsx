@@ -23,8 +23,8 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
   };
 
   return (
-    <section className={cn('flex items-center justify-center pt-20 pb-24', !shouldDisplay && 'hidden')}>
-      <div className="max-w-8xl flex w-full flex-col gap-16 px-9">
+    <section className={cn('flex items-center justify-center py-20', !shouldDisplay && 'hidden')}>
+      <div className="max-w-8xl flex w-full flex-col gap-14 px-9">
         <div className="relative">
           {initialLoading ? (
             <div className="flex flex-col gap-4">

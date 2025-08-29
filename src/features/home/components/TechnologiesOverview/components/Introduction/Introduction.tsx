@@ -8,7 +8,9 @@ export default function Introduction() {
   return (
     <div className={cn('w-full', 'flex flex-col items-center gap-4')}>
       <div className="flex items-center gap-4">
-        <h2 className={cn('font-inter text-[32px] font-semibold text-white', 'sm:text-4xl')}>Technologies</h2>
+        <h2 className={cn('font-inter text-[26px] font-semibold text-white', 'sm:text-[32px]', 'lg:text-4xl')}>
+          Technologies
+        </h2>
         <Link
           href="/skills"
           className={cn(
@@ -24,9 +26,10 @@ export default function Introduction() {
       <p
         className={cn(
           'w-full max-w-100',
-          'font-inter text-center text-[15px] font-semibold text-neutral-200',
-          'xs:text-base',
+          'font-inter text-center text-sm font-semibold text-neutral-200',
+          'sm:text-[15px]',
           'md:max-w-full',
+          'lg:text-base',
         )}
       >
         My gear evolves with every battle, and here are some of the technologies at my side.
