@@ -24,7 +24,7 @@ export default function Introduction() {
       <p
         className={cn(
           'w-full max-w-100',
-          'font-inter text-center text-[15px] text-white',
+          'font-inter text-center text-[15px] font-semibold text-neutral-200',
           'xs:text-base',
           'md:max-w-full',
         )}

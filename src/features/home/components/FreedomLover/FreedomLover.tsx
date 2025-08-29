@@ -55,13 +55,18 @@ export default function FreedomLover() {
               <div
                 key={index}
                 className={cn(
-                  'flex items-center justify-center',
+                  'group flex items-center justify-center',
                   'relative aspect-video h-[120px]',
-                  'rounded-sm border border-neutral-100 bg-neutral-50 transition-all',
-                  'hover:scale-105',
+                  'rounded-sm border border-neutral-100 bg-neutral-50',
                 )}
               >
-                <Image src={`/images/flags/${flag}`} alt={flag.split('.')[0]} width={100} height={0} />
+                <Image
+                  src={`/images/flags/${flag}`}
+                  alt={flag.split('.')[0]}
+                  width={100}
+                  height={0}
+                  className={cn('transition-all', 'group-hover:scale-105')}
+                />
               </div>
             ))}
         </motion.div>
