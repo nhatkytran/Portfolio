@@ -67,6 +67,20 @@ export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE =
 export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE =
   'Let the darkness come - I was not shaped to fear it, only to outshine it.';
 
+/** Flag images. */
+export const FLAG_IMAGES: readonly string[] = [
+  'america.webp',
+  'republic-china.webp',
+  'europe.webp',
+  'hongkong.webp',
+  'france.webp',
+  'communist-china.webp',
+  'russia.webp',
+  'ukraine.webp',
+  'uk.webp',
+  'germany.webp',
+];
+
 // prettier-ignore
 type TechnologyOverview = {
 
