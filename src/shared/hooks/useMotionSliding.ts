@@ -33,8 +33,9 @@ export function useMotionSliding({
   const xTranslation = useMotionValue(initialXTranslationValue);
 
   useEffect(() => {
-    const startPosition = 0;
-    const finalPosition = (width / dataLoopTime) * (slideSide === 'left' ? -1 : 1);
+    const startPosition = xTranslation.get();
+    const sidePoint = slideSide === 'left' ? -1 : 1;
+    const finalPosition = (width / dataLoopTime) * sidePoint - startPosition * sidePoint;
     const controls = animate(xTranslation, [startPosition, finalPosition], {
       ease: 'linear',
       duration,
