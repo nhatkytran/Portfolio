@@ -9,7 +9,7 @@ const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutra
 
 /** Hero content. */
 export default function HeroContent() {
-  const { initialLoading } = useInitialLoading({ initialLoadingState: true });
+  const { initialLoading } = useInitialLoading();
 
   return (
     <div
