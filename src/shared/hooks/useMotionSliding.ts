@@ -29,6 +29,9 @@ type Props = {
   readonly delayInSeconds?: number;
 };
 
+/** Return type. */
+type Return = [ReturnType<typeof useMeasure>[0], ReturnType<typeof useMotionValue<number>>];
+
 /** Motion slide content horizontally. */
 export function useMotionSliding({
   slideSide = 'left',
@@ -37,7 +40,7 @@ export function useMotionSliding({
   initialXTranslationValue = 0,
   animateOptions = {},
   delayInSeconds = 1,
-}: Props): [ReturnType<typeof useMeasure>[0], ReturnType<typeof useMotionValue<number>>] {
+}: Props): Return {
   const [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(initialXTranslationValue);
 
