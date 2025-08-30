@@ -1,6 +1,11 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import useMeasure from 'react-use-measure';
-import { type ValueAnimationTransition, animate, useMotionValue } from 'framer-motion';
+import {
+  type ValueAnimationTransition,
+  AnimationPlaybackControlsWithThen,
+  animate,
+  useMotionValue,
+} from 'framer-motion';
 
 // prettier-ignore
 type Props = {
@@ -19,6 +24,9 @@ type Props = {
 
   /** Animate options. */
   readonly animateOptions?: ValueAnimationTransition<number>;
+
+  /** Delay before starting to slide (in seconds). */
+  readonly delayInSeconds?: number;
 };
 
 /** Motion slide content horizontally. */
@@ -28,15 +36,17 @@ export function useMotionSliding({
   dataLoopTime = 10,
   initialXTranslationValue = 0,
   animateOptions = {},
+  delayInSeconds = 1,
 }: Props): [ReturnType<typeof useMeasure>[0], ReturnType<typeof useMotionValue<number>>] {
   const [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(initialXTranslationValue);
 
-  useEffect(() => {
+  /** Handle animate. */
+  const handleAnimate = useCallback(() => {
     const startPosition = xTranslation.get();
     const sidePoint = slideSide === 'left' ? -1 : 1;
     const finalPosition = (width / dataLoopTime) * sidePoint - startPosition * sidePoint;
-    const controls = animate(xTranslation, [startPosition, finalPosition], {
+    return animate(xTranslation, [startPosition, finalPosition], {
       ease: 'linear',
       duration,
       repeat: Infinity,
@@ -44,8 +54,16 @@ export function useMotionSliding({
       repeatDelay: 0,
       ...animateOptions,
     });
-    return controls.stop;
   }, [xTranslation, width, animateOptions, dataLoopTime, duration, slideSide]);
+
+  useEffect(() => {
+    let controls: AnimationPlaybackControlsWithThen | null = null;
+    const timeoutId = setTimeout(() => (controls = handleAnimate()), delayInSeconds * 1000);
+    return () => {
+      clearTimeout(timeoutId);
+      controls?.stop();
+    };
+  }, [handleAnimate, delayInSeconds]);
 
   return [ref, xTranslation];
 }
