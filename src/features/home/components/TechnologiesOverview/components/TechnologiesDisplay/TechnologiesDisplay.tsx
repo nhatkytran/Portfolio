@@ -11,7 +11,7 @@ export default function TechnologiesDisplay() {
   return TECHNOLOGIES_OVERVIEW.map(({ name, Icon }, index) => (
     <div key={index} className="group relative">
       <div
-        style={{ backgroundImage: `url('/images/tech-overview-${index}.webp')` }}
+        style={{ backgroundImage: `url('/images/technologies/overview/tech-overview-${index}.webp')` }}
         className={cn(
           'technologies-overview-clip-path',
           'relative bg-cover bg-center bg-no-repeat pt-[125%]',

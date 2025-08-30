@@ -9,7 +9,7 @@ const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutra
 
 /** Hero content. */
 export default function HeroContent() {
-  const { initialLoading } = useInitialLoading({ initialLoadingState: true });
+  const { initialLoading } = useInitialLoading();
 
   return (
     <div
@@ -69,8 +69,10 @@ export default function HeroContent() {
               'lg:text-4xl',
             )}
           >
-            On The <span className={cn('relative top-0.25', 'font-riot-bold-italic text-red-600')}>Frontlines</span>
-            &nbsp;of&nbsp;Code
+            On The{' '}
+            <span className="whitespace-nowrap">
+              <span className={cn('relative top-0.25', 'font-riot-bold-italic text-red-600')}>Frontlines</span> of Code
+            </span>
           </FadeInMotion>
           <FadeInMotion
             as="p"
@@ -79,8 +81,10 @@ export default function HeroContent() {
           >
             Serving as a Frontend Web Developer since July 2024, armed with{' '}
             <span className="text-amber-300">Vanilla JavaScript</span>, <span>Next</span>,{' '}
-            <span className="text-blue-400">React</span>, <span className="text-red-500">Angular</span>, and
-            self-training&nbsp;in&nbsp;<span className="text-green-400">Vue</span>.
+            <span className="text-blue-400">React</span>, <span className="text-red-500">Angular</span>, and{' '}
+            <span className="whitespace-nowrap">
+              self-training in <span className="text-green-400">Vue</span>.
+            </span>
           </FadeInMotion>
           <FadeInMotion transition={{ delay: 0.2 }} className="py-3">
             <button

@@ -6,9 +6,7 @@ import TechnologiesDisplay from '@/features/home/components/TechnologiesOverview
 /** Technologies overview. */
 export default function TechnologiesOverview() {
   return (
-    <section
-      className={cn('flex items-center justify-center', 'relative bg-black py-10', 'sm:py-14', 'lg:py-20', 'xl:pb-24')}
-    >
+    <section className={cn('flex items-center justify-center', 'relative bg-black pt-16 pb-18', 'xl:pb-24')}>
       <FullSiteLink />
       <div
         className={cn(

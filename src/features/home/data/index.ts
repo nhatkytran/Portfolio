@@ -68,6 +68,31 @@ export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE =
   'Let the darkness come - I was not shaped to fear it, only to outshine it.';
 
 // prettier-ignore
+
+type FlagImage = {
+
+  /** Name. */
+  readonly name: string;
+
+  /** Alt. */
+  readonly alt: string;
+};
+
+/** Flag images. */
+export const FLAG_IMAGES: readonly FlagImage[] = [
+  { name: 'america.webp', alt: 'America flag' },
+  { name: 'republic-china.webp', alt: 'Republic of China flag' },
+  { name: 'europe.webp', alt: 'Europe flag' },
+  { name: 'hongkong.webp', alt: 'Hong Kong flag' },
+  { name: 'france.webp', alt: 'France flag' },
+  { name: 'communist-china.webp', alt: 'Communist China flag' },
+  { name: 'russia.webp', alt: 'Russia flag' },
+  { name: 'ukraine.webp', alt: 'Ukraine flag' },
+  { name: 'uk.webp', alt: 'United Kingdom flag' },
+  { name: 'germany.webp', alt: 'Germany flag' },
+];
+
+// prettier-ignore
 type TechnologyOverview = {
 
   /** Name. */

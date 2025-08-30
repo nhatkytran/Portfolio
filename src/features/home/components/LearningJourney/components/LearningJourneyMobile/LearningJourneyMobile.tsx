@@ -20,7 +20,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
   const { initialLoading } = useInitialLoading({ dependencies: [shouldDisplay] });
 
   return (
-    <section className={cn('py-10', 'sm:py-14', !shouldDisplay && 'hidden')}>
+    <section className={cn('py-14', !shouldDisplay && 'hidden')}>
       <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
         {initialLoading ? (
           <SkeletonLoading className="h-[158px] w-full" />
