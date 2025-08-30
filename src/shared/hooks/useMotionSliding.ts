@@ -44,8 +44,7 @@ export function useMotionSliding({
       ...animateOptions,
     });
     return controls.stop;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [xTranslation, width]);
+  }, [xTranslation, width, animateOptions, dataLoopTime, duration, slideSide]);
 
   return [ref, xTranslation];
 }

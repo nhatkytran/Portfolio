@@ -27,7 +27,7 @@ export default function FlagsSlide() {
         {Array(FLAGS_LOOP_TIME)
           .fill(FLAG_IMAGES)
           .flat()
-          .map((flag, index) => (
+          .map(({ name, alt }, index) => (
             <div
               key={index}
               className={cn(
@@ -37,8 +37,8 @@ export default function FlagsSlide() {
               )}
             >
               <Image
-                src={`/images/flags/${flag}`}
-                alt={flag.split('.')[0]}
+                src={`/images/flags/${name}`}
+                alt={alt}
                 width={100}
                 height={0}
                 className={cn('transition-all', 'group-hover:scale-105')}
