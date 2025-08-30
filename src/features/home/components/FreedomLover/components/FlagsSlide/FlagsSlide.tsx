@@ -10,9 +10,7 @@ import { FLAG_IMAGES } from '@/features/home/data';
 const FLAGS_LOOP_TIME = 10;
 const INITIAL_X_TRANSLATION_VALUE = 16;
 
-/**
- *
- */
+/** Flags slide. */
 export default function FlagsSlide() {
   const [slidingRef, xTranslation] = useMotionSliding({
     dataLoopTime: FLAGS_LOOP_TIME,

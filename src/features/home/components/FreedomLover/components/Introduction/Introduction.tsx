@@ -1,4 +1,3 @@
-/** Freedom lover introduction. */
 import { cn } from '@/shared/utils/helpers';
 
 /** Freedom lover introduction. */
