@@ -13,13 +13,11 @@ export default function Introduction() {
           'lg:text-base',
         )}
       >
-        Ideologies are strategies, not destinies.{' '}
-        <span className="whitespace-nowrap">
-          <span className="font-bold text-blue-500">Capitalism</span>,{' '}
-          <span className="font-bold text-red-600">Communism</span>, even{' '}
-          <span className="font-bold text-neutral-800">Fascism</span>
-        </span>{' '}
-        - victory belongs to those who use them with discipline, not those who worship them.
+        <span className="font-bold text-blue-500">Passionate</span> in code,{' '}
+        <span className="font-bold text-red-500">skilled</span> in Front-end,{' '}
+        <span className="font-bold text-green-500">advancing</span> to JavaScript Full-stack. A freedom lover{' '}
+        <span className="font-bold text-yellow-500">thriving</span> with diverse teams, always{' '}
+        <span className="font-bold text-pink-500">learning</span>, ready to deliver.
       </p>
     </div>
   );

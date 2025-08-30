@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
@@ -17,6 +18,8 @@ export default function FlagsSlide() {
     initialXTranslationValue: INITIAL_X_TRANSLATION_VALUE,
   });
 
+  const flags = useMemo(() => Array.from({ length: FLAGS_LOOP_TIME }, () => FLAG_IMAGES).flat(), []);
+
   return (
     <div className={cn('relative h-[180px] overflow-hidden', 'sm:h-[200px]')}>
       <motion.div
@@ -24,27 +27,24 @@ export default function FlagsSlide() {
         style={{ x: xTranslation }}
         className={cn('flex items-center gap-4', 'absolute top-0')}
       >
-        {Array(FLAGS_LOOP_TIME)
-          .fill(FLAG_IMAGES)
-          .flat()
-          .map(({ name, alt }, index) => (
-            <div
-              key={index}
-              className={cn(
-                'group flex items-center justify-center',
-                'relative aspect-video h-[120px]',
-                'rounded-sm border border-neutral-100 bg-neutral-50',
-              )}
-            >
-              <Image
-                src={`/images/flags/${name}`}
-                alt={alt}
-                width={100}
-                height={0}
-                className={cn('transition-all', 'group-hover:scale-105')}
-              />
-            </div>
-          ))}
+        {flags.map(({ name, alt }, index) => (
+          <div
+            key={index}
+            className={cn(
+              'group flex items-center justify-center',
+              'relative aspect-video h-[120px]',
+              'rounded-sm border border-neutral-100 bg-neutral-50',
+            )}
+          >
+            <Image
+              src={`/images/flags/${name}`}
+              alt={alt}
+              width={100}
+              height={0}
+              className={cn('transition-all', 'group-hover:scale-105')}
+            />
+          </div>
+        ))}
       </motion.div>
     </div>
   );
