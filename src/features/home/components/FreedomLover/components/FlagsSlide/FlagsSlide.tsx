@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/shared/utils/helpers';
 import { useMotionSliding } from '@/shared/hooks';
 import { FLAG_IMAGES } from '@/features/home/data';
+import FadeInMotion from '@/shared/components/FadeInMotion';
 
 const FLAGS_LOOP_TIME = 10;
 const INITIAL_X_TRANSLATION_VALUE = 16;
@@ -38,13 +39,15 @@ export default function FlagsSlide() {
               'rounded-sm border border-neutral-100 bg-neutral-50',
             )}
           >
-            <Image
-              src={`/images/flags/${name}`}
-              alt={alt}
-              width={100}
-              height={0}
-              className={cn('transition-all', 'group-hover:scale-105')}
-            />
+            <FadeInMotion transition={{ delay: index * 0.05 }}>
+              <Image
+                src={`/images/flags/${name}`}
+                alt={alt}
+                width={100}
+                height={0}
+                className={cn('transition-all', 'group-hover:scale-105')}
+              />
+            </FadeInMotion>
           </div>
         ))}
       </motion.div>

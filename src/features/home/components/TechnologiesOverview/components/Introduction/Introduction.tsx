@@ -32,7 +32,8 @@ export default function Introduction() {
           'lg:text-base',
         )}
       >
-        My gear evolves with every battle, and here are some of the technologies at my side.
+        My gear evolves with every battle, and here are some of the technologies{' '}
+        <span className="whitespace-nowrap">at my side</span>.
       </p>
     </div>
   );
