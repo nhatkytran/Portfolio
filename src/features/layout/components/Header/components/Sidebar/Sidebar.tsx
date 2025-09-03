@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/shared/utils/helpers';
 import { BREAK_POINTS, CONTENTS } from '@/shared/constants';
 import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
-import { useOpen, useWindowEventListener } from '@/shared/hooks';
+import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
@@ -14,6 +14,7 @@ import Divider from '@/shared/components/Divider';
 /** Sidebar. */
 export default function Sidebar() {
   const pathname = usePathname();
+  const { isNightbringer } = useBringer();
   const { isOpen, handleOpen, handleClose } = useOpen();
 
   /** Auto close sidebar when window size is greater than lg breakpoint. */
@@ -86,8 +87,13 @@ export default function Sidebar() {
         </div>
         <div className="flex flex-col gap-2">
           <Divider />
-          <p className="font-riot-bold-italic text-right text-sm tracking-widest text-red-600">
-            -- Live on the dark side --
+          <p
+            className={cn(
+              'font-riot-bold-italic text-right text-sm tracking-widest',
+              isNightbringer ? 'text-red-600' : 'text-sky-600',
+            )}
+          >
+            -- Live on the {isNightbringer ? 'dark' : 'bright'} side --
           </p>
         </div>
       </aside>
