@@ -57,7 +57,13 @@ export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
 ];
 
 /** Learning journey soldier quote. */
-export const LEARNING_JOURNEY_SOLDIER_QUOTE = 'Keep pushing forward as a soldier, growing and improving my skills.';
+export const LEARNING_JOURNEY_SOLDIER_QUOTE = (
+  <>
+    Keep <span className="font-bold text-blue-500">pushing</span> forward as a soldier,{' '}
+    <span className="font-bold text-red-500">growing</span> and{' '}
+    <span className="font-bold text-green-500">improving</span> my skills.
+  </>
+);
 
 /** Learning journey night bringer quote. */
 export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE =

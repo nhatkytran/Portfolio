@@ -52,8 +52,15 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
               <SkeletonLoading className="block h-[28px] w-[96px]" />
             ) : (
               <FadeInMotion className="flex items-center gap-1">
-                <ArrowExploreIcon fill="#e80029" />
-                <p className="font-inter text-sm font-semibold text-red-600 uppercase underline">Full site</p>
+                <ArrowExploreIcon fill={isNightbringer ? '#e80029' : '#007dd2'} />
+                <p
+                  className={cn(
+                    'font-inter text-sm font-semibold uppercase underline',
+                    isNightbringer ? 'text-red-600' : 'text-sky-600',
+                  )}
+                >
+                  Full site
+                </p>
               </FadeInMotion>
             )}
           </Link>
@@ -66,7 +73,10 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
               <FadeInMotion
                 key={name}
                 as="li"
-                className={cn('learning-item-bg-hover', 'rounded-md p-0.5 transition duration-100')}
+                className={cn(
+                  'rounded-md p-0.5 transition duration-100',
+                  isNightbringer ? 'learning-item-bg-hover' : 'learning-item-bg-dawn-hover',
+                )}
                 transition={{ delay: index * 0.05 }}
               >
                 <div
@@ -102,7 +112,10 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
           {initialLoading ? (
             <SkeletonLoading className="h-[20px] w-[496px]" />
           ) : (
-            <FadeInMotion as="p" className="font-riot-bold text-red-base text-sm tracking-wider">
+            <FadeInMotion
+              as="p"
+              className={cn('font-riot-bold text-sm tracking-wider', isNightbringer ? 'text-red-base' : 'text-sky-600')}
+            >
               {isNightbringer ? LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE : LEARNING_JOURNEY_DAWN_BRINGER_QUOTE}
             </FadeInMotion>
           )}
