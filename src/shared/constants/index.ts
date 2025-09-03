@@ -1,3 +1,6 @@
+/** Portal id. */
+export const PORTAL_ID = 'portal' as const;
+
 /** Nightbringer mode. */
 export const NIGHTBRINGER_MODE = 'NIGHTBRINGER_MODE' as const;
 

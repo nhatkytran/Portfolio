@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 
 import { fonts } from '@/shared/config';
 import { cn, getFontsVariables } from '@/shared/utils/helpers';
-import { CONTENTS } from '@/shared/constants';
+import { PORTAL_ID, CONTENTS } from '@/shared/constants';
 import Header from '@/features/layout/components/Header';
 import Footer from '@/features/layout/components/Footer';
 
@@ -20,6 +20,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={cn(getFontsVariables(fonts), 'font-spiegel-regular antialiased')}>
+        <div id={PORTAL_ID} />
         <Header />
         {children}
         <Footer />
