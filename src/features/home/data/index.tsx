@@ -61,17 +61,27 @@ export const LEARNING_JOURNEY_SOLDIER_QUOTE = (
   <>
     Keep <span className="font-bold text-blue-500">pushing</span> forward as a soldier,{' '}
     <span className="font-bold text-red-500">growing</span> and{' '}
-    <span className="font-bold text-green-500">improving</span> my skills.
+    <span className="whitespace-nowrap">
+      <span className="font-bold text-green-500">improving</span> my skills.
+    </span>
   </>
 );
 
 /** Learning journey night bringer quote. */
-export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE =
-  'Let the light fade - I was never meant to follow it, only to surpass it.';
+export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE = (
+  <>
+    Let the light fade - I was never meant to follow it, only to
+    <span className="whitespace-nowrap"> surpass it.</span>
+  </>
+);
 
 /** Learning journey dawn bringer quote. */
-export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE =
-  'Let the darkness come - I was not shaped to fear it, only to outshine it.';
+export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE = (
+  <>
+    Let the darkness come - I was not shaped to fear it, only to
+    <span className="whitespace-nowrap"> outshine it.</span>
+  </>
+);
 
 // prettier-ignore
 

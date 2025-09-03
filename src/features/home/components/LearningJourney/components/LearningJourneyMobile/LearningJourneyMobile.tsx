@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
+import { useBringer } from '@/shared/hooks';
 import {
   LEARNINGS,
   LEARNING_ICON_STYLES,
   LEARNING_JOURNEY_SOLDIER_QUOTE,
   LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,
+  LEARNING_JOURNEY_DAWN_BRINGER_QUOTE,
 } from '@/features/home/data';
 import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 import FadeInMotion from '@/shared/components/FadeInMotion';
@@ -18,6 +20,7 @@ const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutra
 /** Learning journey mobile. */
 export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDisplayProps) {
   const { initialLoading } = useInitialLoading({ dependencies: [shouldDisplay] });
+  const { isNightbringer } = useBringer();
 
   return (
     <section className={cn('py-14', !shouldDisplay && 'hidden')}>
@@ -28,21 +31,24 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
           <FadeInMotion
             className={cn(
               'relative flex size-full flex-col justify-center gap-2.5',
-              'overflow-hidden rounded-sm bg-neutral-50 p-6',
-              'sm:p-9',
+              'overflow-hidden rounded-sm bg-neutral-50 px-6 pt-6 pb-7',
+              'sm:py-9 sm:pr-34 sm:pl-9',
             )}
           >
             <h2 className="font-riot-sans-bold text-xl font-normal tracking-wider uppercase">Learning Journey</h2>
             <p className="font-inter text-[15px]">{LEARNING_JOURNEY_SOLDIER_QUOTE}</p>
-            <p className="font-riot-bold text-red-base text-xs tracking-wider">
-              {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
+            <p
+              className={cn('font-riot-bold text-xs tracking-wider', isNightbringer ? 'text-red-base' : 'text-sky-600')}
+            >
+              {isNightbringer ? LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE : LEARNING_JOURNEY_DAWN_BRINGER_QUOTE}
             </p>
             <div
               className={cn(
                 'learning-journey-clip-path',
                 'h-full w-32',
-                'absolute top-0 right-0 hidden bg-red-600',
+                'absolute top-0 right-0 hidden',
                 'sm:flex sm:items-center sm:justify-center',
+                isNightbringer ? 'bg-red-600' : 'bg-sky-500',
               )}
             >
               <LearningBookIcon className="relative left-1" />
@@ -52,7 +58,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
         {initialLoading ? (
           <SkeletonLoading className="h-[412px] w-full" />
         ) : (
-          <FadeInMotion className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 py-6', 'sm:px-10')}>
+          <FadeInMotion className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 pt-6 pb-8', 'sm:px-10')}>
             <div className="flex items-center justify-between">
               <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
               {/* TODO (Ky Tran): Implement learning journey page. */}
@@ -60,10 +66,17 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
                 href="/learning-journey"
                 className={cn('flex items-center gap-1.5 rounded-sm bg-neutral-200 p-1', 'sm:bg-transparent sm:p-0')}
               >
-                <p className={cn('hidden', 'font-inter text-sm font-bold text-red-600 uppercase', 'sm:block')}>
+                <p
+                  className={cn(
+                    'hidden',
+                    'font-inter text-sm font-bold uppercase',
+                    'sm:block',
+                    isNightbringer ? 'text-red-600' : 'text-sky-600',
+                  )}
+                >
                   Full site
                 </p>
-                <ArrowExploreIcon fill="#e80029" />
+                <ArrowExploreIcon fill={isNightbringer ? '#e80029' : '#007dd2'} />
               </Link>
             </div>
             <ul className="flex flex-col gap-4">
