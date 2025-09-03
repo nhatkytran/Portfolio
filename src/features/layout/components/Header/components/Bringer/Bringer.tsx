@@ -18,7 +18,7 @@ export default function Bringer({ className }: PropsWithClassName) {
   return (
     <div
       onClick={handleSetMode}
-      className={cn('group relative flex cursor-pointer items-center gap-1 p-1.5', className)}
+      className={cn('group relative flex cursor-pointer items-center gap-1 p-0.5', className)}
     >
       <span
         className={cn(

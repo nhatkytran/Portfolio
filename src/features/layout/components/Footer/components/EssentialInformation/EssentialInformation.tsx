@@ -1,10 +1,15 @@
+'use client';
+
 import StraightStick from './components/StraightStick';
 
 import { cn } from '@/shared/utils/helpers';
+import { useBringer } from '@/shared/hooks';
 import { ESSENTIAL_INFORMATION, ESSENTIAL_INFORMATION_ICON_STYLES } from '@/features/layout/data';
 
 /** Essential information. */
 export default function EssentialInformation() {
+  const { isNightbringer } = useBringer();
+
   return (
     <div className={cn('flex flex-col justify-center', 'w-full max-w-6xl gap-6', 'sm:gap-8', 'lg:flex-row')}>
       {ESSENTIAL_INFORMATION.map(({ label, content, Icon }, index) => (
@@ -33,14 +38,27 @@ export default function EssentialInformation() {
             <p className="tracking-wider">{content}</p>
           </div>
           <StraightStick
-            className={cn('left-20 -rotate-75 bg-red-600', 'lgx:left-25', 'group-hover:lgx:left-5 group-hover:left-10')}
+            className={cn(
+              'left-20 -rotate-75',
+              'lgx:left-25',
+              'group-hover:lgx:left-5 group-hover:left-10',
+              isNightbringer ? 'bg-red-600' : 'bg-sky-600',
+            )}
           />
-          <StraightStick className={cn('left-25 -rotate-75 bg-red-600', 'lgx:left-30', 'group-hover:left-20')} />
           <StraightStick
             className={cn(
-              'left-35 -rotate-75 bg-blue-400',
+              'left-25 -rotate-75',
+              'lgx:left-30',
+              'group-hover:left-20',
+              isNightbringer ? 'bg-red-600' : 'bg-sky-600',
+            )}
+          />
+          <StraightStick
+            className={cn(
+              'left-35 -rotate-75',
               'lgx:left-40',
               'group-hover:lgx:left-43 group-hover:left-38',
+              isNightbringer ? 'bg-blue-400' : 'bg-red-500',
             )}
           />
           <div

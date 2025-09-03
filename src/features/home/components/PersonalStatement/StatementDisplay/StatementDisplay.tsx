@@ -1,5 +1,6 @@
 import { type Language, STATEMENTS } from '@/features/home/data';
 import { cn } from '@/shared/utils/helpers';
+import { useBringer } from '@/shared/hooks';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 
@@ -17,6 +18,8 @@ type Props = {
 
 /** Statement display. */
 export default function StatementDisplay({ language, isTranslating }: Props) {
+  const { isNightbringer } = useBringer();
+
   return (
     <div className={cn('rounded-sm bg-neutral-100 px-7 py-8', 'xs:px-10 xs:py-9', 'md:gap-4 md:px-14')}>
       {isTranslating ? (
@@ -41,7 +44,16 @@ export default function StatementDisplay({ language, isTranslating }: Props) {
               {badge}
             </span>
             <p className="text-sm tracking-wider text-neutral-600">{author}</p>
-            <p className={cn('text-base font-bold tracking-wider text-red-600', 'xs:text-lg', 'md:text-xl')}>{quote}</p>
+            <p
+              className={cn(
+                'text-base font-bold tracking-wider',
+                'xs:text-lg',
+                'md:text-xl',
+                isNightbringer ? 'text-red-600' : 'text-sky-600',
+              )}
+            >
+              {quote}
+            </p>
             <p className={cn('text-sm tracking-wider text-neutral-600 opacity-90', 'md:text-base')}>{motto}</p>
           </FadeInMotion>
         ))
