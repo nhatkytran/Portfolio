@@ -2,6 +2,7 @@
 
 import { cn } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
+import { useBringer } from '@/shared/hooks';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 
@@ -10,6 +11,7 @@ const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutra
 /** Hero content. */
 export default function HeroContent() {
   const { initialLoading } = useInitialLoading();
+  const { isNightbringer } = useBringer();
 
   return (
     <div
@@ -71,7 +73,16 @@ export default function HeroContent() {
           >
             On The{' '}
             <span className="whitespace-nowrap">
-              <span className={cn('relative top-0.25', 'font-riot-bold-italic text-red-600')}>Frontlines</span> of Code
+              <span
+                className={cn(
+                  'relative top-0.25',
+                  'font-riot-bold-italic',
+                  isNightbringer ? 'text-red-600' : 'text-sky-600',
+                )}
+              >
+                Frontlines
+              </span>{' '}
+              of Code
             </span>
           </FadeInMotion>
           <FadeInMotion
@@ -89,10 +100,10 @@ export default function HeroContent() {
           <FadeInMotion transition={{ delay: 0.2 }} className="py-3">
             <button
               className={cn(
-                'w-fit rounded-sm bg-red-600 px-6 py-4',
+                'w-fit rounded-sm px-6 py-4',
                 'font-mark-pro-bold text-xs text-white uppercase',
-                'hover:bg-red-700',
                 'mp:text-base',
+                isNightbringer ? 'bg-red-600 hover:bg-red-700' : 'bg-sky-600 hover:bg-sky-700',
               )}
             >
               Deploy Me on Your Next Mission
