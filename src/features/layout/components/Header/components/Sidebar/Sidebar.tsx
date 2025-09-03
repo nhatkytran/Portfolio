@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { cn } from '@/shared/utils/helpers';
-import { BREAK_POINTS, CONTENTS } from '@/shared/constants';
+import { BREAK_POINTS, CONTENTS, DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
 import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
-import { useOpen, useWindowEventListener } from '@/shared/hooks';
+import { useModeActions } from '@/shared/zustand';
+import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
@@ -14,7 +15,12 @@ import Divider from '@/shared/components/Divider';
 /** Sidebar. */
 export default function Sidebar() {
   const pathname = usePathname();
+  const { isNightbringer } = useBringer();
+  const { setMode } = useModeActions();
   const { isOpen, handleOpen, handleClose } = useOpen();
+
+  /** Handle set bringer mode. */
+  const handleSetMode = () => setMode(isNightbringer ? DAWNBRINGER_MODE : NIGHTBRINGER_MODE);
 
   /** Auto close sidebar when window size is greater than lg breakpoint. */
   const handleAutoClose = () => {
@@ -55,7 +61,14 @@ export default function Sidebar() {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <BringerIcon className={cn('size-8 cursor-pointer fill-sky-400', 'hover:fill-sky-500', 'sm:hidden')} />
+              <div onClick={handleSetMode} className="cursor-pointer">
+                <BringerIcon
+                  className={cn(
+                    'size-8 sm:hidden',
+                    isNightbringer ? 'fill-sky-400 hover:fill-sky-500' : 'fill-red-500 hover:fill-red-600',
+                  )}
+                />
+              </div>
               <div
                 onClick={handleClose}
                 className={cn('flex items-center', 'cursor-pointer rounded-md bg-neutral-100 p-0.5')}
@@ -86,8 +99,13 @@ export default function Sidebar() {
         </div>
         <div className="flex flex-col gap-2">
           <Divider />
-          <p className="font-riot-bold-italic text-right text-sm tracking-widest text-red-600">
-            -- Live on the dark side --
+          <p
+            className={cn(
+              'font-riot-bold-italic text-right text-sm tracking-widest',
+              isNightbringer ? 'text-red-600' : 'text-sky-600',
+            )}
+          >
+            -- Live on the {isNightbringer ? 'dark' : 'bright'} side --
           </p>
         </div>
       </aside>

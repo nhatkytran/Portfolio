@@ -220,12 +220,12 @@
     clip-path: polygon(18% 0px, 100% 0px, 100% 100%, 0% 100%);
   }
 
-  .learning-item-bg {
+  .learning-item-bg-hover:hover {
     background: linear-gradient(90deg, rgb(232, 0, 41) 5%, rgb(235, 235, 235) 95%);
   }
 
-  .learning-item-bg-hover:hover {
-    background: linear-gradient(90deg, rgb(232, 0, 41) 5%, rgb(235, 235, 235) 95%);
+  .learning-item-bg-dawn-hover:hover {
+    background: linear-gradient(90deg, rgb(0, 125, 210) 5%, rgb(235, 235, 235) 95%);
   }
 
   .technologies-overview-clip-path {

@@ -1,9 +1,14 @@
 import Link from 'next/link';
 
+import {
+  LEARNINGS,
+  LEARNING_JOURNEY_SOLDIER_QUOTE,
+  LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,
+  LEARNING_JOURNEY_DAWN_BRINGER_QUOTE,
+} from '@/features/home/data';
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn } from '@/shared/utils/helpers';
-import { useInitialLoading } from '@/shared/hooks';
-import { LEARNINGS, LEARNING_JOURNEY_SOLDIER_QUOTE, LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE } from '@/features/home/data';
+import { useBringer, useInitialLoading } from '@/shared/hooks';
 import { ArrowExploreIcon } from '@/shared/icons';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
@@ -13,6 +18,7 @@ const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutra
 /** Learning journey large desktop. */
 export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
   const { initialLoading } = useInitialLoading({ dependencies: [shouldDisplay] });
+  const { isNightbringer } = useBringer();
 
   /**
    * Prevents the link from navigating.
@@ -46,8 +52,15 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
               <SkeletonLoading className="block h-[28px] w-[96px]" />
             ) : (
               <FadeInMotion className="flex items-center gap-1">
-                <ArrowExploreIcon fill="#e80029" />
-                <p className="font-inter text-sm font-semibold text-red-600 uppercase underline">Full site</p>
+                <ArrowExploreIcon fill={isNightbringer ? '#e80029' : '#007dd2'} />
+                <p
+                  className={cn(
+                    'font-inter text-sm font-semibold uppercase underline',
+                    isNightbringer ? 'text-red-600' : 'text-sky-600',
+                  )}
+                >
+                  Full site
+                </p>
               </FadeInMotion>
             )}
           </Link>
@@ -60,7 +73,10 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
               <FadeInMotion
                 key={name}
                 as="li"
-                className={cn('learning-item-bg-hover', 'rounded-md p-0.5 transition duration-100')}
+                className={cn(
+                  'rounded-md p-0.5 transition duration-100',
+                  isNightbringer ? 'learning-item-bg-hover' : 'learning-item-bg-dawn-hover',
+                )}
                 transition={{ delay: index * 0.05 }}
               >
                 <div
@@ -70,7 +86,13 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
                     'hover:rounded-sm',
                   )}
                 >
-                  <div className={cn('learning-item-clip-path', 'flex items-center justify-center', 'w-14 bg-red-600')}>
+                  <div
+                    className={cn(
+                      'learning-item-clip-path',
+                      'flex w-14 items-center justify-center',
+                      isNightbringer ? 'bg-red-600' : 'bg-sky-600',
+                    )}
+                  >
                     <Icon />
                   </div>
                   <p
@@ -90,8 +112,11 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
           {initialLoading ? (
             <SkeletonLoading className="h-[20px] w-[496px]" />
           ) : (
-            <FadeInMotion as="p" className="font-riot-bold text-red-base text-sm tracking-wider">
-              {LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE}
+            <FadeInMotion
+              as="p"
+              className={cn('font-riot-bold text-sm tracking-wider', isNightbringer ? 'text-red-base' : 'text-sky-600')}
+            >
+              {isNightbringer ? LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE : LEARNING_JOURNEY_DAWN_BRINGER_QUOTE}
             </FadeInMotion>
           )}
         </div>
