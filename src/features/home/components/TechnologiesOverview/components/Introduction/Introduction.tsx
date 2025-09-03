@@ -1,7 +1,5 @@
-import Link from 'next/link';
-
 import { cn } from '@/shared/utils/helpers';
-import { ArrowExploreIcon } from '@/shared/icons';
+import FullLink from '@/features/home/components/TechnologiesOverview/components/Introduction/FullLink';
 
 /** Technologies overview introduction. */
 export default function Introduction() {
@@ -11,17 +9,7 @@ export default function Introduction() {
         <h2 className={cn('font-inter text-[26px] font-semibold text-white', 'sm:text-[32px]', 'lg:text-4xl')}>
           Technologies
         </h2>
-        <Link
-          href="/skills"
-          className={cn(
-            'hidden bg-red-600',
-            'cursor-pointer rounded-sm p-1.5 opacity-90',
-            'transition duration-200 hover:opacity-100',
-            '2xl:block',
-          )}
-        >
-          <ArrowExploreIcon fill="white" className="size-5" />
-        </Link>
+        <FullLink />
       </div>
       <p
         className={cn(
@@ -32,8 +20,8 @@ export default function Introduction() {
           'lg:text-base',
         )}
       >
-        My gear evolves with every battle, and here are some of the technologies{' '}
-        <span className="whitespace-nowrap">at my side</span>.
+        My gear <span className="font-bold text-blue-500">evolves</span> with every battle, and here are some of the
+        technologies <span className="whitespace-nowrap">at my side</span>.
       </p>
     </div>
   );

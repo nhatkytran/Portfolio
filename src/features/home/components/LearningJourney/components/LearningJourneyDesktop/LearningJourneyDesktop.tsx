@@ -81,7 +81,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
                     className={cn(
                       'learning-item-clip-path',
                       'flex w-14 items-center justify-center',
-                      isNightbringer ? 'bg-red-600' : 'bg-sky-500',
+                      isNightbringer ? 'bg-red-600' : 'bg-sky-600',
                     )}
                   >
                     <Icon />
