@@ -10,11 +10,11 @@ export default function BringerLabel() {
 
   return (
     <div className={cn('flex items-center gap-0.5', 'relative top-0.25')}>
-      <BringerIcon className={cn('size-2.5', isNightbringer ? 'fill-red-600' : 'fill-sky-600')} />
+      <BringerIcon className={cn('size-2.5', isNightbringer ? 'fill-red-600' : 'fill-sky-500')} />
       <span
         className={cn(
           'font-riot-sans-bold text-[11px] tracking-widest uppercase',
-          isNightbringer ? 'text-red-600' : 'text-sky-600',
+          isNightbringer ? 'text-red-600' : 'text-sky-500',
         )}
       >
         {isNightbringer ? 'Nightbringer' : 'Dawnbringer'}

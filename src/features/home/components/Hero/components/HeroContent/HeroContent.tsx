@@ -77,7 +77,7 @@ export default function HeroContent() {
                 className={cn(
                   'relative top-0.25',
                   'font-riot-bold-italic',
-                  isNightbringer ? 'text-red-600' : 'text-sky-600',
+                  isNightbringer ? 'text-red-600' : 'text-sky-500',
                 )}
               >
                 Frontlines
