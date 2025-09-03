@@ -1,3 +1,9 @@
+/** Nightbringer mode. */
+export const NIGHTBRINGER_MODE = 'NIGHTBRINGER_MODE' as const;
+
+/** Dawnbringer mode. */
+export const DAWNBRINGER_MODE = 'DAWNBRINGER_MODE' as const;
+
 /** Contents. */
 export const CONTENTS = {
   ENGLISH_NAME: 'Ky Tran',
