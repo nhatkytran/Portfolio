@@ -203,11 +203,6 @@
     background-size: 100%;
   }
 
-  .navigation-loading-bg-run {
-    background-size: 200% 100%;
-    animation: loading-run 5s linear infinite;
-  }
-
   .navigation-loading-bg-dawn {
     background: linear-gradient(90deg, rgb(13, 13, 13) 0%, rgb(0, 125, 210) 20%, rgb(13, 13, 13) 40%);
     background-size: 100%;
