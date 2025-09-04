@@ -25,7 +25,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
     <section className={cn('flex items-center justify-center py-20', !shouldDisplay && 'hidden')}>
       <div className="flex w-full gap-5 px-9">
         {initialLoading ? (
-          <SkeletonLoading className="w-full max-w-[474px]" />
+          <SkeletonLoading className="w-full max-w-[474px] animate-pulse" />
         ) : (
           <FadeInMotion className="max-w-[474px] rounded-sm p-1">
             <div
@@ -59,7 +59,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
         <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-4">
           {LEARNINGS.map(({ name, Icon }, index) =>
             initialLoading ? (
-              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[341px]" />
+              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[341px] animate-pulse" />
             ) : (
               <FadeInMotion
                 key={name}

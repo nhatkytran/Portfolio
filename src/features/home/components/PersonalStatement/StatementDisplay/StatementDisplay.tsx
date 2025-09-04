@@ -1,6 +1,6 @@
-import { type Language, STATEMENTS } from '@/features/home/data';
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
+import { type Language, STATEMENTS } from '@/features/home/data';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 

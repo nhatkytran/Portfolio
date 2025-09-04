@@ -26,7 +26,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
     <section className={cn('py-14', !shouldDisplay && 'hidden')}>
       <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
         {initialLoading ? (
-          <SkeletonLoading className="h-[158px] w-full" />
+          <SkeletonLoading className="h-[158px] w-full animate-pulse" />
         ) : (
           <FadeInMotion
             className={cn(
@@ -56,7 +56,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
           </FadeInMotion>
         )}
         {initialLoading ? (
-          <SkeletonLoading className="h-[412px] w-full" />
+          <SkeletonLoading className="h-[412px] w-full animate-pulse" />
         ) : (
           <FadeInMotion className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 pt-6 pb-8', 'sm:px-10')}>
             <div className="flex items-center justify-between">

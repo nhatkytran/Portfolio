@@ -33,7 +33,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
       <div className="max-w-8xl flex w-full flex-col gap-14 px-9">
         <div className="relative">
           {initialLoading ? (
-            <div className="flex flex-col gap-4">
+            <div className="flex animate-pulse flex-col gap-4">
               <SkeletonLoading className="h-[40px] w-[440px]" />
               <SkeletonLoading className="h-[24px] w-[512px]" />
             </div>
@@ -49,7 +49,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
             className={cn('absolute top-4 right-0 rounded-sm p-1', initialLoading && 'cursor-default')}
           >
             {initialLoading ? (
-              <SkeletonLoading className="block h-[28px] w-[96px]" />
+              <SkeletonLoading className={cn('block animate-pulse', 'h-[28px] w-[96px]')} />
             ) : (
               <FadeInMotion className="flex items-center gap-1">
                 <ArrowExploreIcon fill={isNightbringer ? '#e80029' : '#007dd2'} />
@@ -68,7 +68,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         <ul className="grid grid-cols-4 gap-5">
           {LEARNINGS.map(({ name, Icon }, index) =>
             initialLoading ? (
-              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[305px]" />
+              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[305px] animate-pulse" />
             ) : (
               <FadeInMotion
                 key={name}
@@ -110,7 +110,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         </ul>
         <div className="flex flex-col gap-6">
           {initialLoading ? (
-            <SkeletonLoading className="h-[20px] w-[496px]" />
+            <SkeletonLoading className="h-[20px] w-[496px] animate-pulse" />
           ) : (
             <FadeInMotion
               as="p"
