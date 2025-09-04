@@ -5,6 +5,7 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
+import { useInitialLoading } from '@/shared/hooks';
 import { useMotionSliding } from '@/shared/hooks';
 import { FLAG_IMAGES } from '@/features/home/data';
 import FadeInMotion from '@/shared/components/FadeInMotion';
@@ -15,6 +16,8 @@ const DELAY_IN_SECONDS = 1.2;
 
 /** Flags slide. */
 export default function FlagsSlide() {
+  const { initialLoading } = useInitialLoading();
+
   const [slidingRef, xTranslation] = useMotionSliding({
     dataLoopTime: FLAGS_LOOP_TIME,
     initialXTranslationValue: INITIAL_X_TRANSLATION_VALUE,
@@ -37,9 +40,10 @@ export default function FlagsSlide() {
               'group flex items-center justify-center',
               'relative aspect-video h-[120px]',
               'rounded-sm border border-neutral-100 bg-neutral-50',
+              initialLoading && 'animate-pulse',
             )}
           >
-            <FadeInMotion transition={{ delay: index * 0.05 }}>
+            <FadeInMotion transition={{ delay: index * 0.05 + 1 }}>
               <Image
                 src={`/images/flags/${name}`}
                 alt={alt}

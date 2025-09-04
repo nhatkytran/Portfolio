@@ -23,7 +23,7 @@ export default function HeroContent() {
       )}
     >
       {initialLoading ? (
-        <div className={cn('flex flex-3 flex-col gap-6', 'w-full', 'sm:pr-8', 'mp:gap-8')}>
+        <div className={cn('flex flex-3 flex-col gap-6', 'w-full animate-pulse', 'sm:pr-8', 'mp:gap-8')}>
           <SkeletonLoading
             className={cn(
               'h-[36px] max-w-[160px] rounded-3xl',
