@@ -198,6 +198,26 @@
 }
 
 @layer utilities {
+  .navigation-loading-bg-night {
+    background: linear-gradient(90deg, rgb(13, 13, 13) 0%, rgb(232, 0, 41) 20%, rgb(13, 13, 13) 40%);
+    background-size: 100%;
+  }
+
+  .navigation-loading-bg-run {
+    background-size: 200% 100%;
+    animation: loading-run 5s linear infinite;
+  }
+
+  .navigation-loading-bg-dawn {
+    background: linear-gradient(90deg, rgb(13, 13, 13) 0%, rgb(0, 125, 210) 20%, rgb(13, 13, 13) 40%);
+    background-size: 100%;
+  }
+
+  .navigation-loading-bg-run {
+    background-size: 200% 100%;
+    animation: loading-run 5s linear infinite;
+  }
+
   .hero-image-clip-path {
     clip-path: polygon(15% 100%, 0px 30%, 25% 0px, 100% 0px, 100% 100%);
   }
@@ -242,6 +262,18 @@
 
   .personal-statement-line-transition {
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+}
+
+@keyframes loading-run {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -226% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 
