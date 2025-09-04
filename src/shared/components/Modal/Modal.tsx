@@ -2,7 +2,7 @@ import { MouseEventHandler, PropsWithChildren } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import FadeInMotion from '../FadeInMotion';
-import Portal from '../Portal/Portal';
+import Portal from '../Portal';
 
 import { cn } from '@/shared/utils/helpers';
 import { useBodyFreeze } from '@/shared/hooks';
@@ -38,7 +38,7 @@ export default function Modal({ children, isOpen, onClose }: Props) {
       {isOpen && (
         <Portal>
           <FadeInMotion
-            className={cn('fixed inset-0 z-50 flex items-center justify-center', 'cursor-default bg-black/80')}
+            className={cn('fixed inset-0 z-100 flex items-center justify-center', 'cursor-default bg-black/80')}
             onClick={onClose}
             exit={{ opacity: 0 }}
           >

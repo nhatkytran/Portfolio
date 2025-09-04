@@ -6,6 +6,7 @@ import { cn, getFontsVariables } from '@/shared/utils/helpers';
 import { PORTAL_ID, CONTENTS } from '@/shared/constants';
 import Header from '@/features/layout/components/Header';
 import Footer from '@/features/layout/components/Footer';
+import Utility from '@/features/layout/components/Utility';
 
 import './globals.css';
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body className={cn(getFontsVariables(fonts), 'font-spiegel-regular antialiased')}>
         <div id={PORTAL_ID} />
+        <Utility />
         <Header />
         {children}
         <Footer />

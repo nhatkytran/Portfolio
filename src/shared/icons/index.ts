@@ -22,6 +22,7 @@ import NodeIcon from './NodeIcon';
 import PhoneIcon from './PhoneIcon';
 import ReactIcon from './ReactIcon';
 import RiotGamesIcon from './RiotGamesIcon';
+import ScrollToTopIcon from './ScrollToTopIcon';
 import TailwindCssIcon from './TailwindCssIcon';
 import TypeScriptIcon from './TypeScriptIcon';
 import TriangleDownIcon from './TriangleDownIcon';
@@ -51,6 +52,7 @@ export {
   PhoneIcon,
   ReactIcon,
   RiotGamesIcon,
+  ScrollToTopIcon,
   TailwindCssIcon,
   TypeScriptIcon,
   TriangleDownIcon,
