@@ -16,6 +16,7 @@ const eslintConfig = [
     files: ['**/*.{js,ts,jsx,tsx}'],
     plugins: { jsdoc },
     rules: {
+      'no-console': ['error', { allow: ['warn', 'error'] }],
       'lines-around-comment': ['warn', { beforeBlockComment: true, beforeLineComment: true, allowBlockStart: true }],
       semi: ['error', 'always'],
       'import/order': ['warn', { 'newlines-between': 'always' }],
