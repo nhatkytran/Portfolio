@@ -14,7 +14,7 @@ import './globals.css';
 
 // TODO (Ky Tran): Improve SEO and add open graph (https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image).
 export const metadata: Metadata = {
-  title: `Champion | ${CONTENTS.ENGLISH_NAME}`,
+  title: `Champion | ${CONTENTS.ENGLISH_NAME} | 日祺`,
   description: `${CONTENTS.ENGLISH_NAME}'s Portfolio`,
 };
 
