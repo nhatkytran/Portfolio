@@ -13,10 +13,11 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "next lint --fix"
+      "eslint --fix"
     ]
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.6",
     "next": "15.3.5",

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { fonts } from '@/shared/config';
 import { cn, getFontsVariables } from '@/shared/utils/helpers';
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={cn(getFontsVariables(fonts), 'font-spiegel-regular antialiased')}>
+        <SpeedInsights />
         <div id={PORTAL_ID} />
         <Utility />
         <Header />
