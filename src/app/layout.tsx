@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { fonts } from '@/shared/config';
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={cn(getFontsVariables(fonts), 'font-spiegel-regular antialiased')}>
+        <Analytics />
         <SpeedInsights />
         <div id={PORTAL_ID} />
         <Utility />
