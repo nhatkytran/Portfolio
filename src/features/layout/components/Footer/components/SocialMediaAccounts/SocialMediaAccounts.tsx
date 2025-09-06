@@ -8,13 +8,13 @@ export default function SocialMediaAccounts() {
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <div className="flex items-center justify-center gap-4">
-        {SOCIAL_MEDIA_ACCOUNTS.map(({ url, specialColor, Icon }, index) => (
+        {SOCIAL_MEDIA_ACCOUNTS.map(({ url, Icon }, index) => (
           <Link
             key={index}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn('group flex items-center justify-center', 'rounded-sm bg-neutral-800 p-2', specialColor)}
+            className={cn('group flex items-center justify-center', 'rounded-sm bg-neutral-800 p-2')}
           >
             <Icon className={cn('size-6 fill-neutral-300', 'group-hover:fill-white', 'sm:size-7')} />
           </Link>
