@@ -1,7 +1,7 @@
 import { PropsWithClassName } from '@/shared/utils/types';
 
 /** HTML5 icon. */
-export default function Html5Icon({ className }: PropsWithClassName) {
+export default function HTML5Icon({ className }: PropsWithClassName) {
   return (
     <svg className={className} viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
       <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z" />

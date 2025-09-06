@@ -1,3 +1,45 @@
-import Html5Icon from './Html5Icon';
+import HTML5Icon from './HTML5Icon';
+import CSS3Icon from './CSS3Icon';
+import SassIcon from './SassIcon';
+import JavaScriptIcon from './JavaScriptIcon';
+import TypeScriptIcon from './TypeScriptIcon';
+import ReactIcon from './ReactIcon';
+import NextIcon from './NextIcon';
+import ReactRouterIcon from './ReactRouter';
+import ReactQueryIcon from './ReactQueryIcon';
+import ReduxIcon from './ReduxIcon';
+import ZustandIcon from './ZustandIcon';
+import ReactHookFormIcon from './ReactHookForm';
+import MaterialUIIcon from './MaterialUIIcon';
+import TailwindCSSIcon from './TailwindCSSIcon';
+import FramerMotionIcon from './FramerMotionIcon';
+import AngularIcon from './AngularIcon';
+import AngularMaterialIcon from './AngularMaterial';
+import RxJSIcon from './RxJSIcon';
+import VueJSIcon from './VueJSIcon';
+import D3Icon from './D3Icon';
+import MaterializeIcon from './MaterializeIcon';
 
-export { Html5Icon };
+export {
+  HTML5Icon,
+  CSS3Icon,
+  SassIcon,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  ReactIcon,
+  NextIcon,
+  ReactRouterIcon,
+  ReactQueryIcon,
+  ReduxIcon,
+  ZustandIcon,
+  ReactHookFormIcon,
+  MaterialUIIcon,
+  TailwindCSSIcon,
+  FramerMotionIcon,
+  AngularIcon,
+  AngularMaterialIcon,
+  RxJSIcon,
+  VueJSIcon,
+  D3Icon,
+  MaterializeIcon,
+};
