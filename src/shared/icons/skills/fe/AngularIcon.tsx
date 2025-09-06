@@ -23,16 +23,16 @@ export default function AngularIcon({ className }: PropsWithClassName) {
       ></path>
       <defs>
         <linearGradient id="a" x1="2230.03" x2="8680.49" y1="8548.35" y2="5482.97" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#e40035"></stop>
-          <stop offset=".24" stop-color="#f60a48"></stop>
-          <stop offset=".352" stop-color="#f20755"></stop>
-          <stop offset=".494" stop-color="#dc087d"></stop>
-          <stop offset=".745" stop-color="#9717e7"></stop>
-          <stop offset="1" stop-color="#6c00f5"></stop>
+          <stop stopColor="#e40035"></stop>
+          <stop offset=".24" stopColor="#f60a48"></stop>
+          <stop offset=".352" stopColor="#f20755"></stop>
+          <stop offset=".494" stopColor="#dc087d"></stop>
+          <stop offset=".745" stopColor="#9717e7"></stop>
+          <stop offset="1" stopColor="#6c00f5"></stop>
         </linearGradient>
         <linearGradient id="b" x1="1945.09" x2="6356.11" y1="1134.41" y2="6166.17" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#ff31d9"></stop>
-          <stop offset="1" stop-color="#ff5be1" stop-opacity="0"></stop>
+          <stop stopColor="#ff31d9"></stop>
+          <stop offset="1" stopColor="#ff5be1" stopOpacity="0"></stop>
         </linearGradient>
       </defs>
     </svg>

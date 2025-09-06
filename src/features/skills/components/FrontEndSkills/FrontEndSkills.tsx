@@ -51,11 +51,21 @@ const SKILLS = [
 export default function FrontEndSkills() {
   return (
     <section className="flex items-center justify-center bg-neutral-50 py-20">
-      <div className="max-w-8xl flex w-full flex-col gap-14 px-9">
+      <div className={cn('flex flex-col gap-14', 'max-w-8xl w-full px-4', 'xs:px-6', 'sm:px-9')}>
         <h2 className={cn('font-inter text-[26px] font-semibold', 'sm:text-[32px]', 'lg:text-4xl')}>
           Front-end Skills
         </h2>
-        <div className={cn('grid grid-cols-6 gap-4', 'lgx:grid-cols-7')}>
+        <div
+          className={cn(
+            'grid grid-cols-2 gap-3',
+            'xs:gap-4',
+            'sm:grid-cols-3',
+            'md:grid-cols-4',
+            'mp:grid-cols-5',
+            'lgx:grid-cols-6',
+            'xl:grid-cols-7',
+          )}
+        >
           {SKILLS.map(({ name, Icon }) => (
             <div
               key={name}
@@ -66,8 +76,16 @@ export default function FrontEndSkills() {
                 'hover:border-red-600 hover:shadow-lg',
               )}
             >
-              {<Icon className="size-18" />}
-              <p className="font-mark-pro-bold text-center text-sm text-neutral-900">{name}</p>
+              {<Icon className={cn('size-14', 'xs:size-16', 'lg:size-18')} />}
+              <p
+                className={cn(
+                  'font-mark-pro-bold text-center text-[11px] text-neutral-900',
+                  'xxs:text-[13px]',
+                  'lg:text-sm',
+                )}
+              >
+                {name}
+              </p>
             </div>
           ))}
         </div>

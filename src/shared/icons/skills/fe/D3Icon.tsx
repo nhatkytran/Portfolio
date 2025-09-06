@@ -13,8 +13,8 @@ export default function D3Icon({ className }: PropsWithClassName) {
         y2="375.873"
         gradientTransform="matrix(82.4907 0 0 -81.4303 16634.416 30700.326)"
       >
-        <stop offset="0" stop-color="#f9a03c" />
-        <stop offset="1" stop-color="#f7974e" />
+        <stop offset="0" stopColor="#f9a03c" />
+        <stop offset="1" stopColor="#f7974e" />
       </linearGradient>
       <path
         fill="url(#d3js-original-a)"
@@ -30,8 +30,8 @@ export default function D3Icon({ className }: PropsWithClassName) {
         y2="371.916"
         gradientTransform="matrix(40.2105 0 0 -40.4122 8003.203 15127)"
       >
-        <stop offset="0" stop-color="#f9a03c" />
-        <stop offset="1" stop-color="#f7974e" />
+        <stop offset="0" stopColor="#f9a03c" />
+        <stop offset="1" stopColor="#f7974e" />
       </linearGradient>
       <path
         fill="url(#d3js-original-b)"
@@ -47,8 +47,8 @@ export default function D3Icon({ className }: PropsWithClassName) {
         y2="372.475"
         gradientTransform="matrix(41.0403 0 0 -39.9333 8224.5 14997.683)"
       >
-        <stop offset="0" stop-color="#f9a03c" />
-        <stop offset="1" stop-color="#f7974e" />
+        <stop offset="0" stopColor="#f9a03c" />
+        <stop offset="1" stopColor="#f7974e" />
       </linearGradient>
       <path
         fill="url(#d3js-original-c)"
@@ -64,8 +64,8 @@ export default function D3Icon({ className }: PropsWithClassName) {
         y2="378.804"
         gradientTransform="matrix(255.8347 0 0 -242.016 51476.605 91789.102)"
       >
-        <stop offset="0" stop-color="#f26d58" />
-        <stop offset="1" stop-color="#f9a03c" />
+        <stop offset="0" stopColor="#f26d58" />
+        <stop offset="1" stopColor="#f9a03c" />
       </linearGradient>
       <path
         fill="url(#d3js-original-d)"
@@ -81,8 +81,8 @@ export default function D3Icon({ className }: PropsWithClassName) {
         y2="378.218"
         gradientTransform="matrix(160.7307 0 0 -174.8133 32360.78 66184.883)"
       >
-        <stop offset="0" stop-color="#b84e51" />
-        <stop offset="1" stop-color="#f68e48" />
+        <stop offset="0" stopColor="#b84e51" />
+        <stop offset="1" stopColor="#f68e48" />
       </linearGradient>
       <path
         fill="url(#d3js-original-e)"
@@ -98,8 +98,8 @@ export default function D3Icon({ className }: PropsWithClassName) {
         y2="376.532"
         gradientTransform="matrix(176.7653 0 0 -92.6293 35504.598 35022.56)"
       >
-        <stop offset="0" stop-color="#f9a03c" />
-        <stop offset="1" stop-color="#f7974e" />
+        <stop offset="0" stopColor="#f9a03c" />
+        <stop offset="1" stopColor="#f7974e" />
       </linearGradient>
       <path
         fill="url(#d3js-original-f)"

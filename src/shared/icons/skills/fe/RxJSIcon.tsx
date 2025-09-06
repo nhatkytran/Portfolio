@@ -45,8 +45,8 @@ export default function RxJSIcon({ className }: PropsWithClassName) {
           gradientTransform="matrix(7084.78 0 0 5068.07 6213.87 2141.12)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#f80090"></stop>
-          <stop offset="1" stop-color="#4d008e"></stop>
+          <stop stopColor="#f80090"></stop>
+          <stop offset="1" stopColor="#4d008e"></stop>
         </radialGradient>
         <radialGradient
           id="b"
@@ -56,21 +56,21 @@ export default function RxJSIcon({ className }: PropsWithClassName) {
           gradientTransform="matrix(7181.17 0 0 5432.27 6046.96 319.107)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#57008e"></stop>
-          <stop offset=".292" stop-color="#5c008e"></stop>
-          <stop offset="1" stop-color="#f80090"></stop>
+          <stop stopColor="#57008e"></stop>
+          <stop offset=".292" stopColor="#5c008e"></stop>
+          <stop offset="1" stopColor="#f80090"></stop>
         </radialGradient>
         <linearGradient id="c" x1="539.407" x2="1808.79" y1="66.38" y2="2201.17" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#f70090"></stop>
-          <stop offset=".67" stop-color="#e50090"></stop>
-          <stop offset=".827" stop-color="#d6008f" stop-opacity=".2"></stop>
-          <stop offset="1" stop-color="#c10090" stop-opacity="0"></stop>
+          <stop stopColor="#f70090"></stop>
+          <stop offset=".67" stopColor="#e50090"></stop>
+          <stop offset=".827" stopColor="#d6008f" stopOpacity=".2"></stop>
+          <stop offset="1" stopColor="#c10090" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient id="d" x1="1319.98" x2="1135.76" y1="792.386" y2="439.565" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#b2008f" stop-opacity=".151"></stop>
-          <stop offset=".4" stop-color="#f70090" stop-opacity=".4"></stop>
-          <stop offset=".649" stop-color="#f60090" stop-opacity=".892"></stop>
-          <stop offset="1" stop-color="#ff0090"></stop>
+          <stop stopColor="#b2008f" stopOpacity=".151"></stop>
+          <stop offset=".4" stopColor="#f70090" stopOpacity=".4"></stop>
+          <stop offset=".649" stopColor="#f60090" stopOpacity=".892"></stop>
+          <stop offset="1" stopColor="#ff0090"></stop>
         </linearGradient>
       </defs>
     </svg>
