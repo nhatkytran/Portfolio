@@ -3,7 +3,7 @@ import { useInitialLoading } from '@/shared/hooks';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
-const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutral-100' });
+const SkeletonLoading = CreateSkeletonLoading({ className: 'animate-pulse rounded-sm bg-neutral-100' });
 
 /** Freedom lover introduction. */
 export default function Introduction() {
@@ -14,9 +14,9 @@ export default function Introduction() {
       {initialLoading ? (
         <>
           <SkeletonLoading
-            className={cn('h-[36px] w-[188px] animate-pulse', 'sm:h-[38px] sm:w-[232px]', 'lg:h-[40px] lg:w-[260px]')}
+            className={cn('h-[36px] w-[188px]', 'sm:h-[38px] sm:w-[232px]', 'lg:h-[40px] lg:w-[260px]')}
           />
-          <div className="flex animate-pulse flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <SkeletonLoading className={cn('h-[20px] max-w-[460px]', 'mp:max-w-[620px]')} />
             <SkeletonLoading className={cn('h-[20px] max-w-[240px]', 'mp:max-w-[600px]')} />
           </div>

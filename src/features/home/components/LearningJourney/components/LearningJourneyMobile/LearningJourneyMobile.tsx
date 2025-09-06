@@ -15,7 +15,7 @@ import { ArrowExploreIcon, LearningBookIcon } from '@/shared/icons';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 
-const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutral-100' });
+const SkeletonLoading = CreateSkeletonLoading({ className: 'animate-pulse rounded-sm bg-neutral-100' });
 
 /** Learning journey mobile. */
 export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDisplayProps) {
@@ -26,7 +26,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
     <section className={cn('py-14', !shouldDisplay && 'hidden')}>
       <div className={cn('flex flex-col gap-7 px-4', 'xs:px-6', 'sm:gap-9 sm:px-9')}>
         {initialLoading ? (
-          <SkeletonLoading className="h-[158px] w-full animate-pulse" />
+          <SkeletonLoading className="h-[158px] w-full" />
         ) : (
           <FadeInMotion
             className={cn(
@@ -56,7 +56,7 @@ export default function LearningJourneyMobile({ shouldDisplay = true }: ShouldDi
           </FadeInMotion>
         )}
         {initialLoading ? (
-          <SkeletonLoading className="h-[412px] w-full animate-pulse" />
+          <SkeletonLoading className="h-[412px] w-full" />
         ) : (
           <FadeInMotion className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 pt-6 pb-8', 'sm:px-10')}>
             <div className="flex items-center justify-between">

@@ -93,9 +93,6 @@ type SocialMediaAccount = {
   /** URL. */
   readonly url: string;
 
-  /** Special color. */
-  readonly specialColor: string;
-
   /** Icon. */
   readonly Icon: (props: PropsWithClassName) => ReactNode;
 };
@@ -103,22 +100,14 @@ type SocialMediaAccount = {
 export const SOCIAL_MEDIA_ACCOUNTS: readonly SocialMediaAccount[] = [
   {
     url: 'https://www.linkedin.com/in/nhatkytran/',
-    specialColor: '',
     Icon: LinkedInIcon,
   },
   {
     url: 'https://github.com/nhatkytran/',
-    specialColor: '',
-    Icon: GithubIcon,
-  },
-  {
-    url: 'https://github.com/kytran-saritasa/',
-    specialColor: 'bg-[linear-gradient(135deg,_theme(colors.neutral.800)_85%,_theme(colors.orange.700)_50%)]',
     Icon: GithubIcon,
   },
   {
     url: 'https://leetcode.com/u/nhockkutean2/',
-    specialColor: '',
     Icon: LeetCodeIcon,
   },
 ];

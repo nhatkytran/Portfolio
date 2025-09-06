@@ -14,7 +14,7 @@ import { ArrowExploreIcon } from '@/shared/icons';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 
-const SkeletonLoading = CreateSkeletonLoading({ className: 'rounded-sm bg-neutral-100' });
+const SkeletonLoading = CreateSkeletonLoading({ className: 'animate-pulse rounded-sm bg-neutral-100' });
 
 /** Learning journey desktop. */
 export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldDisplayProps) {
@@ -25,7 +25,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
     <section className={cn('flex items-center justify-center py-20', !shouldDisplay && 'hidden')}>
       <div className="flex w-full gap-5 px-9">
         {initialLoading ? (
-          <SkeletonLoading className="w-full max-w-[474px] animate-pulse" />
+          <SkeletonLoading className="w-full max-w-[474px]" />
         ) : (
           <FadeInMotion className="max-w-[474px] rounded-sm p-1">
             <div
@@ -59,7 +59,7 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
         <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-4">
           {LEARNINGS.map(({ name, Icon }, index) =>
             initialLoading ? (
-              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[341px] animate-pulse" />
+              <SkeletonLoading key={name} className="h-[104px] w-full max-w-[341px]" />
             ) : (
               <FadeInMotion
                 key={name}

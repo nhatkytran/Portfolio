@@ -1,4 +1,6 @@
+import HeroIntroduction from '@/shared/components/HeroIntroduction';
+
 /** Skills page. */
 export default function Skills() {
-  return <div className="h-[500px] bg-neutral-900" />;
+  return <HeroIntroduction title="Skills" />;
 }
