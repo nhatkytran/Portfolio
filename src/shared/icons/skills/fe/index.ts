@@ -14,8 +14,8 @@ import MaterialUIIcon from './MaterialUIIcon';
 import TailwindCSSIcon from './TailwindCSSIcon';
 import FramerMotionIcon from './FramerMotionIcon';
 import AngularIcon from './AngularIcon';
-import AngularMaterialIcon from './AngularMaterial';
 import RxJSIcon from './RxJSIcon';
+import AngularMaterialIcon from './AngularMaterial';
 import VueJSIcon from './VueJSIcon';
 import D3Icon from './D3Icon';
 import MaterializeIcon from './MaterializeIcon';
@@ -37,8 +37,8 @@ export {
   TailwindCSSIcon,
   FramerMotionIcon,
   AngularIcon,
-  AngularMaterialIcon,
   RxJSIcon,
+  AngularMaterialIcon,
   VueJSIcon,
   D3Icon,
   MaterializeIcon,
