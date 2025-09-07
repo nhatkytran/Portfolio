@@ -21,6 +21,7 @@ import VueJSIcon from './VueJSIcon';
 import D3Icon from './D3Icon';
 import BootstrapIcon from './BootstrapIcon';
 import MaterializeIcon from './MaterializeIcon';
+import PostCSSIcon from './PostCSSIcon';
 
 export {
   HTML5Icon,
@@ -46,4 +47,5 @@ export {
   D3Icon,
   BootstrapIcon,
   MaterializeIcon,
+  PostCSSIcon,
 };

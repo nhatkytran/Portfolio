@@ -25,6 +25,7 @@ import {
   D3Icon,
   BootstrapIcon,
   MaterializeIcon,
+  PostCSSIcon,
 } from '@/shared/icons/skills/fe';
 import {
   NodeJSIcon,
@@ -46,6 +47,7 @@ import {
   PostmanIcon,
 } from '@/shared/icons/skills/be';
 import { JestIcon, PuppeteerIcon, CypressIcon } from '@/shared/icons/skills/testing';
+import { VSCodeIcon, WindsurfIcon, ChatGPTIcon, SlackIcon, JiraIcon } from '@/shared/icons/skills/tooling';
 
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
@@ -91,6 +93,7 @@ export const FRONT_END_SKILLS: readonly Skill[] = [
   { name: 'D3.js', Icon: D3Icon },
   { name: 'Bootstrap', Icon: BootstrapIcon },
   { name: 'Materialize', Icon: MaterializeIcon },
+  { name: 'PostCSS', Icon: PostCSSIcon },
 ];
 
 /** Back-end skills. */
@@ -119,4 +122,13 @@ export const TESTING_SKILLS: readonly Skill[] = [
   { name: 'Jest', Icon: JestIcon },
   { name: 'Puppeteer', Icon: PuppeteerIcon },
   { name: 'Cypress', Icon: CypressIcon },
+];
+
+/** Tooling skills. */
+export const TOOLING_SKILLS: readonly Skill[] = [
+  { name: 'VSCode', Icon: VSCodeIcon },
+  { name: 'Windsurf', Icon: WindsurfIcon },
+  { name: 'ChatGPT', Icon: ChatGPTIcon },
+  { name: 'Slack', Icon: SlackIcon },
+  { name: 'Jira', Icon: JiraIcon },
 ];
