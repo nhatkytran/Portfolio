@@ -9,6 +9,7 @@ import ReactRouterIcon from './ReactRouter';
 import ReactQueryIcon from './ReactQueryIcon';
 import ReduxIcon from './ReduxIcon';
 import ZustandIcon from './ZustandIcon';
+import AxiosIcon from './AxiosIcon';
 import ReactHookFormIcon from './ReactHookForm';
 import MaterialUIIcon from './MaterialUIIcon';
 import TailwindCSSIcon from './TailwindCSSIcon';
@@ -18,6 +19,7 @@ import RxJSIcon from './RxJSIcon';
 import AngularMaterialIcon from './AngularMaterial';
 import VueJSIcon from './VueJSIcon';
 import D3Icon from './D3Icon';
+import BootstrapIcon from './BootstrapIcon';
 import MaterializeIcon from './MaterializeIcon';
 
 export {
@@ -32,6 +34,7 @@ export {
   ReactQueryIcon,
   ReduxIcon,
   ZustandIcon,
+  AxiosIcon,
   ReactHookFormIcon,
   MaterialUIIcon,
   TailwindCSSIcon,
@@ -41,5 +44,6 @@ export {
   AngularMaterialIcon,
   VueJSIcon,
   D3Icon,
+  BootstrapIcon,
   MaterializeIcon,
 };

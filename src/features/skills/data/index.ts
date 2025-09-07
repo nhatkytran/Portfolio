@@ -13,6 +13,7 @@ import {
   ReactQueryIcon,
   ReduxIcon,
   ZustandIcon,
+  AxiosIcon,
   ReactHookFormIcon,
   MaterialUIIcon,
   TailwindCSSIcon,
@@ -22,8 +23,28 @@ import {
   AngularMaterialIcon,
   VueJSIcon,
   D3Icon,
+  BootstrapIcon,
   MaterializeIcon,
 } from '@/shared/icons/skills/fe';
+import {
+  NodeJSIcon,
+  NodemonIcon,
+  PassportIcon,
+  ExpressIcon,
+  MongoDBIcon,
+  MongooseIcon,
+  RedisIcon,
+  GraphQLIcon,
+  FirebaseIcon,
+  SupabaseIcon,
+  CloudinaryIcon,
+  AwsIcon,
+  PugIcon,
+  StripeIcon,
+  MySQLIcon,
+  PostgreSQLIcon,
+  PostmanIcon,
+} from '@/shared/icons/skills/be';
 
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
@@ -57,6 +78,7 @@ export const FRONT_END_SKILLS: readonly Skill[] = [
   { name: 'React Query', Icon: ReactQueryIcon },
   { name: 'Redux', Icon: ReduxIcon },
   { name: 'Zustand', Icon: ZustandIcon },
+  { name: 'Axios', Icon: AxiosIcon },
   { name: 'React Hook Form', Icon: ReactHookFormIcon },
   { name: 'Material UI', Icon: MaterialUIIcon },
   { name: 'Tailwind CSS', Icon: TailwindCSSIcon },
@@ -66,5 +88,27 @@ export const FRONT_END_SKILLS: readonly Skill[] = [
   { name: 'Angular Material', Icon: AngularMaterialIcon },
   { name: 'Vue.js', Icon: VueJSIcon },
   { name: 'D3.js', Icon: D3Icon },
+  { name: 'Bootstrap', Icon: BootstrapIcon },
   { name: 'Materialize', Icon: MaterializeIcon },
+];
+
+/** Back-end skills. */
+export const BACK_END_SKILLS: readonly Skill[] = [
+  { name: 'Node.js', Icon: NodeJSIcon },
+  { name: 'Nodemon', Icon: NodemonIcon },
+  { name: 'Passport', Icon: PassportIcon },
+  { name: 'Express', Icon: ExpressIcon },
+  { name: 'MongoDB', Icon: MongoDBIcon },
+  { name: 'Mongoose', Icon: MongooseIcon },
+  { name: 'Redis', Icon: RedisIcon },
+  { name: 'GraphQL', Icon: GraphQLIcon },
+  { name: 'Firebase', Icon: FirebaseIcon },
+  { name: 'Supabase', Icon: SupabaseIcon },
+  { name: 'Cloudinary', Icon: CloudinaryIcon },
+  { name: 'AWS', Icon: AwsIcon },
+  { name: 'Pug', Icon: PugIcon },
+  { name: 'Stripe', Icon: StripeIcon },
+  { name: 'MySQL', Icon: MySQLIcon },
+  { name: 'PostgreSQL', Icon: PostgreSQLIcon },
+  { name: 'Postman', Icon: PostmanIcon },
 ];
