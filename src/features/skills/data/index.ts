@@ -45,6 +45,7 @@ import {
   PostgreSQLIcon,
   PostmanIcon,
 } from '@/shared/icons/skills/be';
+import { JestIcon, PuppeteerIcon, CypressIcon } from '@/shared/icons/skills/testing';
 
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
@@ -111,4 +112,11 @@ export const BACK_END_SKILLS: readonly Skill[] = [
   { name: 'MySQL', Icon: MySQLIcon },
   { name: 'PostgreSQL', Icon: PostgreSQLIcon },
   { name: 'Postman', Icon: PostmanIcon },
+];
+
+/** Testing skills. */
+export const TESTING_SKILLS: readonly Skill[] = [
+  { name: 'Jest', Icon: JestIcon },
+  { name: 'Puppeteer', Icon: PuppeteerIcon },
+  { name: 'Cypress', Icon: CypressIcon },
 ];
