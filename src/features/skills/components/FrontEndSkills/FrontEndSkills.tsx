@@ -50,8 +50,8 @@ const SKILLS = [
 /** Front-end skills component. */
 export default function FrontEndSkills() {
   return (
-    <section className="flex items-center justify-center bg-neutral-50 py-20">
-      <div className={cn('flex flex-col gap-14', 'max-w-8xl w-full px-4', 'xs:px-6', 'sm:px-9')}>
+    <section className={cn('flex items-center justify-center', 'bg-neutral-50 py-10', 'sm:py-14', 'lg:py-20')}>
+      <div className={cn('flex flex-col gap-9', 'max-w-8xl w-full px-4', 'xs:px-6', 'sm:gap-11 sm:px-9', 'lg:gap-14')}>
         <h2 className={cn('font-inter text-[26px] font-semibold', 'sm:text-[32px]', 'lg:text-4xl')}>
           Front-end Skills
         </h2>

@@ -8,8 +8,8 @@ export default function LinkCV() {
     <>
       <div
         className={cn(
-          'hidden xl:block',
-          'animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite]',
+          'mp:block hidden',
+          'animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite]',
           'fixed bottom-4.5 left-4.5 z-50 size-[38px]',
           'rounded-full border border-neutral-500',
         )}
