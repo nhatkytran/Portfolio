@@ -2,8 +2,7 @@ import { ReactNode } from 'react';
 
 import { PropsWithClassName } from '@/shared/utils/types';
 import {
-
-  // HTML5Icon,
+  HTML5Icon,
   CSS3Icon,
   SassIcon,
   JavaScriptIcon,
@@ -90,12 +89,11 @@ export type Skill = {
 
 /** Front-end skills. */
 export const FRONT_END_SKILLS: readonly Skill[] = [
-
-  // {
-  //   name: 'HTML5',
-  //   url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax',
-  //   Icon: HTML5Icon,
-  // },
+  {
+    name: 'HTML5',
+    url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax',
+    Icon: HTML5Icon,
+  },
   { name: 'CSS3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS', Icon: CSS3Icon },
   { name: 'Sass', url: 'https://sass-lang.com/', Icon: SassIcon },
   { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', Icon: JavaScriptIcon },
