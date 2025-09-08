@@ -15,7 +15,7 @@ import {
 } from '@/shared/icons';
 
 // prettier-ignore
-type Learning = {
+export type Learning = {
 
   /** Name. */
   readonly name: string;
