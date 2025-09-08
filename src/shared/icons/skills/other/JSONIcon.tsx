@@ -3,54 +3,45 @@ import { PropsWithClassName } from '@/shared/utils/types';
 /** JSON icon. */
 export default function JSONIcon({ className }: PropsWithClassName) {
   return (
-    <svg
-      width={24}
-      height={24}
-      fill="none"
-      className={className}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g id="json">
-        <g id="json_2">
-          <path
-            id="Vector"
-            // eslint-disable-next-line max-len
-            d="M49.9152 74.4375C72.0391 104.597 93.6902 66.0195 93.6582 42.8203C93.6211 15.3922 65.8203 0.0625 49.8973 0.0625C24.3395 0.0621094 0 21.1844 0 50.0844C0 82.207 27.9004 100 49.8973 100C44.9195 99.2832 28.3309 95.7289 28.1082 57.5207C27.9578 31.6793 36.5379 21.3547 49.8613 25.8965C50.1598 26.007 64.5574 31.6867 64.5574 50.2402C64.5574 68.7152 49.9152 74.4371 49.9152 74.4371V74.4375Z"
-            fill="url(#paint0_linear_790_1075)"
-          />
-          <path
-            id="Vector_2"
-            // eslint-disable-next-line max-len
-            d="M49.8895 25.8752C35.2708 20.8365 17.3625 32.8854 17.3625 57.0182C17.3625 96.4232 46.563 99.9998 50.1028 99.9998C75.6606 99.9998 100 78.8771 100 49.9775C100 17.8549 72.0997 0.0619558 50.1028 0.0619558C56.1954 -0.781794 82.9407 6.6557 82.9407 43.2096C82.9407 67.0478 62.9704 80.0252 49.9813 74.4807C49.6829 74.3701 35.2848 68.6904 35.2848 50.1369C35.2848 31.6615 49.8895 25.8752 49.8895 25.8752Z"
-            fill="url(#paint1_linear_790_1075)"
-          />
-        </g>
-      </g>
-      <defs>
-        <linearGradient
-          id="paint0_linear_790_1075"
-          x1="14.7896"
-          y1="14.7903"
-          x2="89.4888"
-          y2="80.3966"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop />
-          <stop offset="1" stopColor="white" />
-        </linearGradient>
-        <linearGradient
-          id="paint1_linear_790_1075"
-          x1="85.2377"
-          y1="85.2368"
-          x2="4.38663"
-          y2="30.0243"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop />
-          <stop offset="1" stopColor="white" />
-        </linearGradient>
-      </defs>
+    <svg width={24} height={24} className={className} viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <linearGradient
+        id="a"
+        x1="-670.564"
+        x2="-583.105"
+        y1="-280.831"
+        y2="-368.306"
+        gradientTransform="matrix(.9988 0 0 -.9987 689.011 -259.008)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" />
+        <stop offset="1" stopColor="#fff" />
+      </linearGradient>
+      <path
+        fill="url(#a)"
+        fillRule="evenodd"
+        // eslint-disable-next-line max-len
+        d="M63.895 94.303c27.433 37.398 54.281-10.438 54.241-39.205-.046-34.012-34.518-53.021-54.263-53.021C32.182 2.077 2 28.269 2 64.105 2 103.937 36.596 126 63.873 126c-6.172-.889-26.742-5.296-27.019-52.674-.186-32.044 10.453-44.846 26.974-39.214.37.137 18.223 7.18 18.223 30.187 0 22.908-18.156 30.004-18.156 30.004z"
+        clipRule="evenodd"
+      />
+      <linearGradient
+        id="b"
+        x1="-579.148"
+        x2="-666.607"
+        y1="-364.34"
+        y2="-276.873"
+        gradientTransform="matrix(.9988 0 0 -.9987 689.011 -259.008)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" />
+        <stop offset="1" stopColor="#fff" />
+      </linearGradient>
+      <path
+        fill="url(#b)"
+        fillRule="evenodd"
+        // eslint-disable-next-line max-len
+        d="M63.863 34.086C45.736 27.838 23.53 42.778 23.53 72.703 23.53 121.565 59.739 126 64.128 126 95.818 126 126 99.808 126 63.972 126 24.14 91.404 2.077 64.127 2.077c7.555-1.046 40.719 8.176 40.719 53.504 0 29.559-24.764 45.651-40.87 38.776-.37-.137-18.223-7.18-18.223-30.187 0-22.91 18.11-30.085 18.11-30.084z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }
