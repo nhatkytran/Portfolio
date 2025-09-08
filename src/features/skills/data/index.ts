@@ -45,9 +45,24 @@ import {
   MySQLIcon,
   PostgreSQLIcon,
   PostmanIcon,
+  BunIcon,
 } from '@/shared/icons/skills/be';
 import { JestIcon, PuppeteerIcon, CypressIcon } from '@/shared/icons/skills/testing';
-import { VSCodeIcon, WindsurfIcon, ChatGPTIcon, SlackIcon, JiraIcon } from '@/shared/icons/skills/tooling';
+import {
+  GitIcon,
+  GithubIcon,
+  GithubCopilotIcon,
+  ParcelIcon,
+  WebpackIcon,
+  BabelIcon,
+  EslintIcon,
+  PrettierIcon,
+  NPMIcon,
+  JSONIcon,
+  NetlifyIcon,
+  VercelIcon,
+} from '@/shared/icons/skills/other';
+import { VSCodeIcon, WindsurfIcon, ChatGPTIcon, SlackIcon, JiraIcon, FigmaIcon } from '@/shared/icons/skills/tooling';
 
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
@@ -115,6 +130,7 @@ export const BACK_END_SKILLS: readonly Skill[] = [
   { name: 'MySQL', Icon: MySQLIcon },
   { name: 'PostgreSQL', Icon: PostgreSQLIcon },
   { name: 'Postman', Icon: PostmanIcon },
+  { name: 'Bun', Icon: BunIcon },
 ];
 
 /** Testing skills. */
@@ -124,6 +140,22 @@ export const TESTING_SKILLS: readonly Skill[] = [
   { name: 'Cypress', Icon: CypressIcon },
 ];
 
+/** Other skills. */
+export const OTHER_SKILLS: readonly Skill[] = [
+  { name: 'Git', Icon: GitIcon },
+  { name: 'Github', Icon: GithubIcon },
+  { name: 'Github Copilot', Icon: GithubCopilotIcon },
+  { name: 'Parcel', Icon: ParcelIcon },
+  { name: 'Webpack', Icon: WebpackIcon },
+  { name: 'Babel', Icon: BabelIcon },
+  { name: 'Eslint', Icon: EslintIcon },
+  { name: 'Prettier', Icon: PrettierIcon },
+  { name: 'NPM', Icon: NPMIcon },
+  { name: 'JSON', Icon: JSONIcon },
+  { name: 'Netlify', Icon: NetlifyIcon },
+  { name: 'Vercel', Icon: VercelIcon },
+];
+
 /** Tooling skills. */
 export const TOOLING_SKILLS: readonly Skill[] = [
   { name: 'VSCode', Icon: VSCodeIcon },
@@ -131,4 +163,5 @@ export const TOOLING_SKILLS: readonly Skill[] = [
   { name: 'ChatGPT', Icon: ChatGPTIcon },
   { name: 'Slack', Icon: SlackIcon },
   { name: 'Jira', Icon: JiraIcon },
+  { name: 'Figma', Icon: FigmaIcon },
 ];

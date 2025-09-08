@@ -15,6 +15,7 @@ import StripeIcon from './StripeIcon';
 import MySQLIcon from './MySQLIcon';
 import PostgreSQLIcon from './PostgreSQLIcon';
 import PostmanIcon from './PostmanIcon';
+import BunIcon from './BunIcon';
 
 export {
   NodeJSIcon,
@@ -34,4 +35,5 @@ export {
   MySQLIcon,
   PostgreSQLIcon,
   PostmanIcon,
+  BunIcon,
 };
