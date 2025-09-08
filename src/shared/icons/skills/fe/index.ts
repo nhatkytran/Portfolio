@@ -1,5 +1,5 @@
-import HTML5Icon from '@/shared/icons/skills/fe/HTML5Icon';
 import CSS3Icon from '@/shared/icons/skills/fe/CSS3Icon';
+import HTML5Icon from '@/shared/icons/skills/fe/HTML5Icon';
 import SassIcon from '@/shared/icons/skills/fe/SassIcon';
 import JavaScriptIcon from '@/shared/icons/skills/fe/JavaScriptIcon';
 import TypeScriptIcon from '@/shared/icons/skills/fe/TypeScriptIcon';
