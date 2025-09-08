@@ -36,7 +36,7 @@ export default function LanguageSelection({ language, onLanguageChange }: Props)
     if (language === ENGLISH_LANGUAGE) {
       return 'left-0';
     }
-    return language === CHINESE_LANGUAGE ? 'left-[33%]' : 'left-[66%]';
+    return language === CHINESE_LANGUAGE ? 'left-[33.33%]' : 'left-[66.67%]';
   })();
 
   /**

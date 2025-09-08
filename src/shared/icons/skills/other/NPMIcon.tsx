@@ -1,0 +1,26 @@
+import { PropsWithClassName } from '@/shared/utils/types';
+
+/** NPM icon. */
+export default function NPMIcon({ className }: PropsWithClassName) {
+  return (
+    <svg
+      width={24}
+      height={24}
+      fill="none"
+      className={className}
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="npm">
+        <g id="npm_2">
+          <path id="Vector" d="M0 0H100V100H0V0Z" fill="#CC0000" />
+          <path
+            id="Vector_2"
+            d="M49.66 10.74H10.74V89.256H49.656V30.54H69.456V89.256H89.256V10.74H49.66Z"
+            fill="white"
+          />
+        </g>
+      </g>
+    </svg>
+  );
+}

@@ -15,12 +15,14 @@
 
     --neutral-50: #f5f5f5;
     --neutral-100: #efefef;
+    --neutral-150: #e6e6e6;
     --neutral-200: #dfdfdf;
     --neutral-300: #cecece;
     --neutral-400: #9d9d9d;
     --neutral-500: #6d6d6d;
     --neutral-600: #4c4c4c;
     --neutral-700: #3a3a3a;
+    --neutral-750: #2a2a2a;
     --neutral-800: #202020;
     --neutral-900: #111111;
     --neutral-950: #040404;
@@ -131,12 +133,14 @@
 
   --color-neutral-50: var(--neutral-50);
   --color-neutral-100: var(--neutral-100);
+  --color-neutral-150: var(--neutral-150);
   --color-neutral-200: var(--neutral-200);
   --color-neutral-300: var(--neutral-300);
   --color-neutral-400: var(--neutral-400);
   --color-neutral-500: var(--neutral-500);
   --color-neutral-600: var(--neutral-600);
   --color-neutral-700: var(--neutral-700);
+  --color-neutral-750: var(--neutral-750);
   --color-neutral-800: var(--neutral-800);
   --color-neutral-900: var(--neutral-900);
   --color-neutral-950: var(--neutral-950);
