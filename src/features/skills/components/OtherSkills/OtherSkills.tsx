@@ -1,3 +1,5 @@
+'use client';
+
 import { OTHER_SKILLS, STACK_SKILLS_DARK } from '@/features/skills/data';
 import StackSkills from '@/features/skills/components/StackSkills';
 

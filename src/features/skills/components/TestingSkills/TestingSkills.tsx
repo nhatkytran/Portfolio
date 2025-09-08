@@ -1,3 +1,5 @@
+'use client';
+
 import { STACK_SKILLS_LIGHT, TESTING_SKILLS } from '@/features/skills/data';
 import StackSkills from '@/features/skills/components/StackSkills';
 
