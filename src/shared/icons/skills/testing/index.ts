@@ -1,5 +1,5 @@
-import JestIcon from './JestIcon';
-import PuppeteerIcon from './PuppeteerIcon';
-import CypressIcon from './CypressIcon';
+import JestIcon from '@/shared/icons/skills/testing/JestIcon';
+import PuppeteerIcon from '@/shared/icons/skills/testing/PuppeteerIcon';
+import CypressIcon from '@/shared/icons/skills/testing/CypressIcon';
 
 export { JestIcon, PuppeteerIcon, CypressIcon };

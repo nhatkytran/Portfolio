@@ -1,15 +1,15 @@
-import GitIcon from './GitIcon';
-import GithubIcon from './GithubIcon';
-import GithubCopilotIcon from './GithubCopilotIcon';
-import ParcelIcon from './ParcelIcon';
-import WebpackIcon from './WebpackIcon';
-import BabelIcon from './BabelIcon';
-import EslintIcon from './EslintIcon';
-import PrettierIcon from './PrettierIcon';
-import NPMIcon from './NPMIcon';
-import JSONIcon from './JSONIcon';
-import NetlifyIcon from './NetlifyIcon';
-import VercelIcon from './VercelIcon';
+import GitIcon from '@/shared/icons/skills/other/GitIcon';
+import GithubIcon from '@/shared/icons/skills/other/GithubIcon';
+import GithubCopilotIcon from '@/shared/icons/skills/other/GithubCopilotIcon';
+import ParcelIcon from '@/shared/icons/skills/other/ParcelIcon';
+import WebpackIcon from '@/shared/icons/skills/other/WebpackIcon';
+import BabelIcon from '@/shared/icons/skills/other/BabelIcon';
+import EslintIcon from '@/shared/icons/skills/other/EslintIcon';
+import PrettierIcon from '@/shared/icons/skills/other/PrettierIcon';
+import NPMIcon from '@/shared/icons/skills/other/NPMIcon';
+import JSONIcon from '@/shared/icons/skills/other/JSONIcon';
+import NetlifyIcon from '@/shared/icons/skills/other/NetlifyIcon';
+import VercelIcon from '@/shared/icons/skills/other/VercelIcon';
 
 export {
   GitIcon,
