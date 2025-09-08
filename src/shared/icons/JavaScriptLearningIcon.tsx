@@ -3,13 +3,7 @@ import { IconAppearanceProps } from '@/shared/utils/types';
 /** JavaScript learning icon. */
 export default function JavaScriptLearningIcon({ width = 23, height = 23, fill = '#f1f5f0' }: IconAppearanceProps) {
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 32 32"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
+    <svg width={width} height={height} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <path
         fill={fill}
         // eslint-disable-next-line max-len
