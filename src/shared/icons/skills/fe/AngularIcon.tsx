@@ -8,32 +8,55 @@ export default function AngularIcon({ className }: PropsWithClassName) {
       width={24}
       fill="none"
       className={className}
+      viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 96 96"
     >
-      <path
-        fill="url(#a)"
-        // eslint-disable-next-line max-len
-        d="m92.4018 16.6719-3.2066 50.3536L58.5364 1l33.8654 15.6719ZM71.1664 81.7817 48.0004 95 24.834 81.7817l4.7118-11.4188h36.9089l4.7117 11.4188Zm-23.166-55.7195 12.1391 29.512H35.861l12.1394-29.512ZM6.77245 67.0255 3.59863 16.6719 37.4641 1 6.77245 67.0255Z"
-      ></path>
-      <path
-        fill="url(#b)"
-        // eslint-disable-next-line max-len
-        d="m92.4018 16.6719-3.2066 50.3536L58.5364 1l33.8654 15.6719ZM71.1664 81.7817 48.0004 95 24.834 81.7817l4.7118-11.4188h36.9089l4.7117 11.4188Zm-23.166-55.7195 12.1391 29.512H35.861l12.1394-29.512ZM6.77245 67.0255 3.59863 16.6719 37.4641 1 6.77245 67.0255Z"
-      ></path>
+      <g id="angular17">
+        <g id="angular17_2" clipPath="url(#clip0_790_79)">
+          <path
+            id="Vector"
+            // eslint-disable-next-line max-len
+            d="M97.1406 16.796L93.625 69.921L61.2031 -0.000854492L97.1406 16.796ZM74.4844 85.546L50.2656 99.6085L25.6562 85.546L30.3438 73.4366H69.7969L74.4844 85.546ZM50.2656 26.5616L62.7656 57.8116H37.375L50.2656 26.5616ZM6.51562 69.921L3 16.796L38.9375 -0.000854492L6.51562 69.921Z"
+            fill="url(#paint0_linear_790_79)"
+          />
+          <path
+            id="Vector_2"
+            // eslint-disable-next-line max-len
+            d="M97.1406 16.796L93.625 69.921L61.2031 -0.000854492L97.1406 16.796ZM74.4844 85.546L50.2656 99.6085L25.6562 85.546L30.3438 73.4366H69.7969L74.4844 85.546ZM50.2656 26.5616L62.7656 57.8116H37.375L50.2656 26.5616ZM6.51562 69.921L3 16.796L38.9375 -0.000854492L6.51562 69.921Z"
+            fill="url(#paint1_linear_790_79)"
+          />
+        </g>
+      </g>
       <defs>
-        <linearGradient id="a" x1="2230.03" x2="8680.49" y1="8548.35" y2="5482.97" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#e40035"></stop>
-          <stop offset=".24" stopColor="#f60a48"></stop>
-          <stop offset=".352" stopColor="#f20755"></stop>
-          <stop offset=".494" stopColor="#dc087d"></stop>
-          <stop offset=".745" stopColor="#9717e7"></stop>
-          <stop offset="1" stopColor="#6c00f5"></stop>
+        <linearGradient
+          id="paint0_linear_790_79"
+          x1="23.7813"
+          y1="90.5851"
+          x2="98.7031"
+          y2="54.9601"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#E40035" />
+          <stop offset="0.2" stopColor="#F60A48" />
+          <stop offset="0.4" stopColor="#F20755" />
+          <stop offset="0.5" stopColor="#DC087D" />
+          <stop offset="0.7" stopColor="#9717E7" />
+          <stop offset="1" stopColor="#6C00F5" />
         </linearGradient>
-        <linearGradient id="b" x1="1945.09" x2="6356.11" y1="1134.41" y2="6166.17" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#ff31d9"></stop>
-          <stop offset="1" stopColor="#ff5be1" stopOpacity="0"></stop>
+        <linearGradient
+          id="paint1_linear_790_79"
+          x1="20.3828"
+          y1="11.9913"
+          x2="69.4062"
+          y2="67.9679"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FF31D9" />
+          <stop offset="1" stopColor="#FF5BE1" stopOpacity="0" />
         </linearGradient>
+        <clipPath id="clip0_790_79">
+          <rect width="94.5312" height="100" fill="white" transform="translate(3 -0.000854492)" />
+        </clipPath>
       </defs>
     </svg>
   );

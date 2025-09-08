@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { cn } from '@/shared/utils/helpers';
 import { useBringer, useInitialLoading } from '@/shared/hooks';
 import { Skill, STACK_SKILLS_LIGHT, StackSkillsTheme } from '@/features/skills/data';
@@ -71,7 +73,7 @@ export default function StackSkills({ theme, title, skills }: Props) {
             'xl:grid-cols-7',
           )}
         >
-          {skills.map(({ name, Icon }, index) =>
+          {skills.map(({ name, url, Icon }, index) =>
             initialLoading ? (
               <SkeletonLoading
                 key={index}
@@ -84,29 +86,35 @@ export default function StackSkills({ theme, title, skills }: Props) {
                 )}
               />
             ) : (
-              <FadeInMotion
-                key={name}
-                transition={{ duration: index * 0.1 }}
-                className={cn(
-                  'flex flex-col items-center gap-4',
-                  'px-4 py-6 transition-all',
-                  'cursor-pointer rounded-sm border-2 shadow-xs',
-                  'hover:shadow-lg',
-                  isLight ? 'border-neutral-100 bg-white' : 'bg-neutral-750 border-neutral-900',
-                  isNightbringer ? 'hover:border-red-600' : isLight ? 'hover:border-blue-600' : 'hover:border-blue-500',
-                )}
-              >
-                {<Icon className={cn('size-14', 'xs:size-16', 'lg:size-18')} />}
-                <p
+              <FadeInMotion key={name} transition={{ duration: index * 0.1 }}>
+                <Link
+                  href={url}
+                  target="_blank"
                   className={cn(
-                    'font-mark-pro-bold text-center text-[11px]',
-                    'xxs:text-[13px]',
-                    'lg:text-sm',
-                    isLight ? 'text-neutral-900' : 'text-neutral-200',
+                    'flex flex-col items-center gap-4',
+                    'px-4 py-6 transition-all',
+                    'cursor-pointer rounded-sm border-2 shadow-xs',
+                    'hover:shadow-lg',
+                    isLight ? 'border-neutral-100 bg-white' : 'bg-neutral-750 border-neutral-900',
+                    isNightbringer
+                      ? 'hover:border-red-600'
+                      : isLight
+                        ? 'hover:border-blue-600'
+                        : 'hover:border-blue-500',
                   )}
                 >
-                  {name}
-                </p>
+                  <Icon className={cn('size-14', 'xs:size-16', 'lg:size-18')} />
+                  <p
+                    className={cn(
+                      'font-mark-pro-bold text-center text-[11px]',
+                      'xxs:text-[13px]',
+                      'lg:text-sm',
+                      isLight ? 'text-neutral-900' : 'text-neutral-200',
+                    )}
+                  >
+                    {name}
+                  </p>
+                </Link>
               </FadeInMotion>
             ),
           )}
