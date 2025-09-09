@@ -1,18 +1,19 @@
 import Link from 'next/link';
 
+import CardContentDesktop from '../CardContentDesktop';
+
+import CardSkeleton from './components/CardSkeleton';
 import TitleSkeleton from './components/TitleSkeleton';
 import TitleContent from './components/TitleContent';
 import LinkSkeleton from './components/LinkSkeleton';
 import LinkContent from './components/LinkContent';
-import CardContent from './components/CardContent';
-import CardSkeleton from './components/CardSkeleton';
 import QuoteSkeleton from './components/QuoteSkeleton';
 import QuoteContent from './components/QuoteContent';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn, getSEOSkeletonLoadingKey } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
-import { LEARNINGS } from '@/features/home/data';
+import { DESKTOP_LARGE, LEARNINGS } from '@/features/home/data';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 import SEOSkeletonLoading from '@/shared/components/SEOSkeletonLoading';
 
@@ -53,12 +54,12 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
             />
           </Link>
         </div>
-        <ul className="grid grid-cols-4 gap-5">
+        <ul className="grid grid-cols-4 gap-4">
           {LEARNINGS.map((learning, index) => (
             <SEOSkeletonLoading
               key={`${getSEOSkeletonLoadingKey(shouldDisplay)}-${learning.name}`}
               skeleton={<CardSkeleton SkeletonLoading={SkeletonLoading} />}
-              content={<CardContent learning={learning} index={index} />}
+              content={<CardContentDesktop size={DESKTOP_LARGE} learning={learning} index={index} />}
             />
           ))}
         </ul>

@@ -1,11 +1,12 @@
+import CardContentDesktop from '../CardContentDesktop';
+
+import CardSkeleton from './components/CardSkeleton';
 import TitleSkeleton from './components/TitleSkeleton';
 import TitleContent from './components/TitleContent';
-import CardSkeleton from './components/CardSkeleton';
-import CardContent from './components/CardContent';
 
-import { LEARNINGS } from '@/features/home/data';
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn, getSEOSkeletonLoadingKey } from '@/shared/utils/helpers';
+import { DESKTOP_SMALL, LEARNINGS } from '@/features/home/data';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 import SEOSkeletonLoading from '@/shared/components/SEOSkeletonLoading';
 
@@ -21,12 +22,12 @@ export default function LearningJourneyDesktop({ shouldDisplay = true }: ShouldD
           skeleton={<TitleSkeleton SkeletonLoading={SkeletonLoading} />}
           content={<TitleContent />}
         />
-        <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-4">
+        <ul className="grid min-w-[590px] flex-1 grid-cols-2 gap-3">
           {LEARNINGS.map(({ name, Icon }, index) => (
             <SEOSkeletonLoading
               key={`${getSEOSkeletonLoadingKey(shouldDisplay)}-${name}`}
               skeleton={<CardSkeleton SkeletonLoading={SkeletonLoading} />}
-              content={<CardContent learning={{ name, Icon }} index={index} />}
+              content={<CardContentDesktop size={DESKTOP_SMALL} learning={{ name, Icon }} index={index} />}
             />
           ))}
         </ul>
