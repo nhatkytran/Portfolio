@@ -27,7 +27,9 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
    * @param event The click event.
    */
   const handleLinkPrevention = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
+    if (initialLoading) {
+      event.preventDefault();
+    }
   };
 
   return (
