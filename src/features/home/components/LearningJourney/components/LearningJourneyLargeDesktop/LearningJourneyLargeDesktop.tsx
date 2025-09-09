@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
-import TitleSkeleton from './TitleSkeleton';
-import TitleContent from './TitleContent';
-import LinkSkeleton from './LinkSkeleton';
-import LinkContent from './LinkContent';
-import CardContent from './CardContent';
-import CardSkeleton from './CardSkeleton';
-import QuoteSkeleton from './QuoteSkeleton';
-import QuoteContent from './QuoteContent';
+import TitleSkeleton from './components/TitleSkeleton';
+import TitleContent from './components/TitleContent';
+import LinkSkeleton from './components/LinkSkeleton';
+import LinkContent from './components/LinkContent';
+import CardContent from './components/CardContent';
+import CardSkeleton from './components/CardSkeleton';
+import QuoteSkeleton from './components/QuoteSkeleton';
+import QuoteContent from './components/QuoteContent';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
 import { cn, getSEOSkeletonLoadingKey } from '@/shared/utils/helpers';
