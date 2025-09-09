@@ -11,18 +11,18 @@ type Props = {
   readonly learning: Learning;
 };
 
-/** Card content. */
+/** Card content */
 export default function CardContent({ learning: { name, Icon }, index }: PropsWithIndex<Props>) {
   const { isNightbringer } = useBringer();
 
   return (
     <FadeInMotion
       as="li"
+      transition={{ delay: index * 0.05 }}
       className={cn(
-        'rounded-md p-0.5 transition duration-100',
+        'min-w-[284px] rounded-md p-0.5 transition duration-100',
         isNightbringer ? 'learning-item-bg-hover' : 'learning-item-bg-dawn-hover',
       )}
-      transition={{ delay: index * 0.05 }}
     >
       <div
         className={cn(
@@ -43,7 +43,7 @@ export default function CardContent({ learning: { name, Icon }, index }: PropsWi
         <p
           className={cn(
             'flex flex-1 items-center justify-center',
-            'font-inter px-4 py-2 text-lg font-bold tracking-wider',
+            'font-inter lgx:text-lg px-4 py-2 text-base font-bold tracking-wider',
           )}
         >
           {name}

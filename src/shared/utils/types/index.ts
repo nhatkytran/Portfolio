@@ -1,6 +1,7 @@
 export * from './HTMLElements';
 export * from './iconAppearanceProps';
 export * from './propsWithClassName';
+export * from './propsWithIndex';
 export * from './shouldDisplayProps';
 export * from './typedMemo';
 export * from './valueOf';
