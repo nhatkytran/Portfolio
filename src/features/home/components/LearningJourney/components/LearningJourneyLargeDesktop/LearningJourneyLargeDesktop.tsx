@@ -10,7 +10,7 @@ import QuoteSkeleton from './QuoteSkeleton';
 import QuoteContent from './QuoteContent';
 
 import { type ShouldDisplayProps } from '@/shared/utils/types';
-import { cn } from '@/shared/utils/helpers';
+import { cn, getSEOSkeletonLoadingKey } from '@/shared/utils/helpers';
 import { useInitialLoading } from '@/shared/hooks';
 import { LEARNINGS } from '@/features/home/data';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
@@ -35,6 +35,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
       <div className="max-w-8xl flex w-full flex-col gap-14 px-9">
         <div className="relative">
           <SEOSkeletonLoading
+            key={getSEOSkeletonLoadingKey(shouldDisplay)}
             skeleton={<TitleSkeleton SkeletonLoading={SkeletonLoading} />}
             content={<TitleContent />}
           />
@@ -44,6 +45,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
             className={cn('absolute top-4 right-0 rounded-sm p-1', initialLoading && 'cursor-default')}
           >
             <SEOSkeletonLoading
+              key={getSEOSkeletonLoadingKey(shouldDisplay)}
               skeleton={<LinkSkeleton SkeletonLoading={SkeletonLoading} />}
               content={<LinkContent />}
             />
@@ -52,7 +54,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         <ul className="grid grid-cols-4 gap-5">
           {LEARNINGS.map((learning, index) => (
             <SEOSkeletonLoading
-              key={learning.name}
+              key={`${getSEOSkeletonLoadingKey(shouldDisplay)}-${learning.name}`}
               skeleton={<CardSkeleton SkeletonLoading={SkeletonLoading} />}
               content={<CardContent learning={learning} index={index} />}
             />
@@ -60,6 +62,7 @@ export default function LearningJourneyLargeDesktop({ shouldDisplay = true }: Sh
         </ul>
         <div className="flex flex-col gap-6">
           <SEOSkeletonLoading
+            key={getSEOSkeletonLoadingKey(shouldDisplay)}
             skeleton={<QuoteSkeleton SkeletonLoading={SkeletonLoading} />}
             content={<QuoteContent />}
           />
