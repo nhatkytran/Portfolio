@@ -26,7 +26,11 @@ export default function Header() {
   };
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => setIsNavigating(false), NAVIGATING_TIMEOUT);
+    const timeoutId = setTimeout(() => {
+      if (isNavigating) {
+        setIsNavigating(false);
+      }
+    }, NAVIGATING_TIMEOUT);
     return () => clearTimeout(timeoutId);
   }, [isNavigating]);
 
@@ -42,12 +46,12 @@ export default function Header() {
         )}
       >
         <div className="flex items-center justify-start">
-          <Logo />
+          <Logo isNavigating={isNavigating} onTriggerNavigating={handleTriggerNavigating} />
           <Navbar isNavigating={isNavigating} onTriggerNavigating={handleTriggerNavigating} />
         </div>
         <div className="flex items-center justify-end gap-2.5">
           <Bringer className="hidden sm:block" />
-          <Sidebar />
+          <Sidebar isNavigating={isNavigating} onTriggerNavigating={handleTriggerNavigating} />
         </div>
       </header>
       <div

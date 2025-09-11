@@ -14,8 +14,17 @@ import {
   AngularIcon,
 } from '@/shared/icons';
 
+/** Desktop large. */
+export const DESKTOP_LARGE = 'large' as const;
+
+/** Desktop small. */
+export const DESKTOP_SMALL = 'small' as const;
+
+/** Desktop size. */
+export type DesktopSize = typeof DESKTOP_LARGE | typeof DESKTOP_SMALL;
+
 // prettier-ignore
-type Learning = {
+export type Learning = {
 
   /** Name. */
   readonly name: string;
