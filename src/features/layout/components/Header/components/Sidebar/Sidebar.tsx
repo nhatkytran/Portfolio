@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { cn } from '@/shared/utils/helpers';
-import { BREAK_POINTS, CONTENTS, DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
-import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
 import { useModeActions } from '@/shared/zustand';
 import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
+import { NavigatingProps } from '@/shared/utils/types';
+import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
+import { BREAK_POINTS, CONTENTS, DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
 
 /** Sidebar. */
-export default function Sidebar() {
+export default function Sidebar({ isNavigating, onTriggerNavigating }: NavigatingProps) {
   const pathname = usePathname();
   const { isNightbringer } = useBringer();
   const { setMode } = useModeActions();
@@ -27,6 +28,12 @@ export default function Sidebar() {
     if (isOpen && window.innerWidth >= BREAK_POINTS.LG) {
       handleClose();
     }
+  };
+
+  /** Handle navigation. */
+  const handleNavigation = (event: { preventDefault: () => void }) => {
+    onTriggerNavigating(event);
+    handleClose();
   };
 
   useWindowEventListener({
@@ -52,7 +59,11 @@ export default function Sidebar() {
         <div>
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center gap-4">
-              <Link href="/" className="cursor-pointer p-1" onClick={handleClose}>
+              <Link
+                href="/"
+                onClick={handleNavigation}
+                className={cn('cursor-pointer p-1', isNavigating && 'cursor-not-allowed')}
+              >
                 <ArrowLeftIcon />
               </Link>
               <div className="flex items-center gap-2 tracking-wider uppercase">
@@ -81,7 +92,11 @@ export default function Sidebar() {
           <ul className="flex flex-col gap-1.5 py-7">
             {APP_NAVIGATION_LINKS.map(({ href, label }) => (
               <li key={href}>
-                <Link href={href} onClick={handleClose} className="group flex items-center justify-between py-3">
+                <Link
+                  href={href}
+                  onClick={handleNavigation}
+                  className={cn('group flex items-center justify-between py-3', isNavigating && 'cursor-not-allowed')}
+                >
                   <span
                     className={cn(
                       'font-inter text-sm font-semibold tracking-widest uppercase',
