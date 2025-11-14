@@ -1,5 +1,5 @@
 import { cn } from '@/shared/utils/helpers';
-import RiotGamesIcon from '@/shared/icons/RiotGamesIcon';
+import { RiotGamesIcon } from '@/shared/icons/layout';
 import RiotGamesLabel from '@/features/layout/components/Footer/components/RiotGamesInspired/RiotGamesLabel';
 
 /** Riot Games inspired. */

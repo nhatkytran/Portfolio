@@ -1,21 +1,17 @@
 import { ReactNode } from 'react';
 
+import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
+import { CssIcon, HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon } from '@/shared/icons';
 import {
-  CssIcon,
   EnvelopIcon,
   GithubIcon,
-  HtmlIcon,
-  JavaScriptIcon,
   LeetCodeIcon,
   LinkedInIcon,
   MapIcon,
   NextIcon,
   PhoneIcon,
-  ReactIcon,
   TailwindCssIcon,
-  TypeScriptIcon,
-} from '@/shared/icons';
-import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
+} from '@/shared/icons/layout';
 
 // prettier-ignore
 type AppNavigationLink = {

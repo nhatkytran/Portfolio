@@ -9,7 +9,7 @@ import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
 import { NavigatingProps } from '@/shared/utils/types';
 import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
 import { BREAK_POINTS, CONTENTS, DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
-import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
+import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons/layout';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
 
