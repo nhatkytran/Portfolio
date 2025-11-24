@@ -218,7 +218,13 @@
   }
 
   .hero-image-clip-path {
-    clip-path: polygon(15% 100%, 0px 30%, 25% 0px, 100% 0px, 100% 100%);
+    clip-path: polygon(10% 100%, 0px 30%, 15% 0px, 100% 0px, 100% 100%);
+  }
+
+  @media screen and (min-width: 48rem) {
+    .hero-image-clip-path {
+      clip-path: polygon(15% 100%, 0px 30%, 25% 0px, 100% 0px, 100% 100%);
+    }
   }
 
   .hero-image-overlay-bg {

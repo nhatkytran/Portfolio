@@ -11,11 +11,11 @@ export default function HeroContent() {
         'max-w-8xl w-full px-4',
         'flex flex-col items-center justify-between',
         'xs:px-6',
-        'sm:flex-row sm:px-9',
+        'md:flex-row md:px-9',
       )}
     >
       <SEOSkeletonLoading skeleton={<Skeleton />} content={<Content />} />
-      <div className={cn('h-[432px]', 'sm:h-0 sm:flex-2')} />
+      <div className={cn('h-[432px]', 'md:h-0 md:flex-2')} />
     </div>
   );
 }
