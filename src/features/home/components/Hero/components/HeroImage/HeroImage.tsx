@@ -9,11 +9,10 @@ export default function HomePage() {
 
   return (
     <div
-      style={{ backgroundImage: "url('/images/hero/ky-tran.jpg')" }}
       className={cn(
         'hero-image-clip-path h-[432px] w-full',
         'absolute right-0 bottom-0 flex-2 self-stretch',
-        'bg-cover bg-center bg-no-repeat',
+        'bg-[url("/images/hero/ky-tran.jpg")] bg-cover bg-center bg-no-repeat',
         'sm:top-0 sm:h-full sm:w-[42%]',
       )}
     >
