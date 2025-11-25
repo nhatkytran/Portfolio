@@ -23,6 +23,17 @@ type AppNavigationLink = {
   readonly label: string;
 };
 
+// prettier-ignore
+/** Navigating props. */
+export type NavigatingProps = {
+
+  /** Whether is navigating. */
+  readonly isNavigating: boolean;
+
+  /** Trigger navigating. */
+  readonly onTriggerNavigating: (event: { preventDefault: () => void }) => void;
+};
+
 /** App navigation links. */
 export const APP_NAVIGATION_LINKS: readonly AppNavigationLink[] = [
   { href: '/', label: 'Home' },
@@ -30,7 +41,7 @@ export const APP_NAVIGATION_LINKS: readonly AppNavigationLink[] = [
   { href: '/experience', label: 'Experience' },
   { href: '/projects', label: 'Projects' },
   { href: '/learning', label: 'Learning' },
-  { href: '/blogs', label: 'Blogs' },
+  { href: '/cv', label: 'CV' },
 ];
 
 /** Technology icons. */
