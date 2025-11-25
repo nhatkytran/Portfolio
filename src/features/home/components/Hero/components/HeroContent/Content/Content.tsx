@@ -58,11 +58,9 @@ export default function Content() {
         className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}
       >
         Serving as a Frontend Web Developer since July 2024, armed with{' '}
-        <span className="text-amber-300">Vanilla JavaScript</span>, <span>Next</span>,{' '}
-        <span className="text-blue-400">React</span>, <span className="text-red-500">Angular</span>, and{' '}
-        <span className="whitespace-nowrap">
-          self-training in <span className="text-green-400">Vue</span>.
-        </span>
+        <span className="text-amber-300">Vanilla JavaScript</span> and its frameworks:{' '}
+        <span className="whitespace-nowrap text-blue-400">React / Next</span> -{' '}
+        <span className="text-red-500">Angular</span> - <span className="text-green-400">Vue</span>.
       </FadeInMotion>
       <FadeInMotion transition={{ delay: 0.2 }} className="py-3">
         <button
