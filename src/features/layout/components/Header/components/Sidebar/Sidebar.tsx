@@ -6,8 +6,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/shared/utils/helpers';
 import { useModeActions } from '@/shared/zustand';
 import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
-import { NavigatingProps } from '@/shared/utils/types';
-import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
+import { APP_NAVIGATION_LINKS, NavigatingProps } from '@/features/layout/data';
 import { BREAK_POINTS, CONTENTS, DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons/layout';
 import Modal from '@/shared/components/Modal';
@@ -31,7 +30,7 @@ export default function Sidebar({ isNavigating, onTriggerNavigating }: Navigatin
   };
 
   /** Handle navigation. */
-  const handleNavigation = (event: { preventDefault: () => void }) => {
+  const handleNavigation = (event: React.MouseEvent<HTMLAnchorElement>) => {
     onTriggerNavigating(event);
     handleClose();
   };

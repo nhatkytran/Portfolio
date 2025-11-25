@@ -31,7 +31,7 @@ export type NavigatingProps = {
   readonly isNavigating: boolean;
 
   /** Trigger navigating. */
-  readonly onTriggerNavigating: (event: { preventDefault: () => void }) => void;
+  readonly onTriggerNavigating: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 /** App navigation links. */

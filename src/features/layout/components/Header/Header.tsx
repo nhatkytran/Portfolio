@@ -17,7 +17,7 @@ export default function Header() {
   const [isNavigating, setIsNavigating] = useState(false);
 
   /** Trigger navigating. */
-  const handleTriggerNavigating = (event: { preventDefault: () => void }) => {
+  const handleTriggerNavigating = (event: React.MouseEvent<HTMLAnchorElement>) => {
     if (isNavigating) {
       event.preventDefault();
       return;

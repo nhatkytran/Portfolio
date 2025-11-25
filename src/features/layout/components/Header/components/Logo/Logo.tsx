@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
 import { CONTENTS } from '@/shared/constants';
-import { NavigatingProps } from '@/shared/utils/types';
 import BringerLabel from '@/features/layout/components/Header/components/Logo/BringerLabel';
+import { NavigatingProps } from '@/features/layout/data';
 
 /** Logo - Ky Tran's Portfolio. */
 export default function Logo({ isNavigating, onTriggerNavigating }: NavigatingProps) {
