@@ -35,10 +35,10 @@ export type Learning = {
 
 /** Learnings. */
 export const LEARNINGS: readonly Learning[] = [
-  { name: 'Coding - Full Stack Developer', Icon: JavaScriptLearningIcon },
+  { name: 'Coding - Frontend Development', Icon: JavaScriptLearningIcon },
   { name: 'Language - English and Chinese', Icon: LanguageIcon },
   { name: 'Music - Piano and Guitar', Icon: MusicIcon },
-  { name: 'Health - Fitness and Nutrition', Icon: HeartIcon },
+  { name: 'Health - Exercise and Tai Chi', Icon: HeartIcon },
 ];
 
 /** Learning icon styles. */

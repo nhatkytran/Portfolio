@@ -38,7 +38,7 @@ export type NavigatingProps = {
 export const APP_NAVIGATION_LINKS: readonly AppNavigationLink[] = [
   { href: '/', label: 'Home' },
   { href: '/skills', label: 'Skills' },
-  { href: '/experience', label: 'Experience' },
+  { href: '/experience', label: 'Exp / Edu' },
   { href: '/projects', label: 'Projects' },
   { href: '/learning', label: 'Learning' },
   { href: '/cv', label: 'CV' },

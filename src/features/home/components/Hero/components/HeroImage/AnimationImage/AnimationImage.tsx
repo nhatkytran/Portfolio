@@ -20,9 +20,13 @@ export default function AnimationImage({ src, shouldBeNightbringer = true }: Pro
 
   return (
     <Image
-      className={cn('opacity-0 transition duration-320 ease-in-out', shouldShowImage && 'opacity-100')}
+      className={cn(
+        'object-cover object-center opacity-0 transition duration-320 ease-in-out',
+        shouldShowImage && 'opacity-100',
+      )}
       src={src}
       alt={CONTENTS.ENGLISH_NAME}
+      sizes="(min-width: 48rem) 42vw, 100vw"
       fill
     />
   );
