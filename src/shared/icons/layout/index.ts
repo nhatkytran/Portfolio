@@ -1,7 +1,9 @@
+import ArrowExploreIcon from './ArrowExploreIcon';
 import ArrowLeftIcon from './ArrowLeftIcon';
 import BringerIcon from './BringerIcon';
 import BurgerIcon from './BurgerIcon';
 import CloseIcon from './CloseIcon';
+import CssIcon from './CssIcon';
 import EnvelopIcon from './EnvelopIcon';
 import GithubIcon from './GithubIcon';
 import LeetCodeIcon from './LeetCodeIcon';
@@ -15,10 +17,12 @@ import TriangleDownIcon from './TriangleDownIcon';
 import TailwindCssIcon from './TailwindCssIcon';
 
 export {
+  ArrowExploreIcon,
   ArrowLeftIcon,
   BurgerIcon,
   BringerIcon,
   CloseIcon,
+  CssIcon,
   EnvelopIcon,
   GithubIcon,
   LeetCodeIcon,

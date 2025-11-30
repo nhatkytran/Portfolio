@@ -1,6 +1,6 @@
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
-import { LearningBookIcon } from '@/shared/icons';
+import { LearningBookIcon } from '@/shared/icons/learning';
 import {
   LEARNING_JOURNEY_SOLDIER_QUOTE,
   LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE,

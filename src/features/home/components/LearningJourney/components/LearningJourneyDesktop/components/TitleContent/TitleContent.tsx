@@ -7,12 +7,10 @@ import {
 } from '@/features/home/data';
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
-import { ArrowExploreIcon } from '@/shared/icons';
+import { ArrowExploreIcon } from '@/shared/icons/layout';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
-/**
- *
- */
+/** Title content. */
 export default function TitleContent() {
   const { isNightbringer } = useBringer();
 

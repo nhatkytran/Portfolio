@@ -11,7 +11,7 @@ import {
   PhoneIcon,
   TailwindCssIcon,
 } from '@/shared/icons/layout';
-import { CssIcon } from '@/shared/icons';
+import { CssIcon } from '@/shared/icons/layout';
 import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon } from '@/shared/icons/technologies';
 
 // prettier-ignore

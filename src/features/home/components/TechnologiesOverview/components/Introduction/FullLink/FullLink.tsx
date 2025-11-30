@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
-import { ArrowExploreIcon } from '@/shared/icons';
+import { ArrowExploreIcon } from '@/shared/icons/layout';
 
 /** Technologies overview introduction full link. */
 export default function FullLink() {

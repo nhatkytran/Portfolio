@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
-import { ArrowExploreIcon } from '@/shared/icons';
+import { ArrowExploreIcon } from '@/shared/icons/layout';
 import { LEARNINGS, LEARNING_ICON_STYLES } from '@/features/home/data';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 

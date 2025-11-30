@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 
 import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
-import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
+import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons/learning';
 import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon, AngularIcon } from '@/shared/icons/technologies';
 import { VueJSIcon } from '@/shared/icons/skills/fe';
 
