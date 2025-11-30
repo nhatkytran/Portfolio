@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
 import { Mode } from '@/shared/utils/types';
-import { NIGHTBRINGER_MODE } from '@/shared/constants';
+import { DAWNBRINGER_MODE } from '@/shared/constants';
 import { ZustandActions } from '@/shared/utils/types/zustand';
 
 const MODE_STORAGE_KEY = 'NIGHT_DAWN_BRINGER_MODE';
@@ -51,7 +51,7 @@ const getActions: ZustandActions<ModeState, ModeStateActions> = set => ({
 const useModeStore = create<ModeState>()(
   persist(
     (set, get) => {
-      const value = getInitialModeState(NIGHTBRINGER_MODE);
+      const value = getInitialModeState(DAWNBRINGER_MODE);
       const actions = getActions(set, get);
       return { ...value, actions };
     },
