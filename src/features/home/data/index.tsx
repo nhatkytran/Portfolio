@@ -1,17 +1,8 @@
 import { type ReactNode } from 'react';
 
 import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
-import {
-  HeartIcon,
-  JavaScriptLearningIcon,
-  LanguageIcon,
-  MusicIcon,
-  HtmlIcon,
-  JavaScriptIcon,
-  ReactIcon,
-  TypeScriptIcon,
-  AngularIcon,
-} from '@/shared/icons';
+import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons';
+import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon, AngularIcon } from '@/shared/icons/technologies';
 import { VueJSIcon } from '@/shared/icons/skills/fe';
 
 /** Desktop large. */
@@ -35,7 +26,7 @@ export type Learning = {
 
 /** Learnings. */
 export const LEARNINGS: readonly Learning[] = [
-  { name: 'Coding - Frontend Development', Icon: JavaScriptLearningIcon },
+  { name: 'Coding - Front-end Development', Icon: JavaScriptLearningIcon },
   { name: 'Language - English and Chinese', Icon: LanguageIcon },
   { name: 'Music - Piano and Guitar', Icon: MusicIcon },
   { name: 'Health - Exercise and Tai Chi', Icon: HeartIcon },
@@ -68,7 +59,7 @@ export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
 /** Learning journey soldier quote. */
 export const LEARNING_JOURNEY_SOLDIER_QUOTE = (
   <>
-    Going deep in <span className="font-bold text-blue-500">Front-end</span>, preparing for{' '}
+    Going deep in <span className="font-bold text-blue-500">Front-end coding</span>, preparing for{' '}
     <span className="font-bold text-red-500">IELTS</span> and <span className="font-bold text-green-500">HSK</span>.
     Keep pushing as a soldier.
   </>

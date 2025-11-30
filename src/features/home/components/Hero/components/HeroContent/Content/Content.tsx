@@ -58,7 +58,7 @@ export default function Content() {
         className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}
       >
         Serving as a Front-end Developer since July 2024, armed with
-        <span className="text-amber-300">JavaScript</span> and its frameworks:{' '}
+        <span className="text-amber-300"> JavaScript</span> and its frameworks:{' '}
         <span className="whitespace-nowrap text-blue-400">React / Next</span> -{' '}
         <span className="text-red-500">Angular</span> - <span className="text-green-400">Vue</span>.
       </FadeInMotion>
