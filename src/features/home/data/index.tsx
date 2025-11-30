@@ -164,14 +164,14 @@ export const STATEMENTS: Statements = {
   [ENGLISH_LANGUAGE]: {
     badge: 'On learning',
     author: 'Ky Tran',
-    quote: 'I pledge to be first under heaven',
-    motto: "I vow to be as the Sun's light, piercing through the ages",
+    quote: 'I promise to shine above all',
+    motto: 'I strive to shine like the Sun, cutting through time.',
   },
   [CHINESE_LANGUAGE]: {
-    badge: '修學 / 修学',
-    author: '陳日祺 / 陈日祺',
-    quote: '自許人間第一流 / 自许人间第一流',
-    motto: '願如太陽之光，亙古長照，穿越時光 / 愿如太阳之光，亘古长照，穿越时光',
+    badge: '修 學/学',
+    author: '陳/陈 日 祺',
+    quote: '自 許/许 人 間/间 第 一 流',
+    motto: '願/愿 如 太 陽/阳 之 光，穿 越 時/时 光 而 長/长 照',
   },
   [VIETNAMESE_LANGUAGE]: {
     badge: 'Tu học',

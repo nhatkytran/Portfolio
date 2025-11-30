@@ -27,7 +27,7 @@ export default function Content() {
         transition={{ delay: 0.05 }}
         className={cn('font-riot-sans-bold text-base text-white uppercase', 'mp:text-lg')}
       >
-        Ky Tran - (陳 / 陈) 日 祺
+        Ky Tran - 陳/陈 日 祺
       </FadeInMotion>
       <FadeInMotion
         as="h2"
