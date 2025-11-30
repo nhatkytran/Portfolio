@@ -8,11 +8,11 @@ import {
   MusicIcon,
   HtmlIcon,
   JavaScriptIcon,
-  NodeIcon,
   ReactIcon,
   TypeScriptIcon,
   AngularIcon,
 } from '@/shared/icons';
+import { VueJSIcon } from '@/shared/icons/skills/fe';
 
 /** Desktop large. */
 export const DESKTOP_LARGE = 'large' as const;
@@ -68,11 +68,9 @@ export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
 /** Learning journey soldier quote. */
 export const LEARNING_JOURNEY_SOLDIER_QUOTE = (
   <>
-    Keep <span className="font-bold text-blue-500">pushing</span> forward as a soldier,{' '}
-    <span className="font-bold text-red-500">growing</span> and{' '}
-    <span className="whitespace-nowrap">
-      <span className="font-bold text-green-500">improving</span> my skills.
-    </span>
+    Going deep in <span className="font-bold text-blue-500">Front-end</span>, preparing for{' '}
+    <span className="font-bold text-red-500">IELTS</span> and <span className="font-bold text-green-500">HSK</span>.
+    Keep pushing as a soldier.
   </>
 );
 
@@ -106,11 +104,11 @@ type FlagImage = {
 /** Flag images. */
 export const FLAG_IMAGES: readonly FlagImage[] = [
   { name: 'america.webp', alt: 'America flag' },
-  { name: 'republic-china.webp', alt: 'Republic of China flag' },
-  { name: 'europe.webp', alt: 'Europe flag' },
+  { name: 'taiwan.webp', alt: 'Taiwan flag' },
+  { name: 'singapore.webp', alt: 'Singapore flag' },
   { name: 'hongkong.webp', alt: 'Hong Kong flag' },
   { name: 'france.webp', alt: 'France flag' },
-  { name: 'communist-china.webp', alt: 'Communist China flag' },
+  { name: 'china.webp', alt: 'China flag' },
   { name: 'russia.webp', alt: 'Russia flag' },
   { name: 'ukraine.webp', alt: 'Ukraine flag' },
   { name: 'uk.webp', alt: 'United Kingdom flag' },
@@ -134,7 +132,7 @@ export const TECHNOLOGIES_OVERVIEW: readonly TechnologyOverview[] = [
   { name: 'TypeScript', Icon: TypeScriptIcon },
   { name: 'React / Next', Icon: ReactIcon },
   { name: 'Angular', Icon: AngularIcon },
-  { name: 'Node / Express', Icon: NodeIcon },
+  { name: 'Vue / Nuxt', Icon: VueJSIcon },
 ];
 
 /** Language. */

@@ -20,7 +20,7 @@ export default function Content() {
           'lg:text-base',
         )}
       >
-        Web Developer
+        Front-end Developer
       </FadeInMotion>
       <FadeInMotion
         as="p"
@@ -57,8 +57,8 @@ export default function Content() {
         transition={{ delay: 0.15 }}
         className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}
       >
-        Serving as a Frontend Web Developer since July 2024, armed with{' '}
-        <span className="text-amber-300">Vanilla JavaScript</span> and its frameworks:{' '}
+        Serving as a Front-end Developer since July 2024, armed with
+        <span className="text-amber-300">JavaScript</span> and its frameworks:{' '}
         <span className="whitespace-nowrap text-blue-400">React / Next</span> -{' '}
         <span className="text-red-500">Angular</span> - <span className="text-green-400">Vue</span>.
       </FadeInMotion>

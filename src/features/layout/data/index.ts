@@ -77,7 +77,7 @@ export const ESSENTIAL_INFORMATION: readonly EssentialInformation[] = [
   },
   {
     label: 'Location',
-    content: 'Saigon, Vietnam',
+    content: 'HCMC (Saigon), Vietnam',
     Icon: MapIcon,
   },
   {
