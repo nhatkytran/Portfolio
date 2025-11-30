@@ -3,6 +3,7 @@ import ArrowLeftIcon from './ArrowLeftIcon';
 import BringerIcon from './BringerIcon';
 import BurgerIcon from './BurgerIcon';
 import CloseIcon from './CloseIcon';
+import CodeIcon from './CodeIcon';
 import CssIcon from './CssIcon';
 import EnvelopIcon from './EnvelopIcon';
 import GithubIcon from './GithubIcon';
@@ -22,6 +23,7 @@ export {
   BurgerIcon,
   BringerIcon,
   CloseIcon,
+  CodeIcon,
   CssIcon,
   EnvelopIcon,
   GithubIcon,
