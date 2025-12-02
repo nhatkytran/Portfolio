@@ -9,7 +9,7 @@ export default function Content() {
   const { isNightbringer } = useBringer();
 
   return (
-    <div className={cn('flex flex-3 flex-col gap-6', 'sm:pr-8', 'mp:gap-8')}>
+    <div className={cn('flex flex-3 flex-col gap-6', 'sm:pr-7.5', 'mp:gap-7', 'lg:gap-8 lg:pr-8')}>
       <FadeInMotion
         as="span"
         className={cn(
@@ -25,7 +25,7 @@ export default function Content() {
       <FadeInMotion
         as="p"
         transition={{ delay: 0.05 }}
-        className={cn('font-riot-sans-bold text-base text-white uppercase', 'mp:text-lg')}
+        className={cn('font-riot-sans-bold text-[15px] text-white uppercase', 'mp:text-lg')}
       >
         Ky Tran - 陳/陈 日 祺
       </FadeInMotion>
@@ -34,7 +34,7 @@ export default function Content() {
         transition={{ delay: 0.1 }}
         className={cn(
           'text-mark-pro-bold text-[28px] font-bold tracking-wider text-neutral-50',
-          'xs:text-[32px]',
+          'xs:text-3xl',
           'lg:text-4xl',
         )}
       >

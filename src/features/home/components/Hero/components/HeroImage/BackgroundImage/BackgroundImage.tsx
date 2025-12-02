@@ -10,8 +10,7 @@ export default function BackgroundImage() {
   return (
     <div
       className={cn(
-        'size-[101%] bg-neutral-800',
-        'absolute top-0 left-0',
+        'pointer-events-none absolute top-0 left-0 size-[101%] bg-neutral-800',
         'opacity-0 transition duration-200 ease-in-out',
         initialLoading && 'opacity-100',
       )}

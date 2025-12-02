@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div
       className={cn(
-        'hero-image-clip-path h-[442px] w-full',
+        'hero-image-clip-path h-[420px] w-full',
         'absolute right-0 bottom-0 flex-2 self-stretch',
         'md:top-0 md:h-full md:w-[42%]',
       )}
@@ -19,7 +19,10 @@ export default function HomePage() {
       <div
         className={cn(
           'font-beaufort-bold leading-none [text-orientation:upright] [writing-mode:vertical-rl]',
-          'absolute top-[72px] right-[36px] min-h-full text-[20px] text-white/60',
+          'absolute top-[46px] right-[24px] min-h-full text-sm text-transparent opacity-80',
+          'bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text',
+          'sm:right-[36px] sm:text-base',
+          'lg:text-lg',
         )}
       >
         少 年 壯 志 懷 天 夢
@@ -27,7 +30,10 @@ export default function HomePage() {
       <div
         className={cn(
           'font-beaufort-bold leading-none [text-orientation:upright] [writing-mode:vertical-rl]',
-          'absolute top-[138px] right-[82px] min-h-full text-[20px] text-white/60',
+          'absolute top-[92px] right-[56px] min-h-full text-sm text-transparent opacity-80',
+          'bg-gradient-to-b from-neutral-300 to-neutral-600 bg-clip-text',
+          'sm:top-[112px] sm:right-[76px] sm:text-base',
+          'lg:right-[82px] lg:text-lg',
         )}
       >
         自 許 人 間 第 一 流

@@ -29,7 +29,7 @@ export const LEARNINGS: readonly Learning[] = [
   { name: 'Coding - Front-end Development', Icon: JavaScriptLearningIcon },
   { name: 'Language - English and Chinese', Icon: LanguageIcon },
   { name: 'Music - Piano and Guitar', Icon: MusicIcon },
-  { name: 'Health - Exercise and Tai Chi', Icon: HeartIcon },
+  { name: 'Health - Boxing and Tai Chi', Icon: HeartIcon },
 ];
 
 /** Learning icon styles. */
@@ -60,7 +60,7 @@ export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
 export const LEARNING_JOURNEY_SOLDIER_QUOTE = (
   <>
     Going deep in <span className="font-bold text-blue-500">Front-end coding</span>, preparing for{' '}
-    <span className="font-bold text-red-500">IELTS</span> and <span className="font-bold text-green-500">HSK</span>.
+    <span className="font-bold text-red-500">Ielts</span> and <span className="font-bold text-green-500">Hsk</span>.
     Keep pushing as a soldier.
   </>
 );
