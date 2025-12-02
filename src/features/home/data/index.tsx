@@ -171,12 +171,12 @@ export const STATEMENTS: Statements = {
     badge: '修 學/学',
     author: '陳/陈 日 祺',
     quote: '自 許/许 人 間/间 第 一 流',
-    motto: '願/愿 如 太 陽/阳 之 光，穿 越 時/时 光 而 長/长 照',
+    motto: '願/愿 如 太 陽/阳 之 光，穿 越 時/时 光 而 長/长 照 .',
   },
   [VIETNAMESE_LANGUAGE]: {
     badge: 'Tu học',
     author: 'Trần Nhật Kỳ',
     quote: 'Tự hứa nhân gian đệ nhất lưu',
-    motto: 'Nguyện như ánh Mặt Trời, chiếu xuyên qua Thời Gian',
+    motto: 'Nguyện như ánh Mặt Trời, chiếu xuyên qua Thời Gian.',
   },
 };
