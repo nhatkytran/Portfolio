@@ -19,8 +19,9 @@ export default function HomePage() {
       <div
         className={cn(
           'font-beaufort-bold leading-none [text-orientation:upright] [writing-mode:vertical-rl]',
-          'absolute top-[46px] right-[24px] min-h-full text-sm text-transparent opacity-80',
+          'absolute top-[46px] right-[16px] min-h-full text-sm text-transparent opacity-80',
           'bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text',
+          'xs:right-[24px]',
           'sm:right-[36px] sm:text-base',
           'lg:text-lg',
         )}
@@ -30,10 +31,11 @@ export default function HomePage() {
       <div
         className={cn(
           'font-beaufort-bold leading-none [text-orientation:upright] [writing-mode:vertical-rl]',
-          'absolute top-[92px] right-[56px] min-h-full text-sm text-transparent opacity-80',
+          'absolute top-[92px] right-[46px] min-h-full text-sm text-transparent opacity-80',
           'bg-gradient-to-b from-neutral-300 to-neutral-600 bg-clip-text',
+          'xs:right-[56px]',
           'sm:top-[112px] sm:right-[76px] sm:text-base',
-          'lg:right-[82px] lg:text-lg',
+          'lg:right-[80px] lg:text-lg',
         )}
       >
         自 許 人 間 第 一 流
