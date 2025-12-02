@@ -9,7 +9,7 @@ import ToolingSkills from '@/features/skills/components/ToolingSkills';
 export default function Skills() {
   return (
     <>
-      <HeroIntroduction title="Skills" />
+      <HeroIntroduction title="Skills" idiom="熟 能 生 巧" />
       <FrontEndSkills />
       <BackEndSkills />
       <TestingSkills />

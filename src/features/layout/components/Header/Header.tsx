@@ -49,7 +49,7 @@ export default function Header() {
           <Logo isNavigating={isNavigating} onTriggerNavigating={handleTriggerNavigating} />
           <Navbar isNavigating={isNavigating} onTriggerNavigating={handleTriggerNavigating} />
         </div>
-        <div className="flex items-center justify-end gap-2.5">
+        <div className="flex items-center justify-end gap-3">
           <Bringer className="hidden sm:block" />
           <Sidebar isNavigating={isNavigating} onTriggerNavigating={handleTriggerNavigating} />
         </div>
