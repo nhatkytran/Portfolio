@@ -1,16 +1,16 @@
 'use client';
 
 import { cn } from '@/shared/utils/helpers';
-import FlagsSlide from '@/features/home/components/FreedomLover/components/FlagsSlide';
+import FlagsSlide from '@/features/home/components/CultureLover/components/FlagsSlide';
 import CreateSkeletonLoading from '@/shared/components/CreateSkeletonLoading';
 import SEOSkeletonLoading from '@/shared/components/SEOSkeletonLoading';
-import IntroductionSkeleton from '@/features/home/components/FreedomLover/components/IntroductionSkeleton';
-import IntroductionContent from '@/features/home/components/FreedomLover/components/IntroductionContent';
+import IntroductionSkeleton from '@/features/home/components/CultureLover/components/IntroductionSkeleton';
+import IntroductionContent from '@/features/home/components/CultureLover/components/IntroductionContent';
 
 const SkeletonLoading = CreateSkeletonLoading({ className: 'animate-pulse rounded-sm bg-neutral-100' });
 
-/** Freedom lover. */
-export default function FreedomLover() {
+/** Culture lover. */
+export default function CultureLover() {
   return (
     <section>
       <div className={cn('flex items-center justify-center pb-12', 'sm:pt-4 sm:pb-16')}>

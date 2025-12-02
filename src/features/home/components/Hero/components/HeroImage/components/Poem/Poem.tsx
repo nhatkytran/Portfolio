@@ -8,8 +8,8 @@ type Props = {
   readonly idiom: string;
 };
 
-/** Idiom. */
-export default function Idiom({ idiom, className }: PropsWithClassName<Props>) {
+/** Poem. */
+export default function Poem({ idiom, className }: PropsWithClassName<Props>) {
   return (
     <p
       className={cn(

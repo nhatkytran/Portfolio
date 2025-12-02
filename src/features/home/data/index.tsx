@@ -5,6 +5,12 @@ import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/sh
 import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon, AngularIcon } from '@/shared/icons/technologies';
 import { VueJSIcon } from '@/shared/icons/skills/fe';
 
+/** Hero poem. */
+export const HERO_POEM = {
+  first: '少 年 壯 志 懐 天 夢',
+  second: '自 許 人 間 第 一 流',
+};
+
 /** Desktop large. */
 export const DESKTOP_LARGE = 'large' as const;
 

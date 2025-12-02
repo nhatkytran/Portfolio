@@ -1,7 +1,7 @@
 import { cn } from '@/shared/utils/helpers';
 import SEOSkeletonLoading from '@/shared/components/SEOSkeletonLoading';
-import Skeleton from '@/features/home/components/Hero/components/HeroContent/Skeleton';
-import Content from '@/features/home/components/Hero/components/HeroContent/Content';
+import Skeleton from '@/features/home/components/Hero/components/HeroContent/components/Skeleton';
+import Content from '@/features/home/components/Hero/components/HeroContent/components/Content';
 
 /** Hero content. */
 export default function HeroContent() {
