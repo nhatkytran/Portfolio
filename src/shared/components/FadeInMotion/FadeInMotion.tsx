@@ -1,5 +1,5 @@
-import { motion, HTMLMotionProps, MotionConfigProps } from 'framer-motion';
 import { PropsWithChildren, ElementType } from 'react';
+import { motion, HTMLMotionProps, MotionConfigProps } from 'framer-motion';
 
 import { HTMLElements, PropsWithClassName } from '@/shared/utils/types';
 
