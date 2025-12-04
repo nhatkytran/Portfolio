@@ -41,7 +41,7 @@ export default function HeroIntroduction({ title, idiom }: Props) {
       </div>
       <FadeInMotion
         as="p"
-        transition={{ delay: 0.2 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
         className={cn(
           'absolute top-[44px] right-[16px] min-h-full opacity-90',
           'font-beaufort-medium leading-none [text-orientation:upright] [writing-mode:vertical-rl]',

@@ -20,6 +20,7 @@ export default function HomePage() {
       <Poem
         className={cn('top-[46px] right-[16px] from-neutral-100', 'xs:right-[24px]', 'sm:right-[36px]')}
         idiom={HERO_POEM.first}
+        transitionDelay={1.4}
       />
       <Poem
         className={cn(
@@ -29,6 +30,7 @@ export default function HomePage() {
           'lg:right-[80px]',
         )}
         idiom={HERO_POEM.second}
+        transitionDelay={1.6}
       />
       <BackgroundImage />
     </div>

@@ -25,7 +25,7 @@ export default function FadeInMotion<T extends ElementType = 'div'>({
       animate={{ opacity: 1 }}
       onClick={onClick}
       exit={exit}
-      transition={{ duration: 0.2, ...transition }}
+      transition={{ duration: 0.3, ...transition }}
     >
       {children}
     </MotionComponent>

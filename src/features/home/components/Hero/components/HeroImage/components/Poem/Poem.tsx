@@ -1,17 +1,27 @@
+'use client';
+
+import { ValueTransition } from 'framer-motion';
+
 import { cn } from '@/shared/utils/helpers';
 import { PropsWithClassName } from '@/shared/utils/types';
+import FadeInMotion from '@/shared/components/FadeInMotion';
 
 // prettier-ignore
 type Props = {
 
   /** The idiom text to display. */
   readonly idiom: string;
+
+  /** The delay of the transition. */
+  readonly transitionDelay: ValueTransition['delay'];
 };
 
 /** Poem. */
-export default function Poem({ idiom, className }: PropsWithClassName<Props>) {
+export default function Poem({ className, idiom, transitionDelay }: PropsWithClassName<Props>) {
   return (
-    <p
+    <FadeInMotion
+      as="p"
+      transition={{ duration: 0.4, delay: transitionDelay }}
       className={cn(
         'absolute top-0 right-0 min-h-full opacity-80',
         'font-beaufort-bold leading-none [text-orientation:upright] [writing-mode:vertical-rl]',
@@ -22,6 +32,6 @@ export default function Poem({ idiom, className }: PropsWithClassName<Props>) {
       )}
     >
       {idiom}
-    </p>
+    </FadeInMotion>
   );
 }
