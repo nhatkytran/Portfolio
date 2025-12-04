@@ -64,6 +64,12 @@ import {
 } from '@/shared/icons/skills/other';
 import { VSCodeIcon, WindsurfIcon, ChatGPTIcon, SlackIcon, JiraIcon, FigmaIcon } from '@/shared/icons/skills/tooling';
 
+/** Introduction of the skills page. */
+export const SKILLS_INTRODUCTION = {
+  title: 'Skills',
+  idiom: '熟 能 生 巧',
+};
+
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
 
@@ -75,13 +81,12 @@ export type StackSkillsTheme = typeof STACK_SKILLS_LIGHT | typeof STACK_SKILLS_D
 
 // prettier-ignore
 export type Skill = {
-  
+
   /** Name of the skill. */
   readonly name: string;
 
   /** URL. */
   readonly url: string;
-
 
   /** Icon of the skill. */
   readonly Icon: (props: PropsWithClassName) => ReactNode;
