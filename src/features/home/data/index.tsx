@@ -5,8 +5,18 @@ import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/sh
 import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon, AngularIcon } from '@/shared/icons/technologies';
 import { VueJSIcon } from '@/shared/icons/skills/fe';
 
+// prettier-ignore
+type HeroPoem = {
+
+  /** First line. */
+  readonly first: string;
+
+  /** Second line. */
+  readonly second: string;
+};
+
 /** Hero poem. */
-export const HERO_POEM = {
+export const heroPoem: HeroPoem = {
   first: '少 年 壯 志 懐 天 夢',
   second: '自 許 人 間 第 一 流',
 };

@@ -64,8 +64,18 @@ import {
 } from '@/shared/icons/skills/other';
 import { VSCodeIcon, WindsurfIcon, ChatGPTIcon, SlackIcon, JiraIcon, FigmaIcon } from '@/shared/icons/skills/tooling';
 
+// prettier-ignore
+type SkillsIntroduction = {
+
+  /** Title. */
+  readonly title: string;
+
+  /** Idiom. */
+  readonly idiom: string;
+};
+
 /** Introduction of the skills page. */
-export const SKILLS_INTRODUCTION = {
+export const skillsIntroduction: SkillsIntroduction = {
   title: 'Skills',
   idiom: '熟 能 生 巧',
 };

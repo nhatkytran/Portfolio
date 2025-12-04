@@ -3,7 +3,7 @@ import BackgroundImage from './components/BackgroundImage';
 import Poem from './components/Poem';
 
 import { cn } from '@/shared/utils/helpers';
-import { HERO_POEM } from '@/features/home/data';
+import { heroPoem } from '@/features/home/data';
 
 /** Hero image. */
 export default function HomePage() {
@@ -19,7 +19,7 @@ export default function HomePage() {
       <div className={cn('hero-image-overlay-bg size-[101%]', 'absolute top-0 left-0')} />
       <Poem
         className={cn('top-[46px] right-[16px] from-neutral-100', 'xs:right-[24px]', 'sm:right-[36px]')}
-        idiom={HERO_POEM.first}
+        idiom={heroPoem.first}
         transitionDelay={1.4}
       />
       <Poem
@@ -29,7 +29,7 @@ export default function HomePage() {
           'sm:top-[112px] sm:right-[76px]',
           'lg:right-[80px]',
         )}
-        idiom={HERO_POEM.second}
+        idiom={heroPoem.second}
         transitionDelay={1.6}
       />
       <BackgroundImage />

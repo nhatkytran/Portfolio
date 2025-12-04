@@ -1,7 +1,7 @@
 import HeroIntroduction from '@/shared/components/HeroIntroduction';
-import { PROJECTS_INTRODUCTION } from '@/features/projects';
+import { projectsIntroduction } from '@/features/projects';
 
 /** Projects page. */
 export default function Projects() {
-  return <HeroIntroduction title={PROJECTS_INTRODUCTION.title} idiom={PROJECTS_INTRODUCTION.idiom} />;
+  return <HeroIntroduction title={projectsIntroduction.title} idiom={projectsIntroduction.idiom} />;
 }

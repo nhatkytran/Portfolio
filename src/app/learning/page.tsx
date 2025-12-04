@@ -1,7 +1,7 @@
 import HeroIntroduction from '@/shared/components/HeroIntroduction';
-import { LEARNING_INTRODUCTION } from '@/features/learning/data';
+import { learningIntroduction } from '@/features/learning/data';
 
 /** Learning page. */
 export default function Learning() {
-  return <HeroIntroduction title={LEARNING_INTRODUCTION.title} idiom={LEARNING_INTRODUCTION.idiom} />;
+  return <HeroIntroduction title={learningIntroduction.title} idiom={learningIntroduction.idiom} />;
 }
