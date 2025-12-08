@@ -10,10 +10,10 @@ import {
   APP_NAVIGATION_LINKS,
   NIGHTBRINGER_MODE,
   DAWNBRINGER_MODE,
+  BREAK_POINTS,
   NavigatingProps,
   layoutCopy,
 } from '@/features/layout/data';
-import { BREAK_POINTS } from '@/shared/constants';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons/layout';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
