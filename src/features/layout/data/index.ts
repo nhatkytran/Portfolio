@@ -119,3 +119,15 @@ export const SOCIAL_MEDIA_ACCOUNTS: readonly SocialMediaAccount[] = [
     Icon: LeetCodeIcon,
   },
 ];
+
+// prettier-ignore
+type CVCopy = {
+
+  /** Title. */
+  readonly title: string;
+};
+
+/** The copy for the CV call to action button. */
+export const cvCopy: CVCopy = {
+  title: 'CV',
+};
