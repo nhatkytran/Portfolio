@@ -2,6 +2,7 @@
 
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
+import { heroCopy } from '@/features/home/data';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
 /** Hero content. */
@@ -20,14 +21,14 @@ export default function Content() {
           'lg:text-base',
         )}
       >
-        Front-end Developer
+        {heroCopy.heroBrand}
       </FadeInMotion>
       <FadeInMotion
         as="p"
         transition={{ delay: 0.05 }}
         className={cn('font-riot-sans-bold text-[15px] text-white uppercase', 'mp:text-lg')}
       >
-        Ky Tran - 陳/陈 日 祺
+        {heroCopy.heroName}
       </FadeInMotion>
       <FadeInMotion
         as="h2"
@@ -38,29 +39,14 @@ export default function Content() {
           'lg:text-4xl',
         )}
       >
-        On The{' '}
-        <span className="whitespace-nowrap">
-          <span
-            className={cn(
-              'relative top-0.25',
-              'font-riot-bold-italic',
-              isNightbringer ? 'text-red-600' : 'text-sky-500',
-            )}
-          >
-            Frontlines
-          </span>{' '}
-          of Code
-        </span>
+        {heroCopy.getMainHeroTitle(isNightbringer)}
       </FadeInMotion>
       <FadeInMotion
         as="p"
         transition={{ delay: 0.15 }}
         className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}
       >
-        Serving as a Front-end Developer since July 2024, armed with
-        <span className="text-amber-300"> JavaScript</span> and its frameworks:{' '}
-        <span className="whitespace-nowrap text-blue-400">React / Next</span> -{' '}
-        <span className="text-red-500">Angular</span> - <span className="text-green-400">Vue</span>.
+        {heroCopy.subHeroTitle}
       </FadeInMotion>
       <FadeInMotion transition={{ delay: 0.2 }} className="py-3">
         <button
@@ -71,7 +57,7 @@ export default function Content() {
             isNightbringer ? 'bg-red-600 hover:bg-red-700' : 'bg-sky-600 hover:bg-sky-700',
           )}
         >
-          Deploy Me on Your Next Mission
+          {heroCopy.heroCta}
         </button>
       </FadeInMotion>
     </div>

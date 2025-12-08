@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react';
 
+import { cn } from '@/shared/utils/helpers';
 import { IconAppearanceProps, PropsWithClassName } from '@/shared/utils/types';
 import { HeartIcon, JavaScriptLearningIcon, LanguageIcon, MusicIcon } from '@/shared/icons/learning';
 import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon, AngularIcon } from '@/shared/icons/technologies';
@@ -29,6 +30,60 @@ export const DESKTOP_SMALL = 'small' as const;
 
 /** Desktop size. */
 export type DesktopSize = typeof DESKTOP_LARGE | typeof DESKTOP_SMALL;
+
+// prettier-ignore
+type HeroCopy = {
+
+  /** Hero brand. */
+  readonly heroBrand: string;
+
+  /** Hero name. */
+  readonly heroName: string;
+
+  /** Main hero title getter. */
+  readonly getMainHeroTitle: (isNightbringer: boolean) => ReactNode;
+
+  /** Sub hero title. */
+  readonly subHeroTitle: ReactNode;
+
+  /** Hero call to action. */
+  readonly heroCta: string;
+}
+
+/** The copy of the home page hero. */
+export const heroCopy: HeroCopy = {
+  heroBrand: 'Front-end Developer',
+  heroName: 'Ky Tran - 陳/陈 日 祺',
+
+  /**
+   * Main hero title getter.
+   * @param isNightbringer Whether is nightbringer.
+   */
+  getMainHeroTitle: (isNightbringer: boolean) => (
+    <>
+      On The{' '}
+      <span className="whitespace-nowrap">
+        <span
+          className={cn('relative top-0.25', 'font-riot-bold-italic', isNightbringer ? 'text-red-600' : 'text-sky-500')}
+        >
+          Frontlines
+        </span>{' '}
+        of Code
+      </span>
+    </>
+  ),
+
+  subHeroTitle: (
+    <>
+      Serving as a Front-end Developer since July 2024, armed with
+      <span className="text-amber-300"> JavaScript</span> and its frameworks:{' '}
+      <span className="whitespace-nowrap text-blue-400">React / Next</span> -{' '}
+      <span className="text-red-500">Angular</span> - <span className="text-green-400">Vue</span>.
+    </>
+  ),
+
+  heroCta: 'Deploy Me on Your Next Mission',
+};
 
 // prettier-ignore
 export type Learning = {
