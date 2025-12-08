@@ -5,12 +5,13 @@ import { useModeActions } from '@/shared/zustand';
 import { useBringer } from '@/shared/hooks';
 import { PropsWithClassName } from '@/shared/utils/types';
 import { BringerIcon } from '@/shared/icons/layout';
-import { DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/features/layout/data';
+import { DAWNBRINGER_MODE, NIGHTBRINGER_MODE, layoutCopy } from '@/features/layout/data';
 
 /** Bringer - Night / Dawn. */
 export default function Bringer({ className }: PropsWithClassName) {
-  const { isNightbringer } = useBringer();
   const { setMode } = useModeActions();
+  const { isNightbringer } = useBringer();
+  const toBringerLabel = isNightbringer ? layoutCopy.toDawnbringerLabel : layoutCopy.toNightbringerLabel;
 
   /** Handle set bringer mode. */
   const handleSetMode = () => setMode(isNightbringer ? DAWNBRINGER_MODE : NIGHTBRINGER_MODE);
@@ -26,7 +27,7 @@ export default function Bringer({ className }: PropsWithClassName) {
           isNightbringer ? 'group-hover:text-sky-400' : 'group-hover:text-red-400',
         )}
       >
-        {isNightbringer ? 'To.Dawn' : 'To.Night'}
+        {toBringerLabel}
       </span>
       <BringerIcon
         className={cn(

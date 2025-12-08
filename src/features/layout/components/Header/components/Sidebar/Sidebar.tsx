@@ -125,7 +125,7 @@ export default function Sidebar({ isNavigating, onTriggerNavigating }: Navigatin
               isNightbringer ? 'text-red-600' : 'text-sky-600',
             )}
           >
-            -- Live on the {isNightbringer ? 'dark' : 'bright'} side --
+            {layoutCopy.getSidebarQuote(isNightbringer)}
           </p>
         </div>
       </aside>

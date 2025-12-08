@@ -3,10 +3,12 @@
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
 import { BringerIcon } from '@/shared/icons/layout';
+import { layoutCopy } from '@/features/layout/data';
 
 /** Bringer label. */
 export default function BringerLabel() {
   const { isNightbringer } = useBringer();
+  const bringerLabel = isNightbringer ? layoutCopy.nightbringerLabel : layoutCopy.dawnbringerLabel;
 
   return (
     <div className={cn('flex items-center gap-0.5', 'relative top-0.25')}>
@@ -17,7 +19,7 @@ export default function BringerLabel() {
           isNightbringer ? 'text-red-600' : 'text-sky-500',
         )}
       >
-        {isNightbringer ? 'Nightbringer' : 'Dawnbringer'}
+        {bringerLabel}
       </span>
     </div>
   );

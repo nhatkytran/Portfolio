@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
 import { CodeIcon } from '@/shared/icons/layout';
-import { SOCIAL_MEDIA_ACCOUNTS } from '@/features/layout/data';
+import { PORTFOLIO_SOURCE_CODE, SOCIAL_MEDIA_ACCOUNTS, layoutCopy } from '@/features/layout/data';
 
 /** Social media accounts. */
 export default function SocialMediaAccounts() {
@@ -21,11 +21,9 @@ export default function SocialMediaAccounts() {
           </Link>
         ))}
       </div>
-      <p className={cn('text-center text-sm font-semibold text-neutral-500', 'sm:text-base')}>
-        © 2025 by Ky Tran (nhatky.tran.2002@gmail.com)
-      </p>
+      <p className={cn('text-center text-sm font-semibold text-neutral-500', 'sm:text-base')}>{layoutCopy.copyRight}</p>
       <Link
-        href="https://github.com/nhatkytran/portfolio"
+        href={PORTFOLIO_SOURCE_CODE}
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
@@ -42,7 +40,7 @@ export default function SocialMediaAccounts() {
             'sm:text-base',
           )}
         >
-          Portfolio source code
+          {layoutCopy.sourceCode}
         </span>
       </Link>
     </div>

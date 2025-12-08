@@ -29,11 +29,62 @@ type LayoutCopy = {
   /** English name. */
   readonly englishName: string;
 
+  /** Nightbringer label. */
+  readonly nightbringerLabel: string;
+
+  /** Dawnbringer label. */
+  readonly dawnbringerLabel: string;
+
+  /** To nightbringer label. */
+  readonly toNightbringerLabel: string;
+
+  /** To dawnbringer label. */
+  readonly toDawnbringerLabel: string;
+
+  /** Sidebar quote getter. */
+  readonly getSidebarQuote: (isNightbringer: boolean) => string;
+
+  /** Riot Games inspired. */
+  readonly riotInspire: ReactNode;
+
+  /** Riot Games credit. */
+  readonly riotCredit: string;
+
+  /** Copyright. */
+  readonly copyRight: string;
+
+  /** Source code. */
+  readonly sourceCode: string;
 }
 
 /** The copy for the layout. */
 export const layoutCopy: LayoutCopy = {
   englishName: 'Ky Tran',
+  nightbringerLabel: 'Nightbringer',
+  dawnbringerLabel: 'Dawnbringer',
+  toNightbringerLabel: 'To.Night',
+  toDawnbringerLabel: 'To.Dawn',
+
+  /**
+   * Sidebar quote getter.
+   * @param isNightbringer Whether is nightbringer.
+   */
+  getSidebarQuote: (isNightbringer: boolean) => `-- Live on the ${isNightbringer ? 'dark' : 'bright'} side --`,
+
+  riotInspire: (
+    <>
+      Inspired by <span className="text-red-600">Riot Games</span>
+    </>
+  ),
+
+  riotCredit: `
+    This portfolio design was inspired by Riot's UI/UX.
+    All rights to original assets belong to Riot Games.
+    Personal, non-commercial project.
+  `,
+
+  copyRight: '© 2025 by Ky Tran (nhatky.tran.2002@gmail.com)',
+  sourceCode: 'Portfolio source code',
 };
 
 /** Breakpoints. */
@@ -115,7 +166,7 @@ export const ESSENTIAL_INFORMATION: readonly EssentialInformation[] = [
   },
   {
     label: 'Location',
-    content: 'HCMC (Saigon), Vietnam',
+    content: 'Saigon, Vietnam',
     Icon: MapIcon,
   },
   {
@@ -156,6 +207,9 @@ export const SOCIAL_MEDIA_ACCOUNTS: readonly SocialMediaAccount[] = [
     Icon: LeetCodeIcon,
   },
 ];
+
+/** Portfolio source code. */
+export const PORTFOLIO_SOURCE_CODE = 'https://github.com/nhatkytran/portfolio';
 
 // prettier-ignore
 type CVCopy = {
