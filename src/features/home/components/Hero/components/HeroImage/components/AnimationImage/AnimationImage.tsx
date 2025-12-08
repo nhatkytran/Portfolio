@@ -3,8 +3,8 @@
 import Image, { ImageProps } from 'next/image';
 
 import { cn } from '@/shared/utils/helpers';
+import { layoutCopy } from '@/features/layout/data';
 import { useBringer } from '@/shared/hooks';
-import { CONTENTS } from '@/shared/constants';
 
 // prettier-ignore
 type Props = Pick<ImageProps, 'src'> & {
@@ -25,7 +25,7 @@ export default function AnimationImage({ src, shouldBeNightbringer = true }: Pro
         shouldShowImage && 'opacity-100',
       )}
       src={src}
-      alt={CONTENTS.ENGLISH_NAME}
+      alt={layoutCopy.englishName}
       sizes="(min-width: 48rem) 42vw, 100vw"
       fill
     />

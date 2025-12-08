@@ -24,6 +24,19 @@ export const NIGHTBRINGER_MODE = 'NIGHTBRINGER_MODE' as const;
 export const DAWNBRINGER_MODE = 'DAWNBRINGER_MODE' as const;
 
 // prettier-ignore
+type LayoutCopy = {
+
+  /** English name. */
+  readonly englishName: string;
+
+}
+
+/** The copy for the layout. */
+export const layoutCopy: LayoutCopy = {
+  englishName: 'Ky Tran',
+};
+
+// prettier-ignore
 type AppNavigationLink = {
 
   /** URL. */

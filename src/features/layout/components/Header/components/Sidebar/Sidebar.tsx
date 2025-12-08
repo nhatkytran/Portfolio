@@ -6,8 +6,14 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/shared/utils/helpers';
 import { useModeActions } from '@/shared/zustand';
 import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
-import { APP_NAVIGATION_LINKS, NIGHTBRINGER_MODE, DAWNBRINGER_MODE, NavigatingProps } from '@/features/layout/data';
-import { BREAK_POINTS, CONTENTS } from '@/shared/constants';
+import {
+  APP_NAVIGATION_LINKS,
+  NIGHTBRINGER_MODE,
+  DAWNBRINGER_MODE,
+  NavigatingProps,
+  layoutCopy,
+} from '@/features/layout/data';
+import { BREAK_POINTS } from '@/shared/constants';
 import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons/layout';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
@@ -67,7 +73,7 @@ export default function Sidebar({ isNavigating, onTriggerNavigating }: Navigatin
               </Link>
               <div className="flex items-center gap-2 tracking-wider uppercase">
                 <p className="font-riot-regular text-xl">/</p>
-                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">{CONTENTS.ENGLISH_NAME}</p>
+                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">{layoutCopy.englishName}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

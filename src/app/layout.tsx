@@ -5,8 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { fonts } from '@/shared/config';
 import { cn, getFontsVariables } from '@/shared/utils/helpers';
-import { PORTAL_ID } from '@/features/layout/data';
-import { CONTENTS } from '@/shared/constants';
+import { PORTAL_ID, layoutCopy } from '@/features/layout/data';
 import Header from '@/features/layout/components/Header';
 import Footer from '@/features/layout/components/Footer';
 import Utility from '@/features/layout/components/Utility';
@@ -15,8 +14,8 @@ import './globals.css';
 
 // TODO (Ky Tran): Improve SEO and add open graph (https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image).
 export const metadata: Metadata = {
-  title: `Champion | ${CONTENTS.ENGLISH_NAME} | 日祺`,
-  description: `${CONTENTS.ENGLISH_NAME}'s Portfolio`,
+  title: `Champion | ${layoutCopy.englishName} | 日祺`,
+  description: `${layoutCopy.englishName}'s Portfolio`,
 };
 
 /** Root layout for the application. */
