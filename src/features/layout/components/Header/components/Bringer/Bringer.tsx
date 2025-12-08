@@ -3,9 +3,9 @@
 import { cn } from '@/shared/utils/helpers';
 import { useModeActions } from '@/shared/zustand';
 import { useBringer } from '@/shared/hooks';
-import { DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
 import { PropsWithClassName } from '@/shared/utils/types';
 import { BringerIcon } from '@/shared/icons/layout';
+import { DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/features/layout/data';
 
 /** Bringer - Night / Dawn. */
 export default function Bringer({ className }: PropsWithClassName) {

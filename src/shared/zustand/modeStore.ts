@@ -2,8 +2,8 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
 import { Mode } from '@/shared/utils/types';
-import { DAWNBRINGER_MODE } from '@/shared/constants';
 import { ZustandActions } from '@/shared/utils/types/zustand';
+import { DAWNBRINGER_MODE } from '@/features/layout/data';
 
 const MODE_STORAGE_KEY = 'NIGHT_DAWN_BRINGER_MODE';
 

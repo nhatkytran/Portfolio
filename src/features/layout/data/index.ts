@@ -14,6 +14,15 @@ import {
 import { CssIcon } from '@/shared/icons/layout';
 import { HtmlIcon, JavaScriptIcon, ReactIcon, TypeScriptIcon } from '@/shared/icons/technologies';
 
+/** Portal id. */
+export const PORTAL_ID = 'portal' as const;
+
+/** Nightbringer mode. */
+export const NIGHTBRINGER_MODE = 'NIGHTBRINGER_MODE' as const;
+
+/** Dawnbringer mode. */
+export const DAWNBRINGER_MODE = 'DAWNBRINGER_MODE' as const;
+
 // prettier-ignore
 type AppNavigationLink = {
 

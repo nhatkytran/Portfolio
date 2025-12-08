@@ -1,5 +1,5 @@
 import { useMode } from '@/shared/zustand';
-import { DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
+import { DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/features/layout/data';
 
 /** Use bringer. */
 export function useBringer() {

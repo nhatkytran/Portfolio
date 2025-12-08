@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
 
-import { PORTAL_ID } from '@/shared/constants';
+import { PORTAL_ID } from '@/features/layout/data';
 
 /** Portal component. */
 export default function Portal({ children }: PropsWithChildren) {
