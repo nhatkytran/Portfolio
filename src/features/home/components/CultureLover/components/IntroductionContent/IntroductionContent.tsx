@@ -1,4 +1,5 @@
 import { cn } from '@/shared/utils/helpers';
+import { cultureLoverCopy } from '@/features/home/data';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
 /** Introduction content. */
@@ -6,7 +7,7 @@ export default function IntroductionContent() {
   return (
     <>
       <FadeInMotion as="h2" className={cn('font-inter text-[26px] font-semibold', 'sm:text-[32px]', 'lg:text-4xl')}>
-        Culture Lover
+        {cultureLoverCopy.title}
       </FadeInMotion>
       <FadeInMotion
         as="p"
@@ -17,8 +18,7 @@ export default function IntroductionContent() {
           'lg:text-base',
         )}
       >
-        I love working with diverse cultures and teams, always learning,{' '}
-        <span className="whitespace-nowrap">ready to deliver.</span>
+        {cultureLoverCopy.subtitle}
       </FadeInMotion>
     </>
   );

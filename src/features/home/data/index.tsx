@@ -168,27 +168,32 @@ export const LEARNINGS: readonly Learning[] = [
 
 /** Learning icon styles. */
 export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
-  {
-    width: 18,
-    height: 18,
-    fill: '#111111',
-  },
-  {
-    width: 16,
-    height: 16,
-    fill: '#111111',
-  },
-  {
-    width: 17,
-    height: 17,
-    fill: '#111111',
-  },
-  {
-    width: 13,
-    height: 14,
-    fill: '#111111',
-  },
+  { width: 18, height: 18, fill: '#111111' },
+  { width: 16, height: 16, fill: '#111111' },
+  { width: 17, height: 17, fill: '#111111' },
+  { width: 13, height: 14, fill: '#111111' },
 ];
+
+// prettier-ignore
+type CultureLoverCopy = {
+
+  /** Title. */
+  readonly title: string;
+
+  /** Sub title. */
+  readonly subtitle: ReactNode;
+};
+
+/** The copy for the culture lover section. */
+export const cultureLoverCopy: CultureLoverCopy = {
+  title: 'Culture Lover',
+  subtitle: (
+    <>
+      I love working with diverse cultures and teams, always learning,{' '}
+      <span className="whitespace-nowrap">ready to deliver.</span>
+    </>
+  ),
+};
 
 // prettier-ignore
 type FlagImage = {
