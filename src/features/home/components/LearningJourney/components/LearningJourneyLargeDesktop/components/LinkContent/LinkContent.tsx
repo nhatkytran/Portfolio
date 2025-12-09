@@ -1,5 +1,6 @@
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
+import { learningJourneyCopy } from '@/features/home/data';
 import { ArrowExploreIcon } from '@/shared/icons/layout';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
@@ -15,7 +16,7 @@ export default function LinkContent() {
           isNightbringer ? 'text-red-600' : 'text-sky-600',
         )}
       >
-        Full site
+        {learningJourneyCopy.fullSiteCta}
       </p>
     </FadeInMotion>
   );

@@ -21,14 +21,14 @@ export default function Content() {
           'lg:text-base',
         )}
       >
-        {heroCopy.heroBrand}
+        {heroCopy.role}
       </FadeInMotion>
       <FadeInMotion
         as="p"
         transition={{ delay: 0.05 }}
         className={cn('font-riot-sans-bold text-[15px] text-white uppercase', 'mp:text-lg')}
       >
-        {heroCopy.heroName}
+        {heroCopy.name}
       </FadeInMotion>
       <FadeInMotion
         as="h2"
@@ -39,14 +39,14 @@ export default function Content() {
           'lg:text-4xl',
         )}
       >
-        {heroCopy.getMainHeroTitle(isNightbringer)}
+        {heroCopy.getTitle(isNightbringer)}
       </FadeInMotion>
       <FadeInMotion
         as="p"
         transition={{ delay: 0.15 }}
         className={cn('font-inter text-sm font-semibold tracking-wide text-neutral-200', 'mp:text-base')}
       >
-        {heroCopy.subHeroTitle}
+        {heroCopy.subTitle}
       </FadeInMotion>
       <FadeInMotion transition={{ delay: 0.2 }} className="py-3">
         <button
@@ -57,7 +57,7 @@ export default function Content() {
             isNightbringer ? 'bg-red-600 hover:bg-red-700' : 'bg-sky-600 hover:bg-sky-700',
           )}
         >
-          {heroCopy.heroCta}
+          {heroCopy.cta}
         </button>
       </FadeInMotion>
     </div>

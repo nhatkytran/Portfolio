@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { cn } from '@/shared/utils/helpers';
 import { useBringer } from '@/shared/hooks';
 import { ArrowExploreIcon } from '@/shared/icons/layout';
-import { LEARNINGS, LEARNING_ICON_STYLES } from '@/features/home/data';
+import { LEARNINGS, LEARNING_ICON_STYLES, learningJourneyCopy } from '@/features/home/data';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
 /** Card content */
@@ -13,7 +13,7 @@ export default function CardContent() {
   return (
     <FadeInMotion className={cn('flex flex-col gap-6', 'rounded-sm bg-neutral-50 px-6 pt-6 pb-8', 'sm:px-10')}>
       <div className="flex items-center justify-between">
-        <h3 className="font-inter text-xl font-semibold">Improvement Status</h3>
+        <h3 className="font-inter text-xl font-semibold">{learningJourneyCopy.improvementStatus}</h3>
         <Link
           href="#"
           className={cn('flex items-center gap-1.5 rounded-sm bg-neutral-200 p-1', 'sm:bg-transparent sm:p-0')}
@@ -25,7 +25,7 @@ export default function CardContent() {
               isNightbringer ? 'text-red-600' : 'text-sky-600',
             )}
           >
-            Full site
+            {learningJourneyCopy.fullSiteCta}
           </p>
           <ArrowExploreIcon fill={isNightbringer ? '#e80029' : '#007dd2'} />
         </Link>
@@ -51,7 +51,9 @@ export default function CardContent() {
                 <p className="font-inter text-sm font-semibold tracking-wider text-neutral-900">{name}</p>
               </div>
               <div className="flex flex-row-reverse items-center gap-2">
-                <span className="font-inter text-sm tracking-wider text-neutral-400 uppercase">On Learning</span>
+                <span className="font-inter text-sm tracking-wider text-neutral-400 uppercase">
+                  {learningJourneyCopy.onLearningStatus}
+                </span>
                 <span className="block size-4 rounded-full bg-lime-400" />
               </div>
             </div>

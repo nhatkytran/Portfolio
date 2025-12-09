@@ -34,32 +34,32 @@ export type DesktopSize = typeof DESKTOP_LARGE | typeof DESKTOP_SMALL;
 // prettier-ignore
 type HeroCopy = {
 
-  /** Hero brand. */
-  readonly heroBrand: string;
+  /** Role. */
+  readonly role: string;
 
-  /** Hero name. */
-  readonly heroName: string;
+  /** Name. */
+  readonly name: string;
 
-  /** Main hero title getter. */
-  readonly getMainHeroTitle: (isNightbringer: boolean) => ReactNode;
+  /** Title getter. */
+  readonly getTitle: (isNightbringer: boolean) => ReactNode;
 
-  /** Sub hero title. */
-  readonly subHeroTitle: ReactNode;
+  /** Sub title. */
+  readonly subTitle: ReactNode;
 
-  /** Hero call to action. */
-  readonly heroCta: string;
+  /** Call to action. */
+  readonly cta: string;
 }
 
-/** The copy of the home page hero. */
+/** The copy for the hero section. */
 export const heroCopy: HeroCopy = {
-  heroBrand: 'Front-end Developer',
-  heroName: 'Ky Tran - 陳/陈 日 祺',
+  role: 'Front-end Developer',
+  name: 'Ky Tran - 陳/陈 日 祺',
 
   /**
-   * Main hero title getter.
+   * Title getter.
    * @param isNightbringer Whether is nightbringer.
    */
-  getMainHeroTitle: (isNightbringer: boolean) => (
+  getTitle: (isNightbringer: boolean) => (
     <>
       On The{' '}
       <span className="whitespace-nowrap">
@@ -73,7 +73,7 @@ export const heroCopy: HeroCopy = {
     </>
   ),
 
-  subHeroTitle: (
+  subTitle: (
     <>
       Serving as a Front-end Developer since July 2024, armed with
       <span className="text-amber-300"> JavaScript</span> and its frameworks:{' '}
@@ -82,7 +82,70 @@ export const heroCopy: HeroCopy = {
     </>
   ),
 
-  heroCta: 'Deploy Me on Your Next Mission',
+  cta: 'Deploy Me on Your Next Mission',
+};
+
+// prettier-ignore
+type LearningJourneyCopy = {
+
+  /** Large desktop title. */
+  readonly largeDesktopTitle: string;
+
+  /** Desktop title. */
+  readonly desktopTitle: string;
+
+  /** Mobile title. */
+  readonly mobileTitle: string;
+
+  /** Full site call to action text. */
+  readonly fullSiteCta: string;
+
+  /** Improvement status text. */
+  readonly improvementStatus: string;
+
+  /** On learning status text. */
+  readonly onLearningStatus: string;
+
+  /** Sub title */
+  readonly subTitle: ReactNode;
+
+  /** Nightbringer quote */
+  readonly nightbringerQuote: ReactNode;
+
+  /** Dawnbringer quote */
+  readonly dawnbringerQuote: ReactNode;
+}
+
+/** The copy for learning journey section. */
+export const learningJourneyCopy: LearningJourneyCopy = {
+  largeDesktopTitle: 'On The Learning Journey',
+  desktopTitle: 'Learning Journey',
+  mobileTitle: 'Learning Journey',
+  fullSiteCta: 'Full Site',
+  improvementStatus: 'Improvement Status',
+  onLearningStatus: 'On Learning',
+
+  subTitle: (
+    <>
+      Going deep in <span className="font-bold text-blue-500">Front-end coding</span>, preparing for{' '}
+      <span className="font-bold text-red-500">Ielts</span> and <span className="font-bold text-green-500">Hsk</span>.
+      Keep pushing as a soldier.
+    </>
+  ),
+
+  nightbringerQuote: (
+    <>
+      Let the light fade - I was never meant to follow it, only to
+      <span className="whitespace-nowrap"> surpass it.</span>
+    </>
+  ),
+
+  dawnbringerQuote: (
+    <>
+      Let the darkness come - I was not shaped to fear it, only to
+      <span className="whitespace-nowrap"> outshine it.</span>
+    </>
+  ),
 };
 
 // prettier-ignore
@@ -127,33 +190,7 @@ export const LEARNING_ICON_STYLES: readonly IconAppearanceProps[] = [
   },
 ];
 
-/** Learning journey soldier quote. */
-export const LEARNING_JOURNEY_SOLDIER_QUOTE = (
-  <>
-    Going deep in <span className="font-bold text-blue-500">Front-end coding</span>, preparing for{' '}
-    <span className="font-bold text-red-500">Ielts</span> and <span className="font-bold text-green-500">Hsk</span>.
-    Keep pushing as a soldier.
-  </>
-);
-
-/** Learning journey night bringer quote. */
-export const LEARNING_JOURNEY_NIGHT_BRINGER_QUOTE = (
-  <>
-    Let the light fade - I was never meant to follow it, only to
-    <span className="whitespace-nowrap"> surpass it.</span>
-  </>
-);
-
-/** Learning journey dawn bringer quote. */
-export const LEARNING_JOURNEY_DAWN_BRINGER_QUOTE = (
-  <>
-    Let the darkness come - I was not shaped to fear it, only to
-    <span className="whitespace-nowrap"> outshine it.</span>
-  </>
-);
-
 // prettier-ignore
-
 type FlagImage = {
 
   /** Name. */
