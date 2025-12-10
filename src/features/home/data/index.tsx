@@ -220,6 +220,27 @@ export const FLAG_IMAGES: readonly FlagImage[] = [
 ];
 
 // prettier-ignore
+type TechnologyOverviewCopy = {
+
+  /** Title. */
+  readonly title: string;
+
+  /** Sub title. */
+  readonly subTitle: ReactNode;
+}
+
+/** The copy for the technologies overview section. */
+export const technologyOverviewCopy: TechnologyOverviewCopy = {
+  title: 'Technologies',
+  subTitle: (
+    <>
+      My gear <span className="font-bold text-blue-500">evolves</span> with every battle, and here are some of the
+      technologies <span className="whitespace-nowrap">at my side</span>.
+    </>
+  ),
+};
+
+// prettier-ignore
 type TechnologyOverview = {
 
   /** Name. */
