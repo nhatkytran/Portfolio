@@ -260,17 +260,39 @@ export const TECHNOLOGIES_OVERVIEW: readonly TechnologyOverview[] = [
   { name: 'Vue / Nuxt', Icon: VueJSIcon },
 ];
 
-/** Language. */
-export type Language = 'English' | 'Chinese' | 'Vietnamese';
+// prettier-ignore
+type PersonalStatementCopy = {
+
+  /** Title. */
+  readonly title: ReactNode;
+}
+
+/** The copy for the personal statement section. */
+export const personalStatementCopy: PersonalStatementCopy = {
+  title: (
+    <>
+      Like armor, a soldier&apos;s <span className="font-bold text-blue-500">statement</span> adapts,
+      <br />
+      yet it is always worn into battle - a shield for the <span className="font-bold text-red-500">spirit</span>
+      <span className="whitespace-nowrap">
+        {' '}
+        and a reminder of <span className="font-bold text-green-500">purpose</span>.
+      </span>
+    </>
+  ),
+};
 
 /** English language. */
-export const ENGLISH_LANGUAGE = 'English';
+export const ENGLISH_LANGUAGE = 'English' as const;
 
 /** Chinese language. */
-export const CHINESE_LANGUAGE = 'Chinese';
+export const CHINESE_LANGUAGE = 'Chinese' as const;
 
 /** Vietnamese language. */
-export const VIETNAMESE_LANGUAGE = 'Vietnamese';
+export const VIETNAMESE_LANGUAGE = 'Vietnamese' as const;
+
+/** Language. */
+export type Language = typeof ENGLISH_LANGUAGE | typeof CHINESE_LANGUAGE | typeof VIETNAMESE_LANGUAGE;
 
 /** Languages. */
 export const LANGUAGES: readonly Language[] = [ENGLISH_LANGUAGE, CHINESE_LANGUAGE, VIETNAMESE_LANGUAGE];
