@@ -6,7 +6,7 @@ import LearningJourneyMobile from './components/LearningJourneyMobile';
 
 import { cn } from '@/shared/utils/helpers';
 import { useResponsiveDisplay } from '@/shared/hooks';
-import { DISPLAY_SCREEN } from '@/shared/constants';
+import { DISPLAY_SCREEN } from '@/features/layout/data';
 
 /** Learning journey. */
 export default function LearningJourney() {

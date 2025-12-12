@@ -1,31 +1,38 @@
-'use client';
+import AnimationImage from './components/AnimationImage';
+import BackgroundImage from './components/BackgroundImage';
+import Poem from './components/Poem';
 
 import { cn } from '@/shared/utils/helpers';
-import { useInitialLoading } from '@/shared/hooks';
+import { heroPoem } from '@/features/home/data';
 
 /** Hero image. */
 export default function HomePage() {
-  const { initialLoading } = useInitialLoading({ initialLoadingState: true });
-
   return (
     <div
-      style={{ backgroundImage: "url('/images/hero/ky-tran.jpg')" }}
       className={cn(
-        'hero-image-clip-path h-[432px] w-full',
-        'absolute right-0 bottom-0 flex-2 self-stretch',
-        'bg-cover bg-center bg-no-repeat',
-        'sm:top-0 sm:h-full sm:w-[42%]',
+        'hero-image-clip-path absolute right-0 bottom-0 h-[420px] w-full flex-2 self-stretch',
+        'md:top-0 md:h-full md:w-[42%]',
       )}
     >
+      <AnimationImage src="/images/hero/ky-tran.jpg" shouldBeNightbringer />
+      <AnimationImage src="/images/hero/ky-tran-light.jpg" shouldBeNightbringer={false} />
       <div className={cn('hero-image-overlay-bg size-[101%]', 'absolute top-0 left-0')} />
-      <div
-        className={cn(
-          'size-[101%] bg-neutral-800',
-          'absolute top-0 left-0',
-          'opacity-0 transition duration-200 ease-in-out',
-          initialLoading && 'opacity-100',
-        )}
+      <Poem
+        className={cn('top-[46px] right-[16px] from-neutral-100', 'xs:right-[24px]', 'sm:right-[36px]')}
+        idiom={heroPoem.first}
+        transitionDelay={1.4}
       />
+      <Poem
+        className={cn(
+          'top-[92px] right-[46px] from-neutral-300',
+          'xs:right-[56px]',
+          'sm:top-[112px] sm:right-[76px]',
+          'lg:right-[80px]',
+        )}
+        idiom={heroPoem.second}
+        transitionDelay={1.6}
+      />
+      <BackgroundImage />
     </div>
   );
 }

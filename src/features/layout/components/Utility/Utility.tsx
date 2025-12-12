@@ -1,3 +1,5 @@
+import { cvCopy } from '../../data';
+
 import LinkCV from '@/shared/components/LinkCV';
 import ScrollToTop from '@/shared/components/ScrollToTop';
 
@@ -5,7 +7,7 @@ import ScrollToTop from '@/shared/components/ScrollToTop';
 export default function Utility() {
   return (
     <>
-      <LinkCV />
+      <LinkCV title={cvCopy.title} />
       <ScrollToTop />
     </>
   );

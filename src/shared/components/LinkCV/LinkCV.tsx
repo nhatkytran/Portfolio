@@ -2,8 +2,15 @@ import Link from 'next/link';
 
 import { cn } from '@/shared/utils/helpers';
 
+// prettier-ignore
+type Props = {
+
+  /** The title to display. */
+  readonly title: string;
+};
+
 /** Link CV component. */
-export default function LinkCV() {
+export default function LinkCV({ title }: Props) {
   return (
     <>
       <div
@@ -24,7 +31,7 @@ export default function LinkCV() {
           'group-hover:text-white',
         )}
       >
-        CV
+        {title}
       </Link>
     </>
   );

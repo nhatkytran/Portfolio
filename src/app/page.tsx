@@ -1,5 +1,5 @@
 import Hero from '@/features/home/components/Hero';
-import FreedomLover from '@/features/home/components/FreedomLover';
+import CultureLover from '@/features/home/components/CultureLover';
 import LearningJourney from '@/features/home/components/LearningJourney';
 import TechnologiesOverview from '@/features/home/components/TechnologiesOverview';
 import PersonalStatement from '@/features/home/components/PersonalStatement';
@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Hero />
       <LearningJourney />
-      <FreedomLover />
+      <CultureLover />
       <TechnologiesOverview />
       <PersonalStatement />
     </>

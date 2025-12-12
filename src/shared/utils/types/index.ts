@@ -9,4 +9,3 @@ export * from './valueOf';
 export * from './zustand';
 export * from './mode';
 export * from './SkeletonLoadingProps';
-export * from './navigatingProps';

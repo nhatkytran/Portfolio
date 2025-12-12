@@ -1,0 +1,33 @@
+'use client';
+
+import Image, { ImageProps } from 'next/image';
+
+import { cn } from '@/shared/utils/helpers';
+import { layoutCopy } from '@/features/layout/data';
+import { useBringer } from '@/shared/hooks';
+
+// prettier-ignore
+type Props = Pick<ImageProps, 'src'> & {
+
+  /** Whether the image should be shown when the user is a nightbringer. */
+  readonly shouldBeNightbringer?: boolean;
+};
+
+/** Animation image. */
+export default function AnimationImage({ src, shouldBeNightbringer = true }: Props) {
+  const { isNightbringer } = useBringer();
+  const shouldShowImage = shouldBeNightbringer ? isNightbringer : !isNightbringer;
+
+  return (
+    <Image
+      className={cn(
+        'object-cover object-center opacity-0 transition duration-320 ease-in-out',
+        shouldShowImage && 'opacity-100',
+      )}
+      src={src}
+      alt={layoutCopy.englishName}
+      sizes="(min-width: 48rem) 42vw, 100vw"
+      fill
+    />
+  );
+}

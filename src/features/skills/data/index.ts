@@ -64,6 +64,50 @@ import {
 } from '@/shared/icons/skills/other';
 import { VSCodeIcon, WindsurfIcon, ChatGPTIcon, SlackIcon, JiraIcon, FigmaIcon } from '@/shared/icons/skills/tooling';
 
+// prettier-ignore
+type SkillsIntroduction = {
+
+  /** Title. */
+  readonly title: string;
+
+  /** Idiom. */
+  readonly idiom: string;
+};
+
+/** Introduction of the skills page. */
+export const skillsIntroduction: SkillsIntroduction = {
+  title: 'Skills',
+  idiom: '熟 能 生 巧',
+};
+
+// prettier-ignore
+type SkillsCopy = {
+
+  /** Front-end title. */
+  readonly frontEndTitle: string;
+
+  /** Back-end title. */
+  readonly backEndTitle: string;
+
+  /** Testing title. */
+  readonly testingTitle: string;
+
+  /** Other title. */
+  readonly otherTitle: string;
+
+  /** Tooling title. */
+  readonly toolingTitle: string;
+}
+
+/** The copy of the skills page. */
+export const skillsCopy: SkillsCopy = {
+  frontEndTitle: 'Front-end Skills',
+  backEndTitle: 'Back-end Skills',
+  testingTitle: 'Testing Skills',
+  otherTitle: 'Other Skills',
+  toolingTitle: 'Tooling Skills',
+};
+
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
 
@@ -75,13 +119,12 @@ export type StackSkillsTheme = typeof STACK_SKILLS_LIGHT | typeof STACK_SKILLS_D
 
 // prettier-ignore
 export type Skill = {
-  
+
   /** Name of the skill. */
   readonly name: string;
 
   /** URL. */
   readonly url: string;
-
 
   /** Icon of the skill. */
   readonly Icon: (props: PropsWithClassName) => ReactNode;

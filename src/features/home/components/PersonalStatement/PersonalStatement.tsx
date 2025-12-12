@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-import { type Language, ENGLISH_LANGUAGE } from '@/features/home/data';
+import { type Language, ENGLISH_LANGUAGE, personalStatementCopy } from '@/features/home/data';
 import { cn } from '@/shared/utils/helpers';
-import Introduction from '@/features/home/components/PersonalStatement/Introduction';
 import LanguageSelection from '@/features/home/components/PersonalStatement/LanguageSelection';
 import StatementDisplay from '@/features/home/components/PersonalStatement/StatementDisplay/StatementDisplay';
 import Waves from '@/features/home/components/PersonalStatement/Waves';
@@ -37,7 +36,9 @@ export default function PersonalStatement() {
       <div
         className={cn('flex flex-col gap-6 px-4', 'font-inter w-full max-w-4xl font-semibold', 'xs:px-6', 'sm:px-9')}
       >
-        <Introduction />
+        <p className={cn('text-center text-xs tracking-wider text-neutral-700', 'md:text-sm')}>
+          {personalStatementCopy.title}
+        </p>
         <LanguageSelection language={language} onLanguageChange={handleLanguageChange} />
         <StatementDisplay language={language} isTranslating={isTranslating} />
       </div>

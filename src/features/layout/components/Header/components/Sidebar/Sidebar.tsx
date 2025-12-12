@@ -6,10 +6,15 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/shared/utils/helpers';
 import { useModeActions } from '@/shared/zustand';
 import { useBringer, useOpen, useWindowEventListener } from '@/shared/hooks';
-import { NavigatingProps } from '@/shared/utils/types';
-import { APP_NAVIGATION_LINKS } from '@/features/layout/data';
-import { BREAK_POINTS, CONTENTS, DAWNBRINGER_MODE, NIGHTBRINGER_MODE } from '@/shared/constants';
-import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons';
+import {
+  APP_NAVIGATION_LINKS,
+  NIGHTBRINGER_MODE,
+  DAWNBRINGER_MODE,
+  BREAK_POINTS,
+  NavigatingProps,
+  layoutCopy,
+} from '@/features/layout/data';
+import { ArrowLeftIcon, BringerIcon, BurgerIcon, CloseIcon, TriangleDownIcon } from '@/shared/icons/layout';
 import Modal from '@/shared/components/Modal';
 import Divider from '@/shared/components/Divider';
 
@@ -31,7 +36,7 @@ export default function Sidebar({ isNavigating, onTriggerNavigating }: Navigatin
   };
 
   /** Handle navigation. */
-  const handleNavigation = (event: { preventDefault: () => void }) => {
+  const handleNavigation = (event: React.MouseEvent<HTMLAnchorElement>) => {
     onTriggerNavigating(event);
     handleClose();
   };
@@ -68,7 +73,7 @@ export default function Sidebar({ isNavigating, onTriggerNavigating }: Navigatin
               </Link>
               <div className="flex items-center gap-2 tracking-wider uppercase">
                 <p className="font-riot-regular text-xl">/</p>
-                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">{CONTENTS.ENGLISH_NAME}</p>
+                <p className="font-riot-bold relative top-0.25 text-sm tracking-widest">{layoutCopy.englishName}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -120,7 +125,7 @@ export default function Sidebar({ isNavigating, onTriggerNavigating }: Navigatin
               isNightbringer ? 'text-red-600' : 'text-sky-600',
             )}
           >
-            -- Live on the {isNightbringer ? 'dark' : 'bright'} side --
+            {layoutCopy.getSidebarQuote(isNightbringer)}
           </p>
         </div>
       </aside>

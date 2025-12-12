@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { type ValueOf } from '@/shared/utils/types';
 import { useWindowEventListener } from '@/shared/hooks';
-import { BREAK_POINTS, DISPLAY_SCREEN } from '@/shared/constants';
+import { BREAK_POINTS, DISPLAY_SCREEN } from '@/features/layout/data';
 
 /**
  * Get responsive display.

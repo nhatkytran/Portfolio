@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import { cn } from '@/shared/utils/helpers';
 import { useWindowEventListener } from '@/shared/hooks';
-import { ScrollToTopIcon } from '@/shared/icons';
+import { ScrollToTopIcon } from '@/shared/icons/layout';
 import FadeInMotion from '@/shared/components/FadeInMotion';
 
 const VISIBILITY_THRESHOLD = 250;
