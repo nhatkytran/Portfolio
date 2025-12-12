@@ -11,7 +11,15 @@ export default function EssentialInformation() {
   const { isNightbringer } = useBringer();
 
   return (
-    <div className={cn('flex flex-col justify-center', 'w-full max-w-6xl gap-6', 'sm:gap-8', 'lg:flex-row')}>
+    <div
+      className={cn(
+        'flex flex-col justify-center',
+        'w-full max-w-6xl gap-6',
+        'sm:gap-8',
+        'lg:flex-row lg:gap-6',
+        'xl:gap-8',
+      )}
+    >
       {ESSENTIAL_INFORMATION.map(({ label, content, Icon }, index) => (
         <div
           key={index}
@@ -19,7 +27,7 @@ export default function EssentialInformation() {
             'group relative flex gap-2.5',
             'overflow-hidden rounded-sm bg-neutral-800 px-3 py-4.5',
             'xxs:gap-4 xxs:px-5 xxs:py-5',
-            'lg:w-80',
+            'lg:w-80 lg:px-4 xl:px-5',
           )}
         >
           <div className="flex items-center justify-center">
@@ -27,14 +35,8 @@ export default function EssentialInformation() {
               <Icon />
             </div>
           </div>
-          <div
-            className={cn(
-              'flex flex-col justify-center gap-0.5',
-              'font-inter z-1 text-[15px] text-white',
-              'lg:text-base',
-            )}
-          >
-            <p className="font-semibold tracking-wide">{label}</p>
+          <div className={cn('flex flex-col justify-center gap-0.5', 'font-inter z-1 text-[15px] text-white')}>
+            <p className={cn('font-semibold tracking-wide', 'lg:text-base')}>{label}</p>
             <p className="tracking-wider">{content}</p>
           </div>
           <StraightStick
