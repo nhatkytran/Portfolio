@@ -80,6 +80,34 @@ export const skillsIntroduction: SkillsIntroduction = {
   idiom: '熟 能 生 巧',
 };
 
+// prettier-ignore
+type SkillsCopy = {
+
+  /** Front-end title. */
+  readonly frontEndTitle: string;
+
+  /** Back-end title. */
+  readonly backEndTitle: string;
+
+  /** Testing title. */
+  readonly testingTitle: string;
+
+  /** Other title. */
+  readonly otherTitle: string;
+
+  /** Tooling title. */
+  readonly toolingTitle: string;
+}
+
+/** The copy of the skills page. */
+export const skillsCopy: SkillsCopy = {
+  frontEndTitle: 'Front-end Skills',
+  backEndTitle: 'Back-end Skills',
+  testingTitle: 'Testing Skills',
+  otherTitle: 'Other Skills',
+  toolingTitle: 'Tooling Skills',
+};
+
 /** Light theme of the stack skills. */
 export const STACK_SKILLS_LIGHT = 'light' as const;
 
